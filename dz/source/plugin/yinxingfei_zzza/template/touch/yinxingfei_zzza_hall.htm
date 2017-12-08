@@ -1,0 +1,49 @@
+<!--{template common/header}-->
+<!-- header start -->
+<header class="header">
+
+	<div class="nav">
+		<a href="javascript:history.back();" class="z"><img src="{STATICURL}image/mobile/images/icon_back.png" /></a>
+		<span class="name">每日摇摇乐大厅</span>
+	</div>
+
+</header>
+<!-- header end -->
+<link rel="stylesheet" type="text/css" href="source/plugin/yinxingfei_zzza/yinxingfei_zzza_css/yinxingfei_zzza_rili_touch.css?{VERHASH}" />
+<link rel="stylesheet" type="text/css" href="source/plugin/yinxingfei_zzza/yinxingfei_zzza_css/yinxingfei_zzza_main_touch.css?{VERHASH}" />
+<link rel="stylesheet" type="text/css" href="source/plugin/yinxingfei_zzza/yinxingfei_zzza_css/yinxingfei_zzza_dengji_touch.css?{VERHASH}" />
+<style>
+.zzza_tixing,#zzza_tixingb {
+display:none;
+}
+</style>
+{if $_G['uid']}
+	{if $yjjs == 'yes' && $zzza_time == '1'}
+		<div id="yjyem_zzza">
+		<!--{template yinxingfei_zzza:yinxingfei_zzza_zp}--> 
+		</div>
+	{elseif $zzza_time != '1' && $zzza_tiezi4 <= '0'}
+		<div id="yjyem_zzza">
+		<!--{template yinxingfei_zzza:yinxingfei_zzza_zp}--> 
+		</div>
+	{else}
+		
+	{/if}
+{/if}
+<div class="zzza_hall_main cl">
+    <div class="zzza_hall_bottom">
+        <div class="zzza_hall_bottom_right">
+           <div class="zzza_hall_bottom_mid">
+            {if $zzza_tz == 'yes'}
+            <!--{eval include template($zzza_typeid.':'.$zzza_typeid);}-->
+            {else}
+			<!--{eval include template('yinxingfei_zzza:list_view/top_title');}-->
+            <!--{eval include template('yinxingfei_zzza:list_view/list_com');}-->
+            {/if}
+            <div class="zzza_hall_bottom_mid_bottom">
+                {$multipage}
+            </div>
+                
+    </div>
+</div>
+<!--{template common/footer}-->

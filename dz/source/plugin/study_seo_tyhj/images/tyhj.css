@@ -1,0 +1,27 @@
+.tyhj_baidu{background:url(baidu.gif) no-repeat 0 50%;}
+.tyhj_google{background:url(google.gif) no-repeat 0 50%;}
+.tyhj_yahoo{background:url(yahoo.gif) no-repeat 0 50%;}
+.tyhj_sogou{background:url(sogou.gif) no-repeat 0 50%;}
+.tyhj_soso{background:url(soso.gif) no-repeat 0 50%;}
+.tyhj_youdao{background:url(youdao.gif) no-repeat 0 50%;}
+.tyhj_bing{background:url(bing.gif) no-repeat 0 50%;}
+.tyhj_qihoo{background:url(qihoo.gif) no-repeat 0 50%;}
+.tyhj_gfsoso{background:url(gfsoso.gif) no-repeat 0 50%;}
+.tyhj_360{background:url(360.gif) no-repeat 0 50%;}
+.tyhj_jike{background:url(jike.gif) no-repeat 0 50%;}
+.tyhj_sousuo a {padding: 5px 10px 5px 20px;}
+.tyhj_self{width:70%;line-height:28px;font-size: 12px;height:28px;font-weight:bold;white-space:nowrap;overflow:hidden;float:left;}
+.tyhj_tag_div {line-height:28px;height:28px;white-space:nowrap;overflow:hidden;}
+.tyhj_tag{float:right;padding: 0px 0px 0px 20px;background:url(tag.gif) no-repeat 0 50%;}
+.tyhj_tag a {padding: 0px;}
+.tyhj_sousuo_left{width:48%;line-height:18px;height:18px;white-space:nowrap;overflow:hidden;float:left;margin:0 10px 0 0;}
+.tyhj_sousuo_right{width:48%;line-height:18px;height:18px;white-space:nowrap;overflow:hidden;}
+.tyhj_posttop{padding:0px 8px;}
+.ie7 .tyhj_posttop_em a {padding: 5px 8px 5px 25px;}
+.ie6 .tyhj_sousuo_left{text-indent:18px;}
+.ie6 .tyhj_sousuo_right{text-indent:18px;}
+.ie7 .tyhj_sousuo_left{text-indent:18px;}
+.ie7 .tyhj_sousuo_right{text-indent:18px;}
+.ie9 .tyhj_sousuo_left{text-indent:18px;}
+.ie9 .tyhj_sousuo_right{text-indent:18px;}
+/*Powered by www.1314study.com*/

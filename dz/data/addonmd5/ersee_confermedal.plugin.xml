@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Addon MD5]]></item>
+	<item id="ID"><![CDATA[ersee_confermedal.plugin]]></item>
+	<item id="RevisionID"><![CDATA[22917]]></item>
+	<item id="SN"><![CDATA[2017120801eN57u2YU5b]]></item>
+	<item id="RevisionDateline"><![CDATA[1380175205]]></item>
+	<item id="Data">
+		<item id="/discuz_plugin_ersee_confermedal_SC_GBK.xml"><![CDATA[7e64b6f6e8b8dfadc6a4e7dfddbb8675]]></item>
+		<item id="/discuz_plugin_ersee_confermedal_SC_UTF8.xml"><![CDATA[3df3e084fef38eae2d837a7cc55bc0f3]]></item>
+		<item id="/discuz_plugin_ersee_confermedal_TC_BIG5.xml"><![CDATA[708865040c2745031c3cc9f8a33c6422]]></item>
+		<item id="/discuz_plugin_ersee_confermedal_TC_UTF8.xml"><![CDATA[5f041d3f5325f1280894ea13abc21f8b]]></item>
+		<item id="/ersee_confermedal.class.php"><![CDATA[c6fac105e025c51cdf8acac6e81df68b]]></item>
+	</item>
+</root>

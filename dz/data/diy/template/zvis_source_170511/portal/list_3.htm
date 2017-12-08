@@ -1,0 +1,247 @@
+<!--{template common/header}-->
+<!--{eval $list = array();}-->
+<!--{eval $wheresql = category_get_wheresql($cat);}-->
+<!--{eval $list = category_get_list($cat, $wheresql, $page);}-->
+
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+		<a href="$_G[setting][navs][1][filename]">{lang portal}</a> <em>&rsaquo;</em>
+		<!--{loop $cat[ups] $value}--> <a href="{$portalcategory[$value['catid']]['caturl']}">$value[catname]</a><em>&rsaquo;</em><!--{/loop}-->
+		$cat[catname]
+	</div>
+</div>
+<!--{ad/text/wp a_t}-->
+<style id="diy_style" type="text/css"></style>
+
+<div class="wp">
+	<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+
+<div id="ct" class="ct2 wp cl" style="width:1180px!important; margin:0px auto!important;">
+	<div class="mn">
+    	<div class="deanwzadsd">
+        	<!--[diy=deanwzadsd]--><div id="deanwzadsd" class="area"><div id="frameyhT11d" class="frame move-span cl frame-1"><div id="frameyhT11d_left" class="column frame-1-c"><div id="frameyhT11d_left_temp" class="move-span temp"></div><!--{block/301}--></div></div></div><!--[/diy]-->
+        	
+        </div>
+		<div class="deanmn_left">
+        	<div class="deanwzpdtitle">
+                <h4>$cat[catname]</h4>
+                <div class="deantools">
+                    <!--{if ($_G['group']['allowpostarticle'] || $_G['group']['allowmanagearticle'] || $categoryperm[$catid]['allowmanage'] || $categoryperm[$catid]['allowpublish']) && empty($cat['disallowpublish'])}-->
+                    <a href="portal.php?mod=portalcp&ac=article&catid=$cat[catid]" class="deanaddnew" title="发布文章">发布文章</a>
+                    <!--{/if}-->
+                
+                    <!--{if $_G[setting][rssstatus] && !$_GET['archiveid']}--><a href="portal.php?mod=rss&catid=$cat[catid]" class="deanrssartice" target="_blank" title="RSS">RSS</a><!--{/if}-->
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--下家分类-->	
+            <!--{if $cat[subs]}-->
+            <div class="deannextnav">
+                <h4>{lang sub_category}:</h4>
+                <ul>
+                <!--{eval $i = 1;}-->
+                <!--{loop $cat[subs] $value}-->
+                <!--{if $i != 1}--><!--{/if}--><li><a href="{$portalcategory[$value['catid']]['caturl']}" >$value[catname]</a></li><!--{eval $i--;}-->
+                <!--{/loop}-->
+                <div class="clear"></div>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <!--{/if}-->
+            
+            <div class="clear"></div>
+                
+            <!--[diy=listloopbottom]--><div id="listloopbottom" class="area"></div><!--[/diy]-->
+            <div class="clear"></div>
+            <div class="deanartice">
+                <ul>
+                    <!--{loop $list['list'] $value}-->
+                    <!--{eval $highlight = article_title_style($value);}-->
+                    <!--{eval $article_url = fetch_article_url($value);}-->
+                    <li>
+                        <!--{if $value[pic]}-->
+                        <div class="deanarticel">
+                            <a href="$article_url" target="_blank"><img src="$value[pic]" alt="$value[title]" width="250" height="150"/></a><em></em>
+                        </div>
+                        <div class="deanarticer">
+                            <div class="deanarticername"> 
+                                <!--{if $value[catname] && $cat[subs]}--><a href="{$portalcategory[$value['catid']]['caturl']}" class="deantaglebs" target="_blank">$value[catname]</a>
+                                <!--{/if}-->
+                            </div>
+                            <h5> <a href="$article_url" target="_blank" class="deanarttitles xi2" $highlight>$value[title]</a> <!--{if $value[status] == 1}-->({lang moderate_need})<!--{/if}--></h5>
+                            <div class="deanarticersummary">$value[summary]&hellip;&hellip;</div>
+                            <div class="deanatcertop">
+                                <div class="deanatctl">
+                                    <img src="uc_server/avatar.php?uid=$value[uid]&size=large">
+                                </div>
+                                <div class="deanarticerinfo">
+                                        <span class="deanzhuozhenm">
+                                            作者：$value[username]
+                                        </span>
+                                        <em>|</em>
+                                        <span class="deanfabushijian">时间：$value[dateline]</span>
+                                        <em>|</em>
+                                        <span class="deanyuedushu">阅读：{eval $query = DB::query("SELECT t1.viewnum from ".DB::table('portal_article_count')." t1 inner join ".DB::table('portal_article_title')." t2 on t1.aid=t2.aid WHERE t2.aid=$value[aid]"); $dean = DB::fetch($query);echo $dean['viewnum'];}</span>
+                                        <em>|</em>
+                                        <span class="deanhuifushu">回复：{eval $query = DB::query("SELECT t1.commentnum from ".DB::table('portal_article_count')." t1 inner join ".DB::table('portal_article_title')." t2 on t1.aid=t2.aid WHERE t2.aid=$value[aid]"); $dean = DB::fetch($query);echo $dean['commentnum'];}</span>
+                                        <div class="clear"></div>
+                                    </div>
+                                <div class="clear"></div>   
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                        
+                        <!--{else}-->
+                    	<div class="deanarticer_tl">
+                            <div class="deanattltop">
+                            	<!--{if $value[catname] && $cat[subs]}--><a href="{$portalcategory[$value['catid']]['caturl']}" class="deantaglebs" target="_blank">$value[catname]</a>
+                                <!--{/if}-->
+                                <a href="$article_url" target="_blank" class="deanarttitles xi2" $highlight>$value[title]</a> <!--{if $value[status] == 1}-->({lang moderate_need})<!--{/if}-->
+                                <div class="clear"></div>
+                            </div>
+                            <div class="deanarticersummary">$value[summary]&hellip;&hellip;</div>
+                            <div class="deanatcertop">
+                                <div class="deanatctl">
+                                    <img src="uc_server/avatar.php?uid=$value[uid]&size=large">
+                                </div>
+                                <div class="deanarticerinfo">
+                                        <span class="deanzhuozhenm">
+                                            作者：$value[username]
+                                        </span>
+                                        <em>|</em>
+                                        <span class="deanfabushijian">时间：$value[dateline]</span>
+                                        <em>|</em>
+                                        <span class="deanyuedushu">阅读：{eval $query = DB::query("SELECT t1.viewnum from ".DB::table('portal_article_count')." t1 inner join ".DB::table('portal_article_title')." t2 on t1.aid=t2.aid WHERE t2.aid=$value[aid]"); $dean = DB::fetch($query);echo $dean['viewnum'];}</span>
+                                        <em>|</em>
+                                        <span class="deanhuifushu">回复：{eval $query = DB::query("SELECT t1.commentnum from ".DB::table('portal_article_count')." t1 inner join ".DB::table('portal_article_title')." t2 on t1.aid=t2.aid WHERE t2.aid=$value[aid]"); $dean = DB::fetch($query);echo $dean['commentnum'];}</span>
+                                        <div class="clear"></div>
+                                    </div>
+                                <div class="clear"></div>   
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    	<!--{/if}-->
+                    </li>
+                    	
+                    <!--{/loop}-->
+                </ul>
+            </div>
+            <div class="clear"></div>
+            <!--{ad/articlelist/mbm hm/3}--><!--{ad/articlelist/mbm hm/4}-->
+            <!--{if $list['multi']}--><div class="pgs cl" id="deanpage">{$list['multi']}</div><!--{/if}-->
+    
+            <!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+        </div>
+	</div>
+	<div class="sd pph">
+		<!--关注我们-->
+        <div class="deanguanzhu">
+        	<!--[diy=deanguanzhu]--><div id="deanguanzhu" class="area"><div id="framenff7Xc" class="frame move-span cl frame-1"><div id="framenff7Xc_left" class="column frame-1-c"><div id="framenff7Xc_left_temp" class="move-span temp"></div><!--{block/298}--></div></div></div><!--[/diy]-->
+        </div>
+        <!-- 滚动资讯 -->
+		<div class="deansidebox">
+        	<div class="deanpubtitle">
+                <h4>滚动资讯</h4>
+                <div class="deanpbright">
+                    <a href="#" target="_blank">更多</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="focusBox">
+            	<!--[diy=focusBox]--><div id="focusBox" class="area"><div id="frameF8JUZz" class="frame move-span cl frame-1"><div id="frameF8JUZz_left" class="column frame-1-c"><div id="frameF8JUZz_left_temp" class="move-span temp"></div><!--{block/293}--></div></div></div><!--[/diy]-->
+                <a class="prev" href="javascript:void(0)"><</a>
+                <a class="next" href="javascript:void(0)">></a>
+                <ul class="hd">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <script type="text/javascript">
+                jQuery(".focusBox").slide({ mainCell:".pic",effect:"left", autoPlay:true, delayTime:300});
+            </script>
+        </div>
+		
+        <!-- 精选资讯 -->
+		<div class="deansidebox">
+        	<div class="deangltt">
+                <!--[diy=deangltt2]--><div id="deangltt2" class="area"><div id="frameQyWXWL" class="frame move-span cl frame-1"><div id="frameQyWXWL_left" class="column frame-1-c"><div id="frameQyWXWL_left_temp" class="move-span temp"></div><!--{block/294}--></div></div></div><!--[/diy]-->
+                <div class="clear"></div>
+            </div>
+            <div class="deangllists">
+                <ul>
+                    <!--[diy=deangllists]--><div id="deangllists" class="area"><div id="frameLAu3R3" class="frame move-span cl frame-1"><div id="frameLAu3R3_left" class="column frame-1-c"><div id="frameLAu3R3_left_temp" class="move-span temp"></div><!--{block/295}--></div></div></div><!--[/diy]-->
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 推荐咨讯 -->
+		<div class="deansidebox">
+        	<div class="deanpubtitle">
+                <h4>推荐咨讯</h4>
+                <div class="deanpbright">
+                    <a href="#" target="_blank">更多</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="deanonvideos">
+                <ul>
+                    <!--[diy=deangamestt1ss]--><div id="deangamestt1ss" class="area"><div id="frameCYWs1S" class="frame move-span cl frame-1"><div id="frameCYWs1S_left" class="column frame-1-c"><div id="frameCYWs1S_left_temp" class="move-span temp"></div><!--{block/296}--></div></div></div><!--[/diy]-->
+                    <div class="clear"></div>
+                </ul>
+            </div>
+            
+        </div>
+		<!-- 排行榜 -->
+		<div class="deansidebox">
+        	<div class="deanpubtitle">
+                <h4>阅读排行榜</h4>
+                <div class="deanpbright">
+                    <a href="#" target="_blank">更多</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="deanranklistbox">
+                <ul>
+                    <!--[diy=deanranklistbox]--><div id="deanranklistbox" class="area"><div id="framet46395" class="frame move-span cl frame-1"><div id="framet46395_left" class="column frame-1-c"><div id="framet46395_left_temp" class="move-span temp"></div><!--{block/299}--></div></div></div><!--[/diy]-->
+                </ul>
+            </div>
+            <script type="text/javascript">
+			jq(".deanranklistbox ul li").each(function(s){
+			jq(this).hover(function(){
+			jq(this).addClass("on").siblings().removeClass("on");
+			})
+			})
+			</script>
+        </div>
+        <!-- 专访 -->
+		<div class="deansidebox">
+        	<div class="deanpubtitle">
+                <h4>专访</h4>
+                <div class="deanpbright">
+                    <a href="#" target="_blank">更多</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="deanimg_news">
+                <!--[diy=deanimg_news]--><div id="deanimg_news" class="area"><div id="frametB2gjs" class="frame move-span cl frame-1"><div id="frametB2gjs_left" class="column frame-1-c"><div id="frametB2gjs_left_temp" class="move-span temp"></div><!--{block/297}--></div></div></div><!--[/diy]-->
+                
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!--ads-->
+        <div class="deansideads"><!--[diy=deansideads]--><div id="deansideads" class="area"><div id="framesYYpGP" class="frame move-span cl frame-1"><div id="framesYYpGP_left" class="column frame-1-c"><div id="framesYYpGP_left_temp" class="move-span temp"></div><!--{block/300}--></div></div></div><!--[/diy]--></div>
+        
+	</div>
+</div>
+<div class="wp mtn">
+	<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+</div>
+
+<!--{template common/footer}-->

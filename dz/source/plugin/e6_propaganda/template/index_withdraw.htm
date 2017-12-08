@@ -1,0 +1,42 @@
+<!--{template common/header}-->
+<!--{template e6_propaganda:left_header}-->
+		<style>.e6_ul li {margin-bottom:5px;}</style>
+		<form action="plugin.php?id=e6_propaganda&nav=withdraw" name="form" method="post">
+		<input type="hidden" value="2" name="step">
+		<ul class="e6_ul">
+			{$small_money}
+			<li>{$withdraw_money}</li>
+			{$profile_content}
+			<li style="margin-top:10px;">{lang e6_propaganda:w_1}: <input type="text" class="px vm" value="{$e6_propaganda['withdraw_money']}" size="15" name="money"/> <button type="submit" class="pn vm" type="submit" {$disabled}><em>{lang e6_propaganda:w_2}</em></button> <font color="blue">{$fee_content}</font></li>
+		</ul>
+		</form>
+	</div>
+</div>
+<div class="bm">
+	<div class="bm_h cl">
+		<h2>{lang e6_propaganda:w_8}</h2>
+	</div>
+	<div class="bm_c bid">
+		<table summary="e6_nav_name" cellspacing="0" cellpadding="0" class="dt">
+			<tr style="color:#FF6600;">
+				<td>ID</td>
+				<td>{lang e6_propaganda:w_3}</td>
+				<td>{lang e6_propaganda:w_4}</td>
+				<td>{lang e6_propaganda:w_5}</td>
+				<td>{lang e6_propaganda:w_6}</td>
+				<td>{lang e6_propaganda:w_7}</td>
+			</tr>
+			<!--{loop $list $key $value}-->
+			<tr>
+				<td>$value[n]</td>
+				<td>$value[money]</td>
+				<td>$value[feemoney]</td>
+				<td>$value[date]</td>
+				<td>$value[ok]</td>
+				<td>$value[okdate]</td>
+			</tr>
+			<!--{/loop}-->
+		</table>		
+		<!--{if $multi}--><div class="pgs cl mtm">$multi</div><!--{/if}-->
+<!--{template e6_propaganda:left_footer}-->
+<!--{template common/footer}-->

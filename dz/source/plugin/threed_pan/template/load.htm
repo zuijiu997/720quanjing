@@ -1,0 +1,60 @@
+{template common/header} 
+<script>
+function inst_pan() {
+	if(isUndefined(selection)) {
+		var selection = getSel();
+		if(selection === false) {
+			selection = '';
+		} else {
+			selection += '';
+		}
+	}
+		var vdiskprice = $('vdiskprice').value;
+        var vdisklink1 = $('vdiskurl').value;
+        var vdiskname1 = $('vdiskname').value;
+         if (vdiskprice.replace(/[0-9\ ]*/ig, '') != '') {
+              alert("{lang threed_pan:load1}");
+                return false;
+            } else {
+	var opentag = '[' + 'pan=' + vdisklink1+']';
+	var closetag = '[/pan]';
+	if(vdiskprice!='')vdiskname1=vdiskname1+'|'+vdiskprice;
+	var text = opentag + selection+vdiskname1 + closetag;
+
+	insertText(text, strlen(opentag), strlen(closetag), true);
+	hideWindow('loadbox');
+			}
+}
+</script>
+<table cellpadding="0" cellspacing="0">
+  <tr>
+    <td><h3 class="flb"><em>{lang threed_pan:load2}</em><span><a onclick="hideWindow('loadbox');" class="flbc" href="javascript:;">{lang threed_pan:load3}</a></span></h3>
+      <div class="c">
+        <div style="width:640px;height:150px;">
+          <form id="vdisk_form"  target="vdisk_iframe" action="" method="post" enctype="application/x-www-form-urlencoded" accept-charset=utf-8>
+            <table cellpadding="0" cellspacing="0" width="100%">
+              <tbody>
+                <tr class="xg1">
+                  <th width="54%" class="pbn">{lang threed_pan:load4}</th>
+                  <th width="40%" class="pbn">{lang threed_pan:load5}</th>
+                  <th width="6%" class="pbn">{lang threed_pan:load6}</th>
+                  
+                </tr>
+                <tr height="30">
+                  <td><input id="vdiskurl" type="text" value="http://" style="width: 95%;"></td>
+                  <td><input id="vdiskname" type="text" value="" style="width: 95%;" ></td>
+                  <td><input id="vdiskprice" type="text"value=""></td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </div>
+    
+      <p class="o pns">
+      	<button class="pn pnc" style="width: 100px;" type="button" id="e_vdisk_btn_charu" onclick="inst_pan()"><strong>{lang threed_pan:load7}</strong></button>
+        <button type="submit" id="ctrlid_submit" class="pn pnc" onclick="hideWindow('loadbox')"><strong>{lang threed_pan:load3}</strong></button>
+      </p></td>
+  </tr>
+</table>
+{template common/footer}

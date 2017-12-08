@@ -1,0 +1,23 @@
+<!--{block return}-->
+<script language="javascript">
+			function showlist(){
+			var tbody6 = $("normalthread_892802");
+					var tr6 = tbody6.insertRow(1);
+					tr6.id = "ListTr_892802";
+					tr6.style.cssText="width:100%;";
+					var td6 = tr6.insertCell(-1);
+					td6.id = "ListTd_892802";
+					td6.colSpan = 6;
+					td6.style.cssText="padding:5px;";
+					var div6 = document.createElement("DIV");
+					div6.id = "divLoad_892802";
+					div6.style.cssText="color:#999;";
+					div6.innerHTML = "  安庆这边能找到的鲜族人开的饭店不超过2家,本来想发在美食版块,但摄影区都是人像，风景，挑动一下大家的味蕾，特把此东西发在此版块,美食摄影算是摄影的一个分支,构图要点抓特写和色泽，暖色调常用这张图 纯属美女插楼- - 石锅牛肉拌饭特写很重要同样 拍摄 ...<br /><a href='forum.php?mod=viewthread&tid=892802'><img src=data/attachment/forum/201210/20/1506466tx9ohrlygfmtyrx.jpg height=100 style='margin:5px;'></a><a href='forum.php?mod=viewthread&tid=892802'><img src=data/attachment/forum/201210/20/150656r9nyf3if8luee8qq.jpg height=100 style='margin:5px;'></a><a href='forum.php?mod=viewthread&tid=892802'><img src=data/attachment/forum/201210/20/150708p7io43yv84297ie2.jpg height=100 style='margin:5px;'></a>";
+					td6.appendChild(div6);
+			}
+			showlist();
+</script>
+<!--{loop $threadlist $key $value}-->
+<a href='forum.php?mod=viewthread&tid=$value[tid]'>$value[subject]</a>
+<!--{/loop}-->
+<!--{/block}-->

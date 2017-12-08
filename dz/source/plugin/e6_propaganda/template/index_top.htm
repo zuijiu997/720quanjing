@@ -1,0 +1,74 @@
+<!--{template common/header}-->
+<!--{template e6_propaganda:left_header}-->
+<style>
+.e6_table tr{border-left: 1px solid #CDCDCD;border-right: 1px solid #CDCDCD;}
+.e6_tr {color:#0096C2;background: none repeat scroll 0 0 #F2F2F2;}
+.e6_tr td {font-szie:20px;font-weight:bold;text-align:center;}
+.e6_num {font-size:18px;color:#0096C2;text-align:center;}
+</style>
+<table width="100%">
+	<tr>
+		<td width="32%" valign="top">
+			<table summary="e6_nav_name" cellspacing="0" cellpadding="0" class="dt e6_table">
+				<tr class="e6_tr">
+					<td colspan="3"><h2>{lang e6_propaganda:top_1}</h2></td>
+				</tr>
+				<tr style="color:#FF6600;">
+					<td width="33%" align="center">{lang e6_propaganda:top_2}</td>
+					<td width="33%">{lang e6_propaganda:top_3}</td>
+					<td width="33%">{lang e6_propaganda:top_4}</td>
+				</tr>
+				<!--{loop $newuser $key $value}-->
+				<tr>
+					<td class="e6_num">$value[n]</td>
+					<td><a href="home.php?mod=space&uid={$value['uid']}&do=profile" target="_blank">{$value['username']}</a></td>
+					<td><!--{if $value[fuid1]>0}--><a href="home.php?mod=space&uid={$value['fuid1']}&do=profile" target="_blank">{$value['fuid_username']}</a><!--{else}-->{$value['fuid_username']}<!--{/if}--></td>
+				</tr>
+				<!--{/loop}-->
+			</table>
+		</td>
+		<td width="2%"></td>
+		<td width="32%" valign="top">
+			<table summary="e6_nav_name" cellspacing="0" cellpadding="0" class="dt e6_table">
+				<tr class="e6_tr">
+					<td colspan="3"><h2>{lang e6_propaganda:top_5}</h2></td>
+				</tr>
+				<tr style="color:#FF6600;">
+					<td width="33%" align="center">{lang e6_propaganda:top_6}</td>
+					<td width="33%">{lang e6_propaganda:top_7}</td>
+					<td width="33%">{lang e6_propaganda:top_3}</td>
+				</tr>
+				<!--{loop $moneylist $key $value}-->
+				<tr>
+					<td class="e6_num">$value[n]</td>
+					<td>$value[money]</td>
+					<td><a href="home.php?mod=space&uid={$value['uid']}&do=profile" target="_blank">{$value['username']}</a></td>
+				</tr>
+				<!--{/loop}-->
+			</table>
+		</td>
+		<td width="2%"></td>
+		<td width="32%" valign="top">
+			<table summary="e6_nav_name" cellspacing="0" cellpadding="0" class="dt e6_table">
+				<tr class="e6_tr">
+					<td colspan="3"><h2>{lang e6_propaganda:top_8}</h2></td>
+				</tr>
+				<tr style="color:#FF6600;">
+					<td width="33%" align="center">{lang e6_propaganda:top_6}</td>
+					<td width="33%">{lang e6_propaganda:top_9}</td>
+					<td width="33%">{lang e6_propaganda:top_3}</td>
+				</tr>
+				<!--{loop $registerlist $key $value}-->
+				<tr>
+					<td class="e6_num">$value[n]</td>
+					<td>{$value['register']}{lang e6_propaganda:top_10}</td>
+					<td><a href="home.php?mod=space&uid={$value['uid']}&do=profile" target="_blank">{$value['username']}</a></td>
+				</tr>
+				<!--{/loop}-->
+			</table>
+		</td>
+	</tr>
+</table>		
+<!--{if $multi}--><div class="pgs cl mtm">$multi</div><!--{/if}-->
+<!--{template e6_propaganda:left_footer}-->
+<!--{template common/footer}-->

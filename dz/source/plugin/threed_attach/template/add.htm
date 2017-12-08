@@ -1,0 +1,171 @@
+<!--{eval}-->
+<!--
+
+function show_addpan($group_arr,$tid,$attachlist) {
+global $_G;
+$thd_info=$_G['cache']['plugin']['threed_attach']['thd_info'];
+//print_r($_G);
+-->
+<!--{/eval}-->
+<!--{block return}-->
+
+
+<script>
+function toTxt(str) {  
+    var RexStr = /\<|\>|\"|\'|\(|\)|\./g  
+    str = str.replace(RexStr, function(MatchStr) {  
+        switch (MatchStr) {  
+        case "<":  
+            return "¡¶";  
+            break;  
+        case ">":  
+            return "¡·";  
+            break;  
+        case "\"":  
+            return "¡±";  
+            break;  
+        case "'":  
+            return "¡®";  
+            break;  
+        case "(":  
+            return "£¨";  
+            break;  
+        case ")":  
+            return "£©";  
+            break; 
+        case ".":  
+            return "¡£";  
+            break; 
+        default:  
+            break;  
+        }  
+    })  
+    return str;  
+}  
+function inst_pan() {
+	if(isUndefined(selection)) {
+		var selection = getSel();
+		if(selection === false) {
+			selection = '';
+		} else {
+			selection += '';
+		}
+	}
+		var pan_price = $('pan_price').value;
+        var pan_link1 = $('pan_url').value;
+        var pan_name1 = $('pan_name').value;
+        if(pan_link1==''||pan_name1==''){
+            alert("{lang threed_attach:load8}");
+                return false;
+        }
+        pan_link1 = encodeURIComponent(pan_link1);
+	pan_name1 = pan_name1;
+        var pan_readperm=$('pan_readperm').value;
+        pan_name1 =  toTxt(pan_name1);
+         if (pan_price.replace(/[0-9\ ]*/ig, '') != '') {
+              alert("{lang threed_attach:load1}");
+                return false;
+            } else {
+	           var xmlHttp=new Ajax('HTML', 'pan__iframe');               
+                xmlHttp.get('plugin.php?id=threed_attach:addattach&formhash={FORMHASH}&ac=add&tid={$tid}&name=' + pan_name1 + '&url=' + pan_link1 +'&readaccess=' + pan_readperm + '&price=' + pan_price + '&callback=?',function(json){
+        var INDEX = json;
+        //alert(INDEX);
+        var TEMP_BOX_ID = 'attachlist';
+         var st='<option value="0">{lang threed_attach:attach2}</option>';
+        <!--{loop $group_arr $val $group}-->
+        if(pan_readperm=={$group[readaccess]}&&pan_readperm){
+		st+='<option value="{$group[readaccess]}" title="{lang threed_attach:attachreadperm} {$group[readaccess]}" selected = "selected" >{$group[grouptitle]}</option>';}else{
+        st+='<option value="{$group[readaccess]}" title="{lang threed_attach:attachreadperm} {$group[readaccess]}" >{$group[grouptitle]}</option>';
+		}
+		<!--{/loop}-->
+       st+='<option value="255">{lang threed_attach:attach1}</option>';
+        var t = '<tbody id="attach_' + INDEX + '"><tr><td class="attswf"><p id="attach' + INDEX + '"><span> <img src="static/image/filetype/rar.gif" border="0" class="vm" alt=""> <a href="javascript:;" class="xi2" id="attachname' + INDEX + '" isimage="0" onclick="insertAttachTag(\'' + INDEX + '\');doane(event);" title="' + pan_name1 + '">' + pan_name1 + '</a>&nbsp;&nbsp;<a href="javscript:;" onclick=showeditbox('+INDEX+')><font style="color:#f00;" >{lang threed_attach:load9}</font></a></span></p> <span id="attachupdate' + INDEX + '"></span>    </td>  <td class="atds"> <input type="text" name="attachnew[' + INDEX + '][description]" class="px" value="' + pan_name1 + '" size="6"> </td> <td class="attv"> <select class="ps" name="attachnew[' + INDEX + '][readperm]" id="readperm" tabindex="1" style="width:90px"> '+st+'</select> </td> <td class="attpr"> <input type="text" name="attachnew[' + INDEX + '][price]" class="px" value="' + pan_price + '" size="1"> </td> <td class="attc"> <a href="javascript:;" class="d" onclick="delAttach(' + INDEX + ',1);return false;">{lang threed_attach:load10}</a> </td> </tr></tbody>';
+        var box = document.getElementById(TEMP_BOX_ID).getElementsByTagName('table');
+        var html_ = '';
+        if (box.length != 0) {
+            html_ = document.getElementById(TEMP_BOX_ID).innerHTML;
+            };
+        document.getElementById(TEMP_BOX_ID).innerHTML = '';
+        var html = '<table cellpadding="0" cellspacing="0" summary="post_attachbody" border="0" width="100%">';
+        document.getElementById(TEMP_BOX_ID).innerHTML += html + t + html_ + '</table>';
+        //var TEMP_BOX_NAME="attachnew[" + INDEX + "][readperm]";
+        //document.getElementsByName(TEMP_BOX_NAME).value=pan_readperm;
+        var atttext = '[attach]'+INDEX+'[/attach]';
+        insertText(atttext, false);
+        document.getElementById('pan_url').value="http://";
+        document.getElementById('pan_name').value="";
+        document.getElementById('pan_readperm').value="0";
+        document.getElementById('pan_price').value="";
+        switchAttachbutton('attachlist');
+        hideAttachMenu('attach');
+       
+    });
+
+}
+}
+function showeditbox(INDEX){
+var boxurl='{$_G[siteurl]}plugin.php?id=threed_attach:edit&aid='+ INDEX;
+showWindow("editbox",boxurl);
+hideAttachMenu('attach');
+}
+function add_edit_button(){
+    switchAttachbutton('attachlist');
+    <!--{loop $attachlist $k $attach_arr}-->
+    var p_id='attach'+$attach_arr[aid];
+    var p_box='';
+    p_box = document.getElementById(p_id).getElementsByTagName('span')[0].innerHTML;
+    document.getElementById(p_id).innerHTML = '';
+    document.getElementById(p_id).innerHTML = '<span>'+ p_box + '</span>' + '<input name="attachupdate['+$attach_arr[aid]+']" id="attachupdate'+$attach_arr[aid]+'" size="2" type="hidden">'+'&nbsp;&nbsp;<a href="javscript:;" onclick=showeditbox('+$attach_arr[aid]+')><font style=" color:#f00;" >{lang threed_attach:load9}</font></a>';
+    <!--{/loop}-->
+}
+</script>
+<div  id="e_filelist_pan_upload" style="display:none;">	
+<table cellpadding="0" cellspacing="0">
+  <tr>
+    <td><h3 class="flb"><em>{lang threed_attach:load2}</em><span style="color:#f00">{lang threed_attach:load11}</span></h3>
+      <div class="c">
+        <div style="width:560px;height:150px;">
+          <form id="pan__form"  target="pan__iframe" action="" method="post" enctype="application/x-www-form-urlencoded" accept-charset=utf-8>
+            <table cellpadding="0" cellspacing="0" width="100%">
+              <tbody>
+                <tr class="xg1">
+                  <th width="48%" class="pbn">{lang threed_attach:load4}</th>
+                  <th width="30%" class="pbn">{lang threed_attach:load5}</th>
+                  <th width="16%" class="pbn">{lang threed_attach:attachreadperm}</th>
+                  <th width="6%" class="pbn">{lang threed_attach:load6}</th>
+                  
+                </tr>
+                <tr height="30">
+                  <td><input id="pan_url" type="text" value="http://" style="width: 98%;"></td>
+                  <td><input id="pan_name" type="text" value="" style="width: 98%;" ></td>
+                  <td><select class="ps" id="pan_readperm" style="width:98%">
+							<option value="0">{lang threed_attach:attach2}</option>
+						<!--{loop $group_arr $val $group}-->
+							<option value="$group['readaccess']" title="{lang threed_attach:attachreadperm} $group['readaccess']" >$group['grouptitle']</option>
+						<!--{/loop}-->
+							<option value="255">{lang threed_attach:attach1}</option>
+					</select>
+                  </td>
+                  <td><input id="pan_price" type="text"value="" style="width:98%"></td>  
+                </tr>
+                <tr height="30">
+                <td colspan="3" scope="row" style="padding-top: 10px;">$thd_info</td>
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </div>
+      <p class="o pns">
+      	<button class="pn pnc" style="width: 100px;" type="button" id="e_pan__btn_charu" onclick="inst_pan()"><strong>{lang threed_attach:load7}</strong></button>
+        <button type="submit" id="ctrlid_submit" class="pn pnc" onclick="hideAttachMenu('attach')"><strong>{lang threed_attach:load3}</strong></button>
+      </p></td>
+  </tr>
+</table>
+</div>
+<!--{/block}-->
+<!--{eval}-->
+<!--
+	return $return;
+}
+-->
+<!--{/eval}-->

@@ -1,0 +1,57 @@
+
+<h3 class="flb" style="cursor: move;"><em id="return_c" fwin="select_pay_type">{lang qmx8_buy_usergroup:qmx8_select_pay}</em><span><a title="{lang qmx8_buy_usergroup:qmx8_close}" onclick="hideWindow('select_pay_type')" class="flbc" href="javascript:;">{lang qmx8_buy_usergroup:qmx8_close}</a></span></h3>
+<div class="pay_type_box">
+
+<table cellspacing="0" cellpadding="0">
+	<tbody>
+		<tr>
+			<th>{lang qmx8_buy_usergroup:qmx8_pay_type}</th>
+			<td colspan="2">
+				<!--{if $_G[setting][ec_tenpay_bargainor] || $_G[setting][ec_tenpay_opentrans_chnid]}-->
+					<div class="mbm pbn bbda cl">
+						<div id="div#tenpayBankList"></div><span id="#bank_type_value"></span>
+						<link rel="stylesheet" type="text/css" href="http://union.tenpay.com/bankList/css_col3.css" />
+						{eval $s=strtotime(date('Y-m-d H:i:s'))}
+						<script type="text/javascript">
+							$('div#tenpayBankList').html = function(){$('div#tenpayBankList').innerHTML = htmlString.replace(/<span.+?\/span>/g, ''); };
+							$("#bank_type_value").val = function(value){
+						    	$('bank_type_value_hidden').value='{$select_pay}'+value;
+								obj=$('next_bt');
+								obj.style.cssText="background-position: 0 -70px;color: #FFFFFF;";
+	        					obj.onclick=pay;
+							};
+							appendscript('http://union.tenpay.com/bankList/bank.js?{$s}', '');
+						</script>
+					</div>
+				<!--{/if}-->
+				<div class="long-logo mbw">
+					<ul>
+					<!--{if $_G[setting][ec_account]}-->
+						<li class="z" >
+							<input name="bank_type" type="radio" value="alipay" class="vm" id="apitype_alipay" $ecchecked onclick="set_alipay(this)" /><label class="vm" style="margin-right:18px;width:135px;height:32px;background:#FFF url({STATICURL}image/common/alipay_logo.gif) no-repeat;border:1px solid #DDD;display:inline-block;" for="apitype_alipay"></label>
+						</li>
+					<!--{/if}-->
+
+					<!--{if !$_G[setting][ec_tenpay_bargainor] && !$_G[setting][ec_tenpay_opentrans_chnid] && !$_G[setting][ec_account]}-->
+					<li>{lang qmx8_buy_usergroup:qmx8_config_tip}
+					<img src="source/plugin/qmx8_buy_usergroup/ap.jpg">
+					</li>
+					<!--{else}-->
+					<li class="r"><span class="btn btn-ok"><input id="next_bt" type="submit" value="{lang qmx8_buy_usergroup:qmx8_next}" onclick=""></span></li>
+					<!--{/if}-->
+					</ul>
+					<script type="text/javascript">
+					    function set_alipay(obja){
+					    	$('bank_type_value_hidden').value='{$select_pay}'+obja.value;
+							obj=$('next_bt');
+							obj.style.cssText="background-position: 0 -70px;color: #FFFFFF;";
+        					obj.onclick=pay;
+
+    					}
+					</script>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>

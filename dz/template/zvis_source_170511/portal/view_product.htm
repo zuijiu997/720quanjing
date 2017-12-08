@@ -1,0 +1,298 @@
+<!--{template common/header}-->
+<!--[name][迪恩素材资源教程下载2-宫格频道内容页][/name]-->
+
+<script type="text/javascript" src="{$_G['setting']['jspath']}forum_viewthread.js?{VERHASH}"></script>
+<script type="text/javascript">zoomstatus = parseInt($_G['setting']['zoomstatus']), imagemaxwidth = '{$_G['setting']['imagemaxwidth']}', aimgcount = new Array();</script>
+<style type="text/css">
+.wp, #wp{ width:100%;}
+body{ background:#f4f4f4!important;}
+#pt{ margin:0;}
+#nv_portal .vw .pren em{ float:left; width:575px;}
+#comment_ul ul{ width: 96.8%;padding-left: 30px;}
+.deanacticletop{}
+.deanacticletop h4{font-size:40px; line-height:58px;color:#333; font-weight:normal; text-align:center; margin-bottom:15px;}
+.ct2 .mn {border-right:0; float:left; width:812px; padding:15px 25px; background:#fff;}
+
+.deanmanagerart{ border-bottom:1px solid #ededed; padding:5px 0px 10px 0; text-align:center; margin-bottom:15px;}
+.deanmanagerart span{ display:inline-block; padding-left:25px; font-size:12px; color:#999; margin-right:10px;}
+.deanmanagerart span a{ font-size:12px; color:#999;}
+.deanmanagerart span a:hover{ color:#07AEFC}
+.deanmanagerart span.deanviews{background:url(./template/zvis_source_170511/deancss/portal_list_view/view.png) left center no-repeat;}
+.deanmanagerart span.deanreplies{background:url(./template/zvis_source_170511/deancss/portal_list_view/reply.png) left center no-repeat;}
+.deanmanagerart span.deanedit{background:url(./template/zvis_source_170511/deancss/portal_list_view/edit.png) left center no-repeat;}
+.deanmanagerart span.deandelete{background:url(./template/zvis_source_170511/deancss/portal_list_view/delete.png) left center no-repeat;}
+.deanmanagerart span.deanshoucang{background:url(./template/zvis_source_170511/deancss/portal_list_view/xin.png) left center no-repeat;}
+.deanmanagerart span.deanfenxianga{background:url(./template/zvis_source_170511/deancss/portal_list_view/share.png) left center no-repeat;}
+.deanmanagerart span.deanyaoqing{background:url(./template/zvis_source_170511/deancss/portal_list_view/invite.png) left center no-repeat;}
+.deanmanagerart span.deanadds{background:url(./template/zvis_source_170511/deancss/portal_list_view/add.png) left center no-repeat;}
+.deanmanagerart span.deanpushed{background:url(./template/zvis_source_170511/deancss/portal_list_view/cloud.png) left center no-repeat;}
+
+.deancaser_rr{ float:right; width:300px;}
+.deanfbxxbottom{ padding-top:10px; border-top:1px solid #ededed;}
+.deanfbxxbottom span{ text-align:center; font-size:12px; color:#999;  float: left;  width: 33%; display:block;line-height: 24px;}
+.deanfbxxbottom span.deansss{ margin-right:-1px;}
+.deanfbxxbottom span.deanviews{ border-left:1px solid #ededed; border-right:1px solid #ededed; width: 34%;}
+.deanfbxxbottom span.deanreplies{margin-left:-1px;}
+.deanfbxxbottom span.deanreplies a{}
+.deanfbxxbottom span em{ display: block; font-size: 20px; color: #333;  font-weight: normal;}
+/*作者栏*/
+.deanfabuxinxi{ width:270px; padding:15px; background:#fff; margin-bottom:15px; position:relative;}
+.deanfabuxinxi i{ display:block; width:12px; height:20px; background:url(./template/zvis_source_170511/deancss/portal_list_view/b-trangle.png) center no-repeat; position:absolute; top:70px; left:-12px;}
+
+.bm{ border:0; margin-bottom:0;}
+.deanfbxxtop{}
+
+
+.deanfbxxtop a{ display:block; padding-top:10px; }
+.deantx{width:88px; height:88px; margin:0 auto;}
+.deantx img{width:88px; height:88px; border-radius:100%;}
+.deanzzm{ text-align:center; height:20px; line-height:20px; margin:14px 0 10px 0; font-size:16px; color:#333; font-weight:bold;}
+.deanfbxxtop a span{ display:block; width:80px; height:20px; margin:0 auto 15px auto; line-height:20px; text-align:center; font-size:12px; color:#fff; border-radius:24px;  background-color: #07AEFC; background: linear-gradient(90deg,#5ea2ff,#00e3ff);}
+.deanzztouxian{ display:block; margin:10px auto 15px auto; text-align:center;height:23px; line-height:23px; background:#07AEFC; font-size:12px; color:#fff; border-radius:24px; max-width:80px; overflow:hidden;}
+.deanfbxxtop a em{ text-align:center; height:20px; line-height:20px; font-size:12px; color:#333; display:block; margin-bottom:15px;}
+
+
+/* 标题 */
+
+.vw, #comment{ width:100%!important;}
+.deanpc_right{float: left;width: 1000px;margin: 40px 0px 40px 50px; }
+.vw .s{ padding:5px 15px; background:#f1f1f1;}
+.vw .o{ border-top:1px solid #ededed; margin:0!important;}
+.vw,#comment{ width:755px;}
+ #nv_portal .vw .d{ margin:0; border-bottom:0;}
+#comment_ul .portrait img{ width:50px; height:50px;}
+#comment_ul .portrait{left:-60px;}
+.tedt{ border:none!important;}
+#related_article .bm_c{ padding:0;}
+.pn{ font-size:12px!important; font-weight:normal!important;}
+/*作者文章*/
+.deanthreadslists{}
+.deanthreadslists li{ padding-bottom:10px; margin-bottom:10px; border-bottom:1px solid #ededed;}
+.deanthreadslists li:last-child{ padding-bottom:0; margin-bottom:0; border-bottom:0;}
+.deanotersarts{ width:270px; margin-top:20px;}
+.deanotersarts h3{  height:30px; margin-bottom:10px; width:100%; position:relative;}
+.deanotersarts h3 em{ display:block; width:100%; height:1px; background:#ededed; position:absolute; top:10px; left:0;}
+.deanotersarts h3 span{display: block; font-size: 16px; background:#fff; padding:0 10px; font-weight:300; color: #07AEFC; height: 23px; line-height: 23px; position:absolute; top:-1px; left:95px;}
+.deanoarts{}
+.deanoarts ul li{ margin-bottom:8px; padding-bottom:8px;overflow:hidden; border-bottom:1px dashed #ededed;}
+.deanoarts ul li:last-child{ border-bottom:0; margin-bottom:0; padding-bottom:0;}
+.deanoarts ul li a{  font-size:14px; color:#333; display:block; line-height:23px; overflow:hidden;}
+.deanoarts ul li a:hover{ color:#07AEFC;}
+.deanoarts ul li span{ display:block; height:33px; line-height:33px; font-size:12px; color:#999; padding-left:23px; background:url(./template/zvis_source_170511/deancss/portal_list_view/date1.png) left center no-repeat;}
+/*相关阅读*/
+.deanxgydbox{ padding:15px 15px 7px 15px; background:#fff; margin-bottom:15px;}
+.deanxgydbox h3{  height:30px; margin-bottom:10px; width:100%; position:relative;}
+.deanxgydbox h3 em{ display:block; width:100%; height:1px; background:#ededed; position:absolute; top:10px; left:0;}
+.deanxgydbox h3 span{display: block; font-size: 16px; background:#fff; padding:0 10px; font-weight:300; color: #07AEFC; height: 23px; line-height: 23px; position:absolute; top:-1px; left:95px;}
+.deanrpicfdf{ width:100px; height:65px; float:left;}
+.deanrpicfdf img{ width:100px; height:65px;}
+.deanrpingf{ width:156px; float:right;}
+.deanrpingf a{ display:block; height:44px; line-height:22px; overflow:hidden; font-size:14px; color:#333; margin-bottom:5px;}
+.deanrpingf a:hover{ color:#07AEFC}
+.deanrpingf span{ font-size:12px; color:#999; display:block; height:20px; line-height:20px; overflow:hidden;}
+.deanrpingf span em{}
+
+
+
+/*上一篇下一篇*/
+.deanupdowns{}
+.deanupdowns h5{ font-size:16px; color:#9ca4ab; font-weight:normal; height:30px; line-height:30px;}
+.deanupdowns a{ display:block; height:30px; line-height:30px; font-size:14px; color:#333; overflow:hidden;text-overflow:ellipsis; white-space:nowrap; }
+.deanupdowns a:hover{ color:#07AEFC}
+.deanupdowns em{ font-size:12px; color:#999;}
+</style>
+
+<!--{hook/view_article_top}-->
+<!--{ad/text/wp a_t}-->
+<div id="ct" class="ct2 wp cl" style="width:1180px!important; margin:20px auto;">
+    	<div class="mn">
+        	<div class="deanacticletop">
+            	<h4>$article[title] <!--{if $article['status'] == 1}-->({lang moderate_need})<!--{elseif $article['status'] == 2}-->({lang ignored})<!--{/if}--></h4>
+        	</div>
+            
+            <div class="deanmanagerart">
+            	<span class="deanedit"><!--{if $article[author]}-->{lang view_author_original}: $article[author]<!--{/if}-->
+                        <!--{if $article[from]}-->{lang from}: <!--{if $article[fromurl]}--><a href="$article[fromurl]" target="_blank">$article[from]</a><!--{else}-->$article[from]<!--{/if}--><!--{/if}-->
+                        <!--{if $_G['group']['allowmanagearticle'] || ($_G['group']['allowpostarticle'] && $article['uid'] == $_G['uid'] && (empty($_G['group']['allowpostarticlemod']) || $_G['group']['allowpostarticlemod'] && $article['status'] == 1)) || $categoryperm[$value['catid']]['allowmanage']}-->
+                        <a href="portal.php?mod=portalcp&ac=article&op=edit&aid=$article[aid]">{lang edit}</a>
+                     </span>
+                     <span class="deandelete">
+                        <!--{if $article[status]>0 && ($_G['group']['allowmanagearticle'] || $categoryperm[$value['catid']]['allowmanage'])}-->
+                        <a href="portal.php?mod=portalcp&ac=article&op=verify&aid=$article[aid]" id="article_verify_$article[aid]" onclick="showWindow(this.id, this.href, 'get', 0);">{lang moderate}</a>
+                            <!--{else}-->
+                                <a href="portal.php?mod=portalcp&ac=article&op=delete&aid=$article[aid]" id="article_delete_$article[aid]" onclick="showWindow(this.id, this.href, 'get', 0);">{lang delete}</a>
+                            <!--{/if}-->
+                        <!--{/if}-->
+                        <!--{hook/view_article_subtitle}-->
+                     </span>
+                     <span class="deanshoucang"><a href="home.php?mod=spacecp&ac=favorite&type=article&id=$article[aid]&handlekey=favoritearticlehk_{$article[aid]}" id="a_favorite" onclick="showWindow(this.id, this.href, 'get', 0);">{lang favorite}</a></span>
+                    <!--{if helper_access::check_module('share')}-->
+                    <span class="deanfenxianga"><a href="home.php?mod=spacecp&ac=share&type=article&id=$article[aid]&handlekey=sharearticlehk_{$article[aid]}" id="a_share" onclick="showWindow(this.id, this.href, 'get', 0);">{lang share}</a></span>
+                    <!--{/if}-->
+                    <span class="deanyaoqing"><a href="misc.php?mod=invite&action=article&id=$article[aid]" id="a_invite" onclick="showWindow('invite', this.href, 'get', 0);">{lang invite}</a></span>
+                    <!--{if $_G['group']['allowmanagearticle'] || ($_G['group']['allowpostarticle'] && $article['uid'] == $_G['uid'] && (empty($_G['group']['allowpostarticlemod']) || $_G['group']['allowpostarticlemod'] && $article['status'] == 1)) || $categoryperm[$value['catid']]['allowmanage']}-->
+                    <span class="deanadds"><a id="related_article" href="portal.php?mod=portalcp&ac=related&aid=$article[aid]&catid=$article[catid]&update=1" onclick="showWindow(this.id, this.href, 'get', 0);return false;">{lang article_related}</a></span>
+                    
+                    <!--{/if}-->
+                    <!--{if $article[status]==0 && ($_G['group']['allowdiy']  || getstatus($_G['member']['allowadmincp'], 4) || getstatus($_G['member']['allowadmincp'], 5) || getstatus($_G['member']['allowadmincp'], 6))}-->
+                    <span class="deanpushed"><a href="portal.php?mod=portalcp&ac=portalblock&op=recommend&idtype=aid&id=$article[aid]" onclick="showWindow('recommend', this.href, 'get', 0)">{lang blockdata_recommend}</a></span>
+                    <!--{/if}-->
+            </div>
+            <div class="bm vw">
+                <div class="d">
+                    <table cellpadding="0" cellspacing="0" class="vwtb"><tr><td id="article_content">
+                        <!--{ad/article/a_af/1}-->
+                        <!--{if $content[title]}-->
+                        <div class="vm_pagetitle xw1">$content[title]</div>
+                        <!--{/if}-->
+                        $content[content]
+                    </td></tr></table>
+                    <!--{hook/view_article_content}-->
+                    <!--{if $multi}--><div class="ptw pbw cl">$multi</div><!--{/if}-->
+                    <script type="text/javascript" src="{$_G[setting][jspath]}home.js?{VERHASH}"></script>
+                    <div id="click_div">
+                        <!--{template home/space_click}-->
+                    </div>
+                    <!--{if !empty($contents)}-->
+                    <div id="inner_nav" class="ptn xs1">
+                        <h3>{lang article_inner_navigation}</h3>
+                        <ul class="xl xl2 cl">
+                            <!--{loop $contents $key $value}-->
+                            <!--{eval $curpage = $key+1;}-->
+                            <!--{eval $inner_view_url = helper_page::mpurl($viewurl, '&page=', $curpage);}-->
+                            <li>&bull; <a href="$inner_view_url"{if $key === $start} class="xi1"{/if}>{lang article_inner_page_pre} {$curpage} {lang article_inner_page} $value[title]</a></li>
+                            <!--{/loop}-->
+                        </ul>
+                    </div>
+                    <!--{/if}-->
+                </div>
+                <!--{if !empty($aimgs[$content[pid]])}-->
+                    <script type="text/javascript" reload="1">aimgcount[{$content[pid]}] = [<!--{echo implode(',', $aimgs[$content[pid]]);}-->];attachimgshow($content[pid]);</script>
+                <!--{/if}-->
+    
+                <!--{if !empty($_G['setting']['pluginhooks']['view_share_method'])}-->
+                    <div class="tshare cl">
+                        <strong>{lang viewthread_share_to}:</strong>
+                        <!--{hook/view_share_method}-->
+                    </div>
+                <!--{/if}-->
+    
+                <!--{hook/view_article_op_extra}-->
+                    
+                
+            </div>
+        	<div class="deanseperatedlines"></div>
+            <!--{ad/article/mbm hm/2}--><!--{ad/article/mbm hm/3}-->
+            
+            <!--{if $article['allowcomment']==1}-->
+                <!--{eval $data = &$article}-->
+                <!--{subtemplate portal/portal_comment}-->
+            <!--{/if}-->
+        </div>
+        <div class="deancaser_rr">
+            <div class="deanfabuxinxi">
+            	<i></i>
+                <div class="deanfbxxtop">
+                    <a href="home.php?mod=space&uid=$article[uid]" target="_blank">
+                        <div class="deantx"><!--{avatar($article[uid],big)}--></div>
+                        <div class="deanzzm">$article[username]</div>
+                        <span>本文作者</span>
+                        <em>$article[dateline]</em>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+                <div class="deanfbxxbottom">
+                	<!--{eval $deanusersfollows = DB::result(DB::query("SELECT follower FROM ".DB::table('common_member_count')." WHERE uid = '$article[uid]'"));}-->
+                    <span class="deansss">粉丝<em>$deanusersfollows[follower]</em></span>
+                    
+                    <span class="deanviews">阅读<em><!--{if $article[viewnum] > 0}-->$article[viewnum]<!--{else}-->0<!--{/if}--></em></span>
+                    <span class="deanreplies">回复<!--{if $article[commentnum] > 0}--><a href="$common_url" title="{lang view_all_comments}"><em>$article[commentnum]</em></a><!--{else}--><em>0</em><!--{/if}--></span>
+                    <div class="clear"></div>
+                </div>
+                <div class="deanotersarts">
+                    <h3><em></em><span>Ta的文章</span></h3>
+                    <div class="deanoarts">
+                        <ul>
+                            <!--{eval $ralatedsarts = DB::fetch_all("SELECT * FROM ".DB::table('portal_article_title')." WHERE uid= '$article[uid]' ORDER BY `dateline` DESC LIMIT 8");}-->
+                            <!--{loop $ralatedsarts $slide}-->
+                            <li>
+                            	<a href="portal.php?mod=view&aid=$slide[aid]" target="_blank">$slide[title]</a>
+                                <span><!--{echo date("Y/m/d",$slide[dateline])}--></span>
+                            </li>
+                            <!--{/loop}-->
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!--{if $article['related']}-->
+            <!--相关文章阅读-->
+            <div class="deanxgydbox">
+            	<h3><em></em><span>{lang view_related}</span></h3>
+                <div id="related_article" class="bm">
+                  <div class="bm_c">
+                    <ul class="deanthreadslists" id="raid_div">
+                      <!--{loop $article['related'] $raid $rvalue}-->
+                      <input type="hidden" value="$raid" />
+                      <li>
+                        <div class="deanrpicfdf">
+                            <a href="{$rvalue[uri]}" target="_blank"><img src="data/attachment/$rvalue[pic]"/></a>
+                        </div>
+                        <div class="deanrpingf">
+                            <a href="{$rvalue[uri]}">{$rvalue[title]}</a>
+                            <span><em>作者：$rvalue[username]</em>&nbsp;|&nbsp;<!--{echo date("Y-m-d",$rvalue[dateline])}--></span>
+                        </div>
+                        <div class="clear"></div>
+                      </li>
+                      <!--{/loop}-->
+                      <div class="clear"></div>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+            <!--{/if}-->
+            
+            <!--上一篇下一篇-->
+            <!--{if $article['preaid'] || $article['nextaid']}-->
+            <div class="deanxgydbox">
+                <div class="deanupdowns">
+                	<h5>{lang pre_article}</h5>
+                    <!--{if $article['prearticle']}--><a href="{$article['prearticle']['url']}">{$article['prearticle']['title']}</a><em>发布时间：<!--{echo date("Y-m-d",$article['prearticle']['dateline'])}--></em><!--{/if}-->
+                    <h5>{lang next_article}</h5>
+                    <!--{if $article['nextarticle']}--><a href="{$article['nextarticle']['url']}">{$article['nextarticle']['title']}</a><em>发布时间：<!--{echo date("Y-m-d",$article['nextarticle']['dateline'])}--></em><!--{/if}-->
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <!--{/if}-->
+            
+             
+        </div>
+    <div class="clear"></div>
+</div>
+
+<!--{if $_G['relatedlinks']}-->
+	<script type="text/javascript">
+		var relatedlink = [];
+		<!--{loop $_G['relatedlinks'] $key $link}-->
+		relatedlink[$key] = {'sname':'$link[name]', 'surl':'$link[url]'};
+		<!--{/loop}-->
+		relatedlinks('article_content');
+	</script>
+<!--{/if}-->
+<script type="text/javascript">
+				jQuery(function() { 
+					var elm = jQuery('.deanguanzhu'); 
+					var startPos = jQuery(elm).offset().top; 
+					jQuery.event.add(window, "scroll", function() { 
+						var p = jQuery(window).scrollTop(); 
+						jQuery(elm).css('position',((p) > startPos) ? 'fixed' : 'relative'); 
+						jQuery(elm).css('top',((p) > startPos) ? '75px' : ''); 
+						jQuery(elm).css('box-shadow',((p) > startPos) ? '0px 2px 4px 2px #eaeaea' : '');
+						jQuery(elm).css('z-index',((p) > startPos) ? '2' : '');
+					}); 
+				}); 
+				</script>
+<input type="hidden" id="portalview" value="1">
+
+<!--{template common/footer}-->

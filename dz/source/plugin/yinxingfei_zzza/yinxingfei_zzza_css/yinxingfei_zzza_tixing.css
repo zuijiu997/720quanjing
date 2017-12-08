@@ -1,0 +1,108 @@
+/**
+ *      本程序由尹兴飞开发
+ *      若要二次开发或用于商业用途的，需要经过尹兴飞同意。
+ *
+ *		http://app.yinxingfei.com			插件技术支持
+ *
+ *		http://www.cglnn.com			    插件演示站点
+ *
+ ->		==========================================================================================
+ *
+ *      2014-11-01 开始由6.1升级到6.2！
+ *
+ *		愿我的同学、家人、朋友身体安康，天天快乐！
+ ->		同时也祝您使用愉快！
+ */
+.zzza_tixing {
+	position: fixed;
+	bottom: 5px;
+	z-index: 310;
+	overflow: hidden;
+	width: 320px;
+	height: auto;
+	background: white;
+	border: #E7E7E7 2px solid;
+	padding: 10px;
+	padding-left: 0px;
+}
+* html .zzza_tixing {
+	position:absolute;
+	top:expression(offsetParent.scrollTop+document.documentElement.clientHeight-this.offsetHeight);
+}
+
+.zzza_tsl {
+float: left;
+width: 180px;
+border-right: 1px solid #E9E9E9;
+margin-right: 10px;
+}
+.zzza_tsy {
+
+}
+.zzza_rwzs {
+height: 22px;
+line-height: 30px;
+font-size: 12px;
+text-align: center;
+padding: 0px 10px 0px 10px;
+}
+.zzza_tsr {
+float: left;
+padding-left: 10px;
+}
+.zzza_lxyj {
+overflow:hidden;
+font-size: 14px;
+font-weight: bold;
+}
+.zzza_shuzi {
+font-size: 34px;
+text-align: right;
+width: 118px;
+overflow: hidden;
+}
+.zzza_shuzi strong{
+float: left;
+height: 51px;
+line-height: 51px;
+width: 94px;
+text-align: center;
+}
+.zzza_tian {
+font-size: 14px;
+float: right;
+height: 51px;
+line-height: 51px;
+padding-left: 5px;
+width: 18px;
+}
+.zzza_hall_bottom_right_yjan_btn {
+width: 115px;
+height: 50px;
+background: url(../yinxingfei_zzza_img/rank_yao_all.gif) no-repeat 0 0;
+display: block;
+text-indent: -9999px;
+margin: 0 auto;
+}
+.zzza_hall_top_left_infor_num {
+font-weight: bold;
+font-size: 12px;
+color: #F40;
+}
+.zzza_guanbi {
+float: right;
+width: 30px;
+text-align: right;
+}
+.zzza_guanbi a{
+font-weight: normal;
+font-size: 12px;
+color: #999;
+height: 14px;
+width: 30px;
+display: block;
+text-align: right;
+}
+.zzza_guanbi a:hover{
+text-decoration: none;
+}

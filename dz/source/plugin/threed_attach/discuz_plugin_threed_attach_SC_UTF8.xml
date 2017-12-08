@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X3.0,x3.1,x3.2]]></item>
+	<item id="Time"><![CDATA[2015-05-22 20:15]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://www.yiiweb.cn)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[0]]></item>
+			<item id="name"><![CDATA[网盘伪装成本地附件]]></item>
+			<item id="identifier"><![CDATA[threed_attach]]></item>
+			<item id="description"><![CDATA[把网盘的分享链接伪装成附件，让网盘的链接披着附件的外衣，拥有附件的绝大部分功能，包括下载扣积分、购买，设置权限等属性。 同时，支持点击后不用跳转到源网址下载，直接本站下载，有更好的用户体验。]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[threed_attach/]]></item>
+			<item id="copyright"><![CDATA[易站网]]></item>
+			<item id="version"><![CDATA[商业版V2.2]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[threed_attach]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[cader]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[作者网站]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[help]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[安装帮助]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X3,X3.1,X3.2]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[帖内显示链接]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[thd_panurl]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[以上或 <a href="/plugin.php?id=vip:vip" target="_blank" rel="nofollow" style="text-decoration:none;"><font style="color:#CC0000 !important; font-size:14px;">VIP会员</font></a> &nbsp; <a  target="_blank" href="/plugin.php?id=vip:vip" rel="nofollow" class="xi2" style="text-decoration:none;">[购买VIP]</a> &nbsp; <a  target="_blank"href="/thread-465-1-1.html" rel="nofollow" class="xi2" style="text-decoration:none;">[充值铜板]</a> &nbsp;<a href="/thread-462-1-1.html" rel="nofollow" class="xi2" style="text-decoration:none;">[免费赚铜板]</a> ]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[开通版块]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[thd_forum]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[2]]></item>
+					<item id="1"><![CDATA[36]]></item>
+					<item id="2"><![CDATA[37]]></item>
+				</item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[允许发布网盘的用户]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[thd_fauser]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[1]]></item>
+				</item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[是否支持回帖]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[thd_back]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[添加网盘框提示信息]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[thd_info]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[网盘目前支持百度，360，以及华为网盘，请先使用网盘自带的工具进行分享。谢谢！<br />要编辑网盘，请先点击编辑网盘，然后点击每个网盘名称后的编辑按钮]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[是否跳转到下载页]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[thd_tiao]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[多附件共用一个下载页]]></item>
+				<item id="description"><![CDATA[启用后，帖子内如果有多个附件，只显示一个链接，所有的附件都会在下载页显示和下载。]]></item>
+				<item id="variable"><![CDATA[thd_gong]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[下载页提示]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[thd_downld]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[解压密码是：www.3dcader.com]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[下载页下载扣积分]]></item>
+				<item id="description"><![CDATA[注意：只有使用跳转到下载页时，才会产生扣积分。]]></item>
+				<item id="variable"><![CDATA[thd_koufen]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[下载页下载不扣积分用户组]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[thd_user]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+            <item id="10">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[是否安装附件下载打折]]></item>
+				<item id="description"><![CDATA[请注意，如果开启了下载打折插件，那么一定不能开启共用下载页，否则下载打折无效。]]></item>
+				<item id="variable"><![CDATA[thd_dazhe]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[下载页积分不够时提示]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[thd_credit]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[积分不够了，赶紧去充值吧。]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="downld1"><![CDATA[附件下载]]></item>
+				<item id="downld2"><![CDATA[未定义操作或非常操作，请联系管理员]]></item>
+				<item id="downld3"><![CDATA[您需要登录才可以下载文件！]]></item>
+				<item id="admin1"><![CDATA[网盘附件]]></item>
+				<item id="admin2"><![CDATA[编辑附件]]></item>
+                <item id="downall1"><![CDATA[将跳转到站外下载！]]></item>
+				<item id="downall2"><![CDATA[使用百度网盘下载]]></item>
+				<item id="downall3"><![CDATA[使用华为网盘下载]]></item>
+				<item id="downall4"><![CDATA[使用360云盘下载]]></item>
+				<item id="downall5"><![CDATA[将在站内完成下载]]></item>
+				<item id="downall6"><![CDATA[请先购买再来下载]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="attach1"><![CDATA[最高权限]]></item>
+				<item id="attach2"><![CDATA[不限]]></item>
+				<item id="attach3"><![CDATA[网盘资源]]></item>
+				<item id="attachdown"><![CDATA[请点击此处下载]]></item>
+				<item id="attachdownreg"><![CDATA[请先注册会员后再进行下载]]></item>
+				<item id="attachdownlogin"><![CDATA[已注册会员，请先登录后下载]]></item>
+				<item id="attachdownreg_ok"><![CDATA[加入VIP，免积分下载]]></item>
+				<item id="attachdownreg_pay"><![CDATA[需要先购买才能下载]]></item>
+				<item id="attachdownlogin_ok"><![CDATA[您的用户组是：]]></item>
+				<item id="attachname"><![CDATA[文件名称：]]></item>
+				<item id="attachsize"><![CDATA[文件大小：]]></item>
+				<item id="attachprice"><![CDATA[售价：]]></item>
+				<item id="attachreadperm"><![CDATA[下载权限：]]></item>
+				<item id="attachdownloads"><![CDATA[下载次数：]]></item>
+				<item id="load1"><![CDATA[售价只允许输入数字]]></item>
+				<item id="load2"><![CDATA[添加网盘附件]]></item>
+				<item id="load3"><![CDATA[关闭]]></item>
+				<item id="load4"><![CDATA[网盘地址]]></item>
+				<item id="load5"><![CDATA[文件名]]></item>
+				<item id="load6"><![CDATA[售价]]></item>
+				<item id="load7"><![CDATA[插入附件]]></item>
+				<item id="load8"><![CDATA[链接和名称不能为空]]></item>
+				<item id="load9"><![CDATA[编辑]]></item>
+				<item id="load10"><![CDATA[删除]]></item>
+				<item id="load11"><![CDATA[请注意，如果网盘有提取码，请在文件名称后注明]]></item>
+				<item id="downld1"><![CDATA[下载有问题？点击进入源链接下载]]></item>
+				<item id="edit2"><![CDATA[修改成功]]></item>
+				<item id="edit3"><![CDATA[确定修改]]></item>
+                <item id="downall1"><![CDATA[下载列表]]></item>
+				<item id="downall2"><![CDATA[返回原帖查看]]></item>
+				<item id="downall3"><![CDATA[附件售价：]]></item>
+			</item>
+			<item id="installlang">
+				<item id="0"><![CDATA[]]></item>
+			</item>
+		</item>
+	</item>
+</root>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Addon MD5]]></item>
+	<item id="ID"><![CDATA[study_kz_rewrite.pack]]></item>
+	<item id="RevisionID"><![CDATA[6708]]></item>
+	<item id="SN"><![CDATA[2017120714GTT4e4A00F]]></item>
+	<item id="RevisionDateline"><![CDATA[1348903899]]></item>
+	<item id="Data">
+		<item id="/httpd.ini"><![CDATA[606f36a6c0b14fecad05bb9c6ca2507c]]></item>
+	</item>
+</root>

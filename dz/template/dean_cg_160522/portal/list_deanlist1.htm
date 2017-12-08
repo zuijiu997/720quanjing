@@ -1,0 +1,155 @@
+<!--{template common/header}-->
+<!--[name][迪恩网络-cgmodel-新闻列表][/name]-->
+<!--{eval $list = array();}-->
+<!--{eval $wheresql = category_get_wheresql($cat);}-->
+<!--{eval $list = category_get_list($cat, $wheresql, $page);}-->
+
+<style type="text/css">
+.deannavwrap{ box-shadow:0 0px 15px rgba(0,0,0,0.2); }
+</style>
+
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+		<a href="$_G[setting][navs][1][filename]">{lang portal}</a> <em>&rsaquo;</em>
+		<!--{loop $cat[ups] $value}--> <a href="{$portalcategory[$value['catid']]['caturl']}">$value[catname]</a><em>&rsaquo;</em><!--{/loop}-->
+		$cat[catname]
+	</div>
+</div>
+
+<!--{ad/text/wp a_t}-->
+<style id="diy_style" type="text/css"></style>
+<div class="wp">
+	<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+
+<div class="clear"></div>
+<div id="ct" class="ct2 wp cl deanbox">
+	<div class="deanwpl">
+		<!--{ad/articlelist/mbm hm/1}--><!--{ad/articlelist/mbm hm/2}-->
+		<!--[diy=listcontenttop]--><div id="listcontenttop" class="area"></div><!--[/diy]-->
+		<div class="bm">
+			<div class="bm_h cl" style="padding-left:0;">
+				<!--{if $_G[setting][rssstatus] && !$_GET['archiveid']}--><a href="portal.php?mod=rss&catid=$cat[catid]" class="y xi2 rss" target="_blank" title="RSS">{lang rss_subscribe_this}</a><!--{/if}-->
+				<h1 style="color:#222; font-size:18px; font-weight:500;">$cat[catname]</h1>
+			</div>
+            <div class="deanpiclist top15">
+            	<ul>
+                	<!--{loop $list['list'] $value}-->
+					<!--{eval $highlight = article_title_style($value);}-->
+					<!--{eval $article_url = fetch_article_url($value);}-->
+                    <li class=" deanw714  deanfff wow bounceInUp">
+                        <div class="deanpiclic">
+                            <!--{if $value[pic]}-->
+                            <div class="deanpiclicl">
+                    			<a href="$article_url" target="_blank"><img src="$value[pic]" alt="$value[title]" width="160" height="100" /></a>
+                    			<a href="$article_url" target="_blank" class="deanhover"></a>
+                			</div>
+                            <div class="deanpiclicr">
+                                <h2><a href="$article_url" target="_blank" class="xi2" $highlight>$value[title]</a> <!--{if $value[status] == 1}-->({lang moderate_need})<!--{/if}--></h2>
+                                <div class="clear"></div>
+                                <div class="deanpicsummary">$value[summary]</div>
+                                <div class="clear"></div>
+                                <div class="deannewtwonum">
+                                    <!--{if $value[catname] && $cat[subs]}--><a href="{$portalcategory[$value['catid']]['caturl']}" class="xi2">$value[catname]</a><!--{/if}-->   
+                                    <span>{eval $query = DB::query("SELECT t1.commentnum from ".DB::table('portal_article_count')." t1 inner join ".DB::table('portal_article_title')." t2 on t1.aid=t2.aid WHERE t2.aid=$value[aid]"); $dean = DB::fetch($query);echo $dean['commentnum'];}</span>
+                                    <b>$value[dateline]</b>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            
+                            <!--{else}-->
+                            <div class="deanpiclicr" style="float:left; width:880px; margin-left:0; ">
+                                <h2 style="width:auto;"><a href="$article_url" target="_blank" style="color:#333; font-size:18px;">$value[title]</a> <!--{if $value[status] == 1}-->({lang moderate_need})<!--{/if}--></h2>
+                                <div class="clear"></div>
+                                <div class="deanpicsummary" style="width:880px; ">$value[summary]</div>
+                                <div class="clear"></div>
+                                <div class="deannewtwonum">
+                                    <!--{if $value[catname] && $cat[subs]}--><a href="{$portalcategory[$value['catid']]['caturl']}" class="xi2">$value[catname]</a><!--{/if}-->   
+                                    <span>{eval $query = DB::query("SELECT t1.commentnum from ".DB::table('portal_article_count')." t1 inner join ".DB::table('portal_article_title')." t2 on t1.aid=t2.aid WHERE t2.aid=$value[aid]"); $dean = DB::fetch($query);echo $dean['commentnum'];}</span>
+                                    <b>$value[dateline]</b>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="clear"></div>   
+                            </div>
+                            <!--{/if}-->
+                            
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                	
+                    <!--{/loop}-->
+                </ul>
+                <script type="text/javascript">
+					jq(".deanpiclist ul li").each(function(s){
+						jq(".deanpiclicl").hover(
+							function(){
+								jq(this).children(".deanhover").show();
+							},
+							function(){
+								jq(this).children(".deanhover").hide();
+								})
+						})
+				</script>
+            </div>
+			<!--[diy=listloopbottom]--><div id="listloopbottom" class="area"></div><!--[/diy]-->
+		</div>
+		<!--{ad/articlelist/mbm hm/3}--><!--{ad/articlelist/mbm hm/4}-->
+        <div class="clear"></div>
+		<div><!--{if $list['multi']}--><div class="pgs cl">{$list['multi']}</div><!--{/if}--></div>
+
+		<!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+
+	</div>
+	<div class="deanwpr">
+    	<div class="deanqd"><!--{if ($_G['group']['allowpostarticle'] || $_G['group']['allowmanagearticle'] || $categoryperm[$catid]['allowmanage'] || $categoryperm[$catid]['allowpublish']) && empty($cat['disallowpublish'])}--><a class="button13" href="portal.php?mod=portalcp&ac=article&catid=$cat[catid]" ><span>{lang article_publish}</span></a><!--{/if}--></div>
+        <div class="clear"></div>
+        <!--{if $cat[subs]}-->
+        <div class="deanforumhot" >
+            <h2><span>{lang sub_category}</span></h2>
+            <div class="clear"></div>
+            <ul>
+                <!--{eval $i = 1;}-->
+                <!--{loop $cat[subs] $value}-->
+                <!--{if $i != 1}--><!--{/if}--><li><a href="{$portalcategory[$value['catid']]['caturl']}">$value[catname]</a></li><!--{eval $i--;}-->
+                <!--{/loop}-->
+                <div class="clear"></div>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            jq(".deanforumhot ul li:odd").css("float","right");
+        </script>
+        <!--{/if}-->
+   		<div class="clear"></div>
+        <div class="sd deansd">
+        	<div class="deanhotcar">
+            	<div class="deanvh3"><span>热门图文</span></div>
+            	<div class="clear"></div>
+                <ul><!--[diy=deanhotcar]--><div id="deanhotcar" class="area"></div><!--[/diy]--></ul>
+            </div>
+            <div class="clear"></div>
+            <style type="text/css">
+        		.deanbrand1 ul{}
+					.deanbrand1 ul li{ margin-bottom:10px;}
+			</style>
+			
+			<div class="deanbrand1">
+				<ul><!--[diy=deanbrand]--><div id="deanbrand" class="area"></div><!--[/diy]--><div class="clear"></div></ul>
+			</div>
+            <div class="clear"></div>
+            <div class="deanhotnews">
+            	<div class="deanvh3"><span style="float:left;">热门资讯</span><a href="#" target="_blank" style="float:right; color:#4680d1; font-size:14px;">更多</a><div class="clear"></div></div>
+            	<div class="clear"></div>
+                <div class="deanhotnewpic deanlarge"><!--[diy=deanhotnewpic]--><div id="deanhotnewpic" class="area"></div><!--[/diy]--></div>
+                <ul style="margin-top:10px;"><!--[diy=deanhotnews]--><div id="deanhotnews" class="area"></div><!--[/diy]--><div class="clear"></div></ul>
+            </div>
+			<!--{hook/forumdisplay_side_bottom}-->
+		</div>
+	</div>
+	<div class="clear"></div>
+    <div class="wp mtn">
+        <!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+    </div>
+</div>
+<!--{template common/footer}-->

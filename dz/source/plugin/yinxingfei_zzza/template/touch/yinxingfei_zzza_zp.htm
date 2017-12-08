@@ -1,0 +1,56 @@
+<link rel="stylesheet" type="text/css" href="source/plugin/yinxingfei_zzza/yinxingfei_zzza_css/yaojiang_touch.css?{VERHASH}" />
+<script type="text/javascript" src="source/plugin/yinxingfei_zzza/yinxingfei_zzza_js/jquery-1.7.2-min.js?{VERHASH}"></script>
+<script type="text/javascript" src="source/plugin/yinxingfei_zzza/yinxingfei_zzza_js/easing.js?{VERHASH}"></script>
+<script type="text/javascript" src="source/plugin/yinxingfei_zzza/yinxingfei_zzza_js/yinxingfei_zzza_touch.js?{VERHASH}"></script>
+{if $yjjs == 'yes' && $zzza_time == '1'}
+	<script type="text/javascript">
+	var zzza_jq = jQuery.noConflict();
+	zzza_jq(document).ready(function(){
+		var num = document.getElementById('zzza_fw1').value;
+		var num_arr = (num+'').split('');
+		var u = 77;
+		zzza_jq(".yinxingfei_zzza_num").each(function(index){
+			zzza_jq(this).children().text(num_arr[index]);
+		});
+		setTimeout(function(){
+			zzza_jq(".yyl-random-box").slideToggle(1000);
+		}, 3000);
+	});
+	</script>
+	<style>
+	.yyl-bottom {
+	display:none!important;
+	}
+	.yyl-random-result {
+	display:block!important;
+	}
+	</style>
+{/if}
+<div class="yyl-random-box" id="yyl-random-box">
+	<div class="yinxingfei_zzza_close" onclick="yjyema();">{lang yinxingfei_zzza:djgba}</div>
+	
+	<div class="yyl-number-wrap" style="margin-top:0;">
+		
+		<div class="yinxingfei_zzza_num"><em id="zzza_txt1">0</em></div>
+		<div class="yinxingfei_zzza_num"><em id="zzza_txt2">0</em></div>
+		<div class="yinxingfei_zzza_num"><em id="zzza_txt3">0</em></div>
+		
+		<input id="zzza_fw1" type="hidden" value="{$zzza_jt}" name="zzza_fw1">
+		<div class="yinxingfei_zzza_num_last"><span style="font-size:{$set['zzza_jfzta']}px;">{$zzza_jfmc}</span></div>
+	</div>
+	<div class="yyl-bottom">
+		<div class="zzza_button_1"><a id="zzza_go" href="javascript:;" onclick="go_yj();" style="width:242px; height: 35px;display: block;margin-left: 76px;">&nbsp;</a></div>
+	</div>
+	<div class="yyl-random-banner">
+		{lang yinxingfei_zzza:nyljyja}<!--{eval echo intval($querya['cj_cs']);}-->{lang yinxingfei_zzza:tian}
+	</div>
+	<div class="yyl-random-result" style="display: none; ">
+		<div class="yyl-result-contents">
+			<p style="font-size:14px;line-height: 70px;">{lang yinxingfei_zzza:gxnhda}<!--{eval echo intval($zzza_jt);}-->{$zzza_jfmc}</p>
+		</div>
+	</div>
+	
+	<form id="yinxingfei_zzza_form" action="plugin.php?id=yinxingfei_zzza:yinxingfei_zzza_post" method="post">
+		<input type="hidden" name="formhash" value="{FORMHASH}">
+	</form>
+</div>

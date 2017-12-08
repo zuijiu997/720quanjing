@@ -1,0 +1,57 @@
+{template common/header}
+<div class="bm bw0">
+	<h3 class="flb" style="font-size:14px">	
+    <em>{lang study_freedown:tlang_001}</em>		
+    <!--{if $_G[inajax]}-->
+		<span><a href="javascript:;" class="flbc" onclick="hideWindow('attachpay')" title="{lang close}">{lang close}</a></span>
+		<!--{/if}-->
+	</h3>
+	<div class="c yeei_dw">
+		<div style="border:1px solid #D9D9D9;padding: 10px;">
+				<table width="100%" cellspacing="0">
+				<tbody>
+				<tr>
+						<th style="border-bottom: 1px dashed #CCC;line-height: 29px;">{lang study_freedown:tlang_002}: </th>
+						<td style="border-bottom: 1px dashed #CCC;line-height: 29px;" colspan="3">$attachment[attachtype] <font color="#008000">$attachment[filename]</font></td>
+				</tr>
+				<tr>
+						<th style="border-bottom: 1px dashed #CCC;line-height: 29px;">{lang study_freedown:tlang_003}: </th>
+						<td style="border-bottom: 1px dashed #CCC;line-height: 29px;" colspan="3">{if $attachment[description]}$attachment[description]{else}{lang study_freedown:tlang_004}{/if}</td>
+				</tr>
+				
+				<tr>
+						<th style="border-bottom: 1px dashed #CCC;line-height: 29px;" width="70">{lang study_freedown:tlang_005}: </th>
+						<td style="border-bottom: 1px dashed #CCC;line-height: 29px;" width="200">$attachment['downloads'] {lang study_freedown:tlang_006}</td>
+						<th style="border-bottom: 1px dashed #CCC;line-height: 29px;" width="70">{lang study_freedown:tlang_007}: </th>
+						<td style="border-bottom: 1px dashed #CCC;line-height: 29px;" width="200">$attachment['dateline']</td>
+				</tr>
+				
+				<tr>
+						<th style="border-bottom: 1px dashed #CCC;line-height: 29px;">{lang study_freedown:tlang_008}: </th>
+						<td style="border-bottom: 1px dashed #CCC;line-height: 29px;">$attachment['readperm']</td>
+						<th style="border-bottom: 1px dashed #CCC;line-height: 29px;">{lang study_freedown:tlang_009}: </th>
+						<td style="border-bottom: 1px dashed #CCC;line-height: 29px;" colspan="3">$attachment[filesize]</td>
+				</tr>
+				
+				<tr>
+						<th style="border-bottom: 1px dashed #CCC;line-height: 29px;">{lang study_freedown:tlang_010}: </th>
+						<td style="border-bottom: 1px dashed #CCC;line-height: 29px;" colspan="3"> $attachment['price'] $_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]]['title'] <font color="#FF6633">({if $surplus > 0}{lang study_freedown:tlang_011} {$surplus} {lang study_freedown:tlang_012}{elseif $endtime}{lang study_freedown:tlang_013}{$endtime} {lang study_freedown:tlang_014}{else}{lang study_freedown:tlang_015} {$study_userfreedown[$_G['groupid']][1]} {lang study_freedown:tlang_006}{/if})</font></td>
+				</tr>
+				
+				<tr>
+					<td valign="center" align="center" height="48" colspan="4">
+						<div class="down" style="margin-top:10px;">
+							{if $surplus > 0 || $endtime}
+							<a href="$url" onclick="hideWindow('attachpay');" target="_blank"><img src="source/plugin/study_freedown/images/yeei_down.png" /></a>
+							{else}
+							<a href="forum.php?mod=misc&action=attachpay&aid={$aid}&tid={$tid}&attachpay=true" onclick="showWindow('attachpay', this.href)"><img src="source/plugin/study_freedown/images/attachpay.png" /></a>
+							{/if}
+						</div>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+{template common/footer}

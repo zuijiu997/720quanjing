@@ -1,0 +1,80 @@
+<!--{template common/header}-->
+<!--{template e6_propaganda:left_header}-->
+{eval E6::M()->css('task', 'e6_propaganda')}
+<!--{if intval($_GET['taskid'])}-->
+<table cellpadding="0" cellspacing="0" class="tfm">
+	<tbody>
+		<tr>
+			<td width="80">
+				<img src="source/plugin/e6_propaganda/task/{$task['icon']}" alt="Icon" width="64" height="64">
+			</td>
+			<td class="bbda">
+				<h1 class="xs2 ptm pbm">{$task[name]}</h1>
+				<div>{$task_date}</div>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>
+				<table cellpadding="0" cellspacing="0" class="tfm">
+					<tbody>
+						<tr>
+							<th class="bbda">{lang e6_propaganda:t_1}</th>
+							<td class="bbda xi1">$claimtext</td>
+						</tr>
+						<tr>
+							<th class="bbda">{lang e6_propaganda:t_2}</th>
+							<td class="bbda xi1">$rewardtext</td>
+						</tr>
+						<tr>
+							<th class="bbda">{lang e6_propaganda:t_3}</th>
+							<td class="bbda">
+								<p>$grouplimit</p>
+							</td>
+						</tr>
+						<!--{if $task_ok}-->
+						<tr>
+							<th class="bbda">{lang e6_propaganda:t_4}</th>
+							<td class="bbda xi1">
+								<p>$task_ok</p>
+							</td>
+						</tr>
+						<!--{/if}-->
+					</tbody>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>$taskimg</td>
+		</tr>
+	</tbody>
+</table>
+<!--{else}-->
+<table cellspacing="0" cellpadding="0" width="100%">
+	<tbody>
+		<!--{loop $list $value}-->
+		<tr>
+			<td width="80" class="bbda">
+				<img src="source/plugin/e6_propaganda/task/{$value['icon']}" width="64" height="64" alt="{$value['name']}">
+			</td>
+			<td class="bbda ptm pbm">
+				<h3 class="xs2 xi2"><a href="{$task_url}&taskid={$value['id']}">{$value['name']}</a></h3>
+				<p class="xg2">{lang e6_propaganda:t_5}: {$value['claimtext']}</p>
+				<div class=" mtm mbm">
+					{$value['date']}
+				</div>
+			</td>
+			<td class="xi1 bbda" width="200">
+				{lang e6_propaganda:t_6}{$value['rewardtext']}
+			</td>
+			<td width="120" class="bbda">
+				<p>{$value['taskimg']}</p>
+			</td>
+		</tr>
+		<!--{/loop}-->
+	</tbody>
+</table>
+<!--{/if}-->
+<!--{template e6_propaganda:left_footer}-->
+<!--{template common/footer}-->

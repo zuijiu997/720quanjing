@@ -1,0 +1,268 @@
+﻿body { background-color:#9e1002; margin:0; padding:0; font-family:"微软雅黑"; font-size:12px;}
+
+div,p,table,tr,td{ margin:0; padding:0;}
+
+a{ color:#999999; text-decoration:none;}
+
+a:hover{ text-decoration:underline}
+
+
+
+#header{
+	background:url(../images/topVip.jpg);
+	width:1005px;
+	height:360px;
+	margin:auto;
+	position:relative
+}
+
+#content{ width:1005px; margin:auto; background:#ffba00; min-height:300px; height:auto;_height:300px;background:url(../images/middleVip.jpg) repeat-y;}
+
+.content{ min-height:280px; height:auto;_height:280px; width:958px;margin-left:25px; padding:10px 0;}
+
+.qmx8_tq,.service,.activity,.vipUpgrade,.vipSystem{min-height:100px; height:auto;_height:100px; width:918px; margin:auto;border:0px solid black;  margin-bottom:30px; }
+
+.title{ clear:both; float:left; padding:0 10px; background-color:#ffba00;}
+
+span.first{ color:#dc3000; font-size:20px;  font-style:oblique; margin-right:5px;}
+
+span.sec{ color:#4e0101; font-size:16px;}
+
+.content table{border-collapse:collapse;  border:1px solid #e3e3e3;color:#535353; font-size:16px; clear:both; }
+
+.content table tr{ height:46px; line-height:46px;}
+
+.content table tr td{
+	border-right-width: 1px;
+	border-right-style: dotted;
+	border-right-color: #d3d3d3;
+}
+
+tr.odd{ background-color:#f4f4f4; }
+
+tr.even{ background-color:#e9e9e9;}
+
+.content  table tr td img{ top:3px;  position:relative; left:7px;}
+
+.DivFir{ clear:both; background-color:#f4f4f4;font-size:16px;color:#535353; text-align:left; padding:20px 20px 30px }
+
+.DivSec{clear:both; background-color:#e9e9e9;font-size:16px;color:#535353;padding:20px;}
+
+.DivThr{clear:both; height:30px;font-size:16px;color:#535353;padding:20px;border:1px solid #e3e3e3; border-bottom:1px dotted #e3e3e3}
+
+.DivFou{clear:both; height:30px;font-size:16px;color:#535353;padding:20px;border:1px solid #e3e3e3; border-top:0;}
+
+#footer{width:1005px;height:50px;background:#ffba00; margin:10px auto; text-align:center; line-height:50px; color:#4e0101; font-size:16px;  }
+
+.flag{ cursor:pointer;}
+
+#flag{ position:absolute; border:1px solid #ccc;background:#888;padding:2px;display:none;color:#fff;min-height:20px; height:auto;_height:20px; width:auto;max-width:250px;_width:expression(this.scrollWidth >250 ? "50px" : (this.scrollWidth < 1? "1px" : "auto"));}
+
+.t_l, .t_c, .t_r, .m_l, .m_r, .b_l, .b_c, .b_r {
+    background: none repeat scroll 0 0 #000000;
+    opacity: 0.2;
+    filter:alpha(opacity=20);
+    overflow: hidden;
+}
+.t_l, .t_r, .b_l, .b_r {
+    height: 8px;
+    width: 8px;
+}
+.t_c, .b_c {
+    height: 8px;
+}
+.m_l, .m_r {
+    width: 8px;
+}
+.t_l {
+    border-radius: 8px 0 0 0;
+}
+.t_r {
+    border-radius: 0 8px 0 0;
+}
+.b_l {
+    border-radius: 0 0 0 8px;
+}
+.b_r {
+    border-radius: 0 0 8px 0;
+}
+
+.m_c {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+.m_c .tb {
+    margin: 0 0 10px;
+    padding: 0 10px;
+}
+.m_c .c {
+    padding: 0 10px 10px;
+}
+.m_c .o {
+    background: none repeat scroll 0 0 #F2F2F2;
+    border-top: 1px solid #CCCCCC;
+    height: 26px;
+    padding: 8px 10px;
+    text-align: right;
+}
+.m_c .el {
+    width: 420px;
+}
+.m_c .el li {
+    border: medium none;
+    padding: 0;
+}
+.flbc {
+    background: url("../images/cls.gif") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    float: left;
+    height: 20px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 20px;
+}
+.flbc:hover {
+    background-position: 0 -20px;
+}
+.flb {
+    line-height: 20px;
+    padding: 10px 10px 8px;
+}
+.flb em {
+    color: #336699;
+    float: left;
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+}
+.flb em a {
+    text-decoration: none;
+}
+
+.flb .onerror, .flb .onright {
+    font-size: 12px;
+    font-weight: 400;
+    height: auto;
+    line-height: 140%;
+    padding-left: 20px;
+    white-space: nowrap;
+}
+.flb span {
+    color: #999999;
+    float: right;
+}
+.flb span a, .flb strong {
+    color: #333333;
+    float: left;
+    font-weight: 400;
+    margin-left: 8px;
+    text-decoration: none;
+}
+.flb span a:hover {
+    color: #999999;
+}
+.pay_type_box{
+
+	padding: 10px;
+	width: 640px;
+	height:400px;
+}
+ul li {
+	list-style-type: none;
+}
+
+.vm {
+    vertical-align: middle;
+}
+
+.z {
+    float: left;
+    *margin-top: 8px;
+}
+
+.r{ float: right;
+
+    margin-right: 30px ;
+    *margin-right: 26px ;
+    _margin-right: 16px;
+    *margin-top: 8px;
+}
+
+.btn{
+	vertical-align: baseline;
+}
+.btn-ok {
+    background-position: 0 0;
+    border: 1px solid #D74C00;
+}
+.btn input {
+    font-size: 14px;
+    padding: 1px;
+    border: medium none;
+}
+.btn input,.btn span{
+    background-image: url("../images/bg-btn.png");
+    background-repeat: repeat-x;
+    cursor: pointer;
+    font-family: Tahoma;
+    outline: medium none;
+    background-position: 0 -105px;
+    color: #AAAAAA;
+    font-weight: bold;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 16px 3px;
+}
+
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 100%;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: middle;
+}
+#ajaxback{
+	display: none;
+}
+table {
+    border-collapse: collapse;
+    empty-cells: show;
+}
+#nv {
+    background: url("../images/nv.png") no-repeat scroll 0 0;
+    height: 33px;
+    overflow: hidden;
+    padding-left: 3px;
+    width: 1003px;
+    margin: auto auto 10px auto;
+    border: 1px solid #ffc32d;
+
+}
+#nv ul,#nv li{  margin: 0;  padding: 0; border: 0;  font-size: 100%;    font: inherit;  vertical-align: baseline; }
+#nv li {
+    background: url("../images/nv_a.png") no-repeat scroll 100% 0 transparent;
+    float: left;
+    font-size: 14px;
+    font-weight: 700;
+    height: 33px;
+    padding-right: 1px;
+}
+#nv li a {
+    color: #FFFFFF;
+    float: left;
+    height: 33px;
+    padding: 0 15px;
+    text-decoration: none;
+}
+
+#nv li span {
+    display: none;
+}
+
+#nv li {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 33px;
+}

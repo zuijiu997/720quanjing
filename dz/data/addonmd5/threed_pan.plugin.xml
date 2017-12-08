@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Addon MD5]]></item>
+	<item id="ID"><![CDATA[threed_pan.plugin]]></item>
+	<item id="RevisionID"><![CDATA[45170]]></item>
+	<item id="SN"><![CDATA[20171207188h9HNBBi8h]]></item>
+	<item id="RevisionDateline"><![CDATA[1474808403]]></item>
+	<item id="Data">
+		<item id="/admin.inc.php"><![CDATA[af7d1b5c0fffbabbaa75c234abfb0e90]]></item>
+		<item id="/cader.inc.php"><![CDATA[6afb66f7c2a11dcecc93bef2fa4a3b93]]></item>
+		<item id="/discuz_plugin_threed_pan_SC_GBK.xml"><![CDATA[1318bad989d94268757ce00276180d65]]></item>
+		<item id="/discuz_plugin_threed_pan_SC_UTF8.xml"><![CDATA[b530fb7978115697fbfb2133fdcc48ea]]></item>
+		<item id="/discuz_plugin_threed_pan_TC_BIG5.xml"><![CDATA[63a3b1421df38af7575db33596781117]]></item>
+		<item id="/discuz_plugin_threed_pan_TC_UTF8.xml"><![CDATA[9da7ad052aeb0a684daac1b09f07eea2]]></item>
+		<item id="/downld.inc.php"><![CDATA[3cc4fdf5a3c59ba23f7d4e9ff23ed67e]]></item>
+		<item id="/downlddiy.xml"><![CDATA[a75d08d7f2599dcfe930cee25ca93a6d]]></item>
+		<item id="/function/function_threed.php"><![CDATA[fb6cfd0f0f3def54763b9fdec0f93cba]]></item>
+		<item id="/help.inc.php"><![CDATA[f2a06c918e4a0cb7c9ea868a654e2110]]></item>
+		<item id="/index.html"><![CDATA[d41d8cd98f00b204e9800998ecf8427e]]></item>
+		<item id="/install.php"><![CDATA[1bbb2aa83d9d2e068860e25953f7ea21]]></item>
+		<item id="/load.inc.php"><![CDATA[e43d017c4f5a3cb90829fb9e8bbe50f9]]></item>
+		<item id="/loaddoc.inc.php"><![CDATA[4fe2f83270ab7d45b790afb46e844f47]]></item>
+		<item id="/payfor.inc.php"><![CDATA[9b4b5ce31022b8b6bd19710740c30613]]></item>
+		<item id="/table/table_threed_pan.php"><![CDATA[2cf33916f099a675a59a407e86522da1]]></item>
+		<item id="/template/attach.htm"><![CDATA[adce907dc547ec9b88ff2d089161d375]]></item>
+		<item id="/template/dld.gif"><![CDATA[a477a3bea4662b2367aeff7a96cab745]]></item>
+		<item id="/template/doc.png"><![CDATA[b85e69793dcf5d493a8120f7e70ee3af]]></item>
+		<item id="/template/downld.css"><![CDATA[031dd0a0c2ab174214c154d6071c8a91]]></item>
+		<item id="/template/downld.htm"><![CDATA[01160eabe2c1a869c586ab84d13c9219]]></item>
+		<item id="/template/ico.png"><![CDATA[b85e69793dcf5d493a8120f7e70ee3af]]></item>
+		<item id="/template/index.html"><![CDATA[d41d8cd98f00b204e9800998ecf8427e]]></item>
+		<item id="/template/info.gif"><![CDATA[722cc181f518d0f0e92ab49aa2839060]]></item>
+		<item id="/template/load.htm"><![CDATA[4507e4d95d847b7713097e1b39455871]]></item>
+		<item id="/template/loaddoc.htm"><![CDATA[199b9b1dd64fb9f68cd9d1e9112191d8]]></item>
+		<item id="/template/panattach.css"><![CDATA[953345fa697cbf36711eed34e54da9ef]]></item>
+		<item id="/template/pan_top10.png"><![CDATA[418b0c2c2e01faeb151bc741ba0e37b7]]></item>
+		<item id="/template/pay.htm"><![CDATA[6122053b66b6b1af30355779b582c53c]]></item>
+		<item id="/template/touch/pay.htm"><![CDATA[03a6966d10e24d54e08d9c7250c9c4dc]]></item>
+		<item id="/template/zip.gif"><![CDATA[5ef31bcbd73c83ee1f5ef5d493894178]]></item>
+		<item id="/threed_pan.class.php"><![CDATA[2c2eaa21af6f1f6c4def0e7e88703d11]]></item>
+		<item id="/uninstall.php"><![CDATA[034de6a7a0ab8b65c77b5045943782fb]]></item>
+		<item id="/upgrade.php"><![CDATA[6d85f40d76ee0698db026de19277765c]]></item>
+	</item>
+</root>

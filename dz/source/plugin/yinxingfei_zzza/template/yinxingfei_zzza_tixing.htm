@@ -1,0 +1,58 @@
+<!--{block return}-->
+<link rel="stylesheet" type="text/css" href="source/plugin/yinxingfei_zzza/yinxingfei_zzza_css/yinxingfei_zzza_tixing.css?{VERHASH}" />
+<style>
+{if $set['zzza_txwz'] == '1'}
+.zzza_tixing {
+	left: 5px;
+}
+{else}
+.zzza_tixing {
+	right: 5px;
+}
+{/if}
+</style>
+<div class="zzza_tixing" id="zzza_tixing">
+    <div class="zzza_tsl">
+        <div class="zzza_tsy">
+            <!-- 未完成任务 -->
+				<!--{if $zzza_tiezi4 > 0}-->
+				<style>
+				.zzza_hall_bottom_right_yjan_btn:hover {
+					background: url(source/plugin/yinxingfei_zzza/yinxingfei_zzza_img/rank_yao_all.gif) no-repeat 0 -150px;
+				}
+				</style>
+				<a href="javascript:;" onclick="alert('{lang yinxingfei_zzza:hmwcyyrwo}')" class="zzza_hall_bottom_right_yjan_btn">{lang yinxingfei_zzza:wwcrw}</a>
+				<!--{else}-->
+				<!-- 完成任务 -->
+				<style>
+				.zzza_hall_bottom_right_yjan_btn:hover {
+					background: url(source/plugin/yinxingfei_zzza/yinxingfei_zzza_img/rank_yao_all.gif) no-repeat 0 -50px;
+				}
+				</style>
+				<a href="{$set['zzza_link']}" class="zzza_hall_bottom_right_yjan_btn">{lang yinxingfei_zzza:kyyjl}</a>
+				<!--{/if}-->
+        </div>
+        <div class="zzza_rwzs">
+		<!--{if $zzza_tiezi4 > 0}-->
+		{lang yinxingfei_zzza:rank21}<span class="zzza_hall_top_left_infor_num">{$zzza_tiezi4}</span><!--{if $zzza_lx == '1'}-->{lang yinxingfei_zzza:rank22}<!--{elseif $zzza_lx == '2'}-->{lang yinxingfei_zzza:rank222}<!--{elseif $zzza_lx == '3'}-->{lang yinxingfei_zzza:rank232}<!--{/if}-->
+		<!--{else}-->
+		{lang yinxingfei_zzza:rank20}
+		<!--{/if}-->
+        </div>
+    </div>
+    <div class="zzza_tsr">
+        <div class="zzza_lxyj">
+            <div style="float:left;width: 70px;">{lang yinxingfei_zzza:zzzam5}</div>
+			<div style="float:right;" class="zzza_guanbi"><a href="javascript:;" onclick="guanbitx();">X</a></div>
+        </div>
+        <div class="zzza_shuzi">
+            <strong style="color: #F40;">{$querya['lxyj']}</strong><span class="zzza_tian">{lang yinxingfei_zzza:tian}</span>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+	function guanbitx(){
+		document.getElementById('zzza_tixing').style.display = "none";
+	}
+</script>
+<!--{/block}-->	

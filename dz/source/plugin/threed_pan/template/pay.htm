@@ -1,0 +1,39 @@
+{template common/header}
+<script>
+
+function pan_paycredit() {
+	showWindow('payokbox','{$_G["siteurl"]}plugin.php?id=threed_pan:payfor&tid=$_GET["tid"]&ac=pay&gg=$pan_srlgg&formhash={FORMHASH}');
+}
+</script>
+<style>
+.paybox1{width: 400px;border-top:3px solid #CDCDCD; }
+.paybox1 td{border-bottom:1px dashed #CDCDCD; padding:5px 2px; text-align:center;}
+</style>
+<div class="bm bw0">
+	<h3 class="flb" style="font-size:14px;">	
+    <em>{lang threed_pan:tmpay1}</em>
+    <!--{if $_G[inajax]}-->
+		<span><a href="javascript:;" class="flbc" onclick="hideWindow('paybox')" ></a></span>
+	<!--{/if}-->
+	</h3> <div style="padding:0 10px;">
+	<table class="paybox1" style="" cellpadding="0" cellspacing="0"><tbody>
+    <tr ><td width="150">{lang threed_pan:tmpay2}</td><td><a href="home.php?mod=space&uid=$seieid">$sale_username</a></td></tr>
+	<tr><td>{lang threed_pan:tmpay3}</td><td><a href="home.php?mod=space&amp;uid=$uid">$buy_username</a></td></tr>
+	<tr><td>{lang threed_pan:tmpay4}</td><td>$pan_srljiage $buy_creditname </td></tr>
+        <!--{if $user_creditnum>$pan_srljiage}-->
+        	<tr><td>{lang threed_pan:tmpay5}</td><td>$sale_get $buy_creditname</td></tr>
+			<tr><td>{lang threed_pan:tmpay6}</td><td>$yuxia $buy_creditname</td></tr>
+        <tr style=" background:#F2F2F2; height:20px; border-top:1px solid #CCC"><td>{lang threed_pan:tmpay7}</td><td><div style="padding:8px 10px; text-align:right;"><button type="submit" class="pn vm" onclick="pan_paycredit()"><em>{lang threed_pan:tmpay8}</em></button>
+        <button type="submit" class="pn vm" onclick="hideWindow('paybox')"><em>{lang threed_pan:tmpay9}</em></button></div></td></tr>
+        	<!--{else}-->
+            <tr><td colspan="2">$pan_option['thd_credit']</td></tr>
+            <!--{/if}-->
+            </tbody></table>
+            </div>
+            
+		</div>
+    </div>
+
+</div>
+
+{template common/footer}

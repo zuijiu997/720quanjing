@@ -1,0 +1,59 @@
+<style>
+/* 大分页按钮 by Pony 1203121325 */
+.pgbtn { margin: 5px 0 10px; }
+	.pgbtn a { display: block; height: 40px; line-height: 40px; letter-spacing: 5px; text-align: center; border: 1px solid #DCDCDC; background: #F5F5F5 url({STYLEIMGDIR}/bg_pgbtn.png) repeat-x 0 0; font-size: 14px; outline: none; border-radius: 5px; box-shadow: 0 1px 0 #F5F5F5; }
+		.pgbtn a:hover { border-color: #BABABA; text-decoration: none; }
+		.pgbtn a:active { background: #EEE; border-color: #D0D0D0; box-shadow: none; }
+/* 瀑布流布局 by Pony 1204121803 */
+.waterfall { position: relative; margin-top: 15px; margin-left:-10px;}
+	.waterfall li { margin: 0 0px 10px 10px; padding: 0 0 3px; text-align: left; border-width: 1px 0 0; border-top: 1px solid $_G[style][wrapbordercolor]; background: url(source/plugin/showimg_dzx/images/bg_waterfall.png) no-repeat 100% 100%; }
+	.waterfall .c, .waterfall h3 { padding: 14px; border: solid $_G[style][wrapbordercolor]; border-width: 0 1px; background-color: #FFFFFF; }
+		.waterfall .c { overflow: hidden; padding-bottom: 0; max-height: 800px; }
+		.waterfall .c .nopic { display: block; background:url({IMGDIR}/nophototiny.png) no-repeat 50% 50%; cursor: pointer; }
+	.waterfall .auth { padding: 0 10px 10px; border-width: 0 1px 1px; border-style: solid; border-color: transparent $_G[style][wrapbordercolor] #B9B9B9; background: #F8F8F8; }
+		.waterfall .auth img { display: inline-block; margin: 0 1px; }
+a.wbtn{display:inline-block; padding:4px 8px; border:1px $_G[style][wrapbordercolor] solid; background-color:#ffffff; text-decoration:none;filter:alpha(Opacity=80);}
+a.wbtn:hover{background-color:#efefef;}
+	
+		
+/* 帖子列表 by Pony 1204051535 */
+.tl { border-radius: 0 0 5px 5px; }
+	.tl .bm_c { padding: 0; }
+	.tl th, .tl td { border-bottom-color: #E6E6E6; }
+	.tl tr:hover th, .tl tr:hover td { background: #F7F7F7; }
+	.bw0_all tr:hover th, .bw0_all tr:hover td { background: none; }
+	.tl .th { padding: 4px 15px; background: #EBF1FC; }
+	.tl tbody:last-child th, .tl tbody:last-child td { border-bottom: none; }
+#threadlist.addradius { border-radius: 5px; }
+	.addradius .th { border-radius: 5px 5px 0 0; }
+
+	.tl .tf a { float: left; margin-right: 5px; padding: 4px 12px 3px; height: 18px; background-color: #D9E4F9; border-radius: 5px; }
+		.tl .tf a.a { background-color: #367DD3; color: #FFF; }
+		.tl .tf a.a:hover { text-decoration: none; }
+		.tl .tf .showmenu { padding-right: 20px; background-image: url(source/plugin/showimg_dzx/images/arrwd.png); }
+		.forumrefresh { background-position: 50% 50%; }
+
+	.tl .xst, .newthread .new em, .newthread .new em a { font-family: {THREADTITLEFONT}; font-size: {THREADTITLEFONTSIZE} !important; }
+	.tl th img { margin-bottom: 5px; }
+	.tl .o { width: 30px; }
+	.tl .avt { vertical-align: top; padding: 10px 0; width: 80px; }
+		.tl .avt img { margin-left: 15px; }
+	.tl .by { padding-right: 15px; text-align: right; }
+
+	.emptb th, .emptb td { padding: 0 !important; }
+
+	.tl .tbmu { padding: 10px 15px; }
+	.tl .pgbtn { margin: 5px 15px 15px; }
+		.ie6 .tl .pgbtn, .ie7 .tl .pgbtn, .ie8 .tl .pgbtn { margin-top: 15px; }
+	.tl .waterfall { margin-left: 15px; }
+/** end **/
+
+
+/** forum::forumdisplay **/
+#atarget { margin: 7px 0 0 7px; }
+.imagemode, .txtmode { overflow: hidden; float: right; margin: 7px 0 0 7px; width: 16px; height: 16px; text-indent: -9999px; background: url(source/plugin/showimg_dzx/images/chk.png) no-repeat 0 -16px; outline: none; }
+.imagemode { background-position: -16px -16px; }
+	.ichked { background-position: -16px 0; }
+	.tchked { background-position: 0 0; }
+/** end **/		
+</style>

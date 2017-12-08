@@ -1,0 +1,88 @@
+<!--{block return}-->
+<link rel="stylesheet" type="text/css" href="source/plugin/yinxingfei_zzza/yinxingfei_zzza_css/yinxingfei_zzza_tixing_touch.css?{VERHASH}" />
+<style>
+{if $set['zzza_txwz'] == '1'}
+.zzza_tixingb {
+	left: 1px;
+}
+.zzza_tixing {
+	left: -344px;
+}
+{else}
+.zzza_tixingb {
+	right: 1px;
+}
+.zzza_tixing {
+	right: -344px;
+}
+{/if}
+</style>
+<div class="zzza_tixing" id="zzza_tixing">
+    <div class="zzza_tsl">
+		<a href="javascript:;" onclick="guanbitx();" style="
+position: absolute;
+top: 10px;
+right: 1px;
+font-size: 20px;
+z-index: 999;
+width: 50px;
+height: 43px;
+line-height: 43px;
+text-align: center;">X</a>
+        <div class="zzza_tsy">
+            <!-- 未完成任务 -->
+				<!--{if $zzza_tiezi4 > 0}-->
+				<style>
+				.zzza_hall_bottom_right_yjan_btn:hover {
+					background: url(source/plugin/yinxingfei_zzza/yinxingfei_zzza_img/rank_yao_all.gif) no-repeat 0 -131px;background-size: 100px 173px;
+				}
+				</style>
+				<a href="javascript:;" onclick="alert('{lang yinxingfei_zzza:hmwcyyrwo}')" class="zzza_hall_bottom_right_yjan_btn">{lang yinxingfei_zzza:wwcrw}</a>
+				<!--{else}-->
+				<!-- 完成任务 -->
+				<style>
+				.zzza_hall_bottom_right_yjan_btn:hover {
+					background: url(source/plugin/yinxingfei_zzza/yinxingfei_zzza_img/rank_yao_all.gif) no-repeat 0 -44px;background-size: 100px 173px;
+				}
+				</style>
+				<a href="{$set['zzza_link']}" class="zzza_hall_bottom_right_yjan_btn">{lang yinxingfei_zzza:kyyjl}</a>
+				<!--{/if}-->
+        </div>
+        <div class="zzza_rwzs">
+		<!--{if $zzza_tiezi4 > 0}-->
+		{lang yinxingfei_zzza:rank21}<span class="zzza_hall_top_left_infor_num">{$zzza_tiezi4}</span><!--{if $zzza_lx == '1'}-->{lang yinxingfei_zzza:rank22}<!--{elseif $zzza_lx == '2'}-->{lang yinxingfei_zzza:rank222}<!--{elseif $zzza_lx == '3'}-->{lang yinxingfei_zzza:rank232}<!--{/if}-->
+		<!--{else}-->
+		{lang yinxingfei_zzza:rank20}
+		<!--{/if}-->
+        </div>
+    </div>
+</div>
+<div class="zzza_tixingb" id="zzza_tixingb">
+	<a href="javascript:;" onclick="yaoyiyao();"></a>
+</div>
+{if $set['zzza_txwz'] == '1'}
+<!-- //left -->
+<script type="text/javascript">
+	function guanbitx(){
+		$('#zzza_tixingb').animate({left:'1px'},"slow");
+		$('#zzza_tixing').animate({left:'-344px'},"slow");
+	}
+	function yaoyiyao(){
+		$('#zzza_tixingb').animate({left:'-70px'},"slow");
+		$('#zzza_tixing').animate({left:'-2px'},"slow");
+	}
+</script>
+{else}
+<!-- //right -->
+<script type="text/javascript">
+	function guanbitx(){
+		$('#zzza_tixingb').animate({right:'1px'},"slow");
+		$('#zzza_tixing').animate({right:'-344px'},"slow");
+	}
+	function yaoyiyao(){
+		$('#zzza_tixingb').animate({right:'-70px'},"slow");
+		$('#zzza_tixing').animate({right:'-2px'},"slow");
+	}
+</script>
+{/if}
+<!--{/block}-->	

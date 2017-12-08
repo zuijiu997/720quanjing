@@ -1,0 +1,320 @@
+<style>
+    .banklist{height:auto;overflow: hidden;list-style: none}
+    .banklist li{
+        width: 134px;
+        height: 38px;
+        display: block;
+        border: 1px solid #cfcfcf;
+        float: left;
+        margin: 0 24px 12px 0;
+        cursor: pointer;
+    }
+    .banklist li.bank_on {
+        background-color: #f4f9eb;
+        border: 1px solid #a4c953;
+    }
+    .banklist li em {
+        background: url({$_G['site_url']}source/plugin/youka_pay/template/lbs.png) no-repeat -16px -80px;
+        width: 15px;
+        height: 15px;
+        display: block;
+        position: absolute;
+        margin: -16px 0 0 120px;
+        _margin: 23px 0 0 -14px;
+    }
+    .controls {
+        width: 580px;
+        float: left;
+        position: relative;
+        display: block;
+    }
+    .valuelist {
+        display: inline-block;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    .valuelist li {
+        height: 36px;
+        line-height: 36px;
+        float: left;
+        margin-right: 22px;
+        _margin-right: 20px;
+        margin-bottom: 2px;
+        color: #666;
+    }
+    .valuelist li a {
+        background: url({$_G['site_url']}source/plugin/youka_pay/template/lbs.png) no-repeat 0 10px;
+        height: 36px;
+        display: block;
+        color: #666;
+        text-decoration: none;
+        padding-left: 18px;
+        float: left;
+    }
+    .valuelist li.hover a {
+        background-position: 0 -30px;
+        font-weight: bold;
+    }
+
+    .cell_radio {
+        float: left;
+        width: 615px;
+    }
+    .pay_type .form-select {
+        margin-bottom: 10px;
+        vertical-align: top;
+    }
+    .form-select {
+        border: 1px solid #c7c7c7;
+        width: 116px;
+        height: 36px;
+        line-height: 36px;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        vertical-align: middle;
+        margin-right: 10px;
+        font-size: 14px;
+        background: #f8f9fb;
+        color: #646464;
+    }
+    label.selected {
+        background: url({$_G['site_url']}source/plugin/youka_pay/template/radio_cur.gif) right bottom no-repeat;
+        border: 2px solid #f86c41;
+        color: #000;
+        width: 114px;
+        height: 34px;
+        line-height: 34px;
+    }
+    .form-field {
+        margin: 12px 0;
+        zoom: 1;
+    }
+    .mod_form {
+        color: #000000;
+    }
+
+</style>
+        <!--{if $get_orderid}-->
+        <br>
+<table cellspacing="0" cellpadding="0" class="dt valt">
+    <tr>
+        <th class="xw1">{lang youka_pay:dingdan}</th>
+        <th class="xw1">{lang youka_pay:posttime}</th>
+        <th class="xw1">{lang youka_pay:pay_status}</th>
+    </tr>
+    <tr class="">
+        <td>{$order['orderid']}</td>
+        <td>{$order[posttime]}</td>
+        <td><!--{if $order['status']==0}--><img src="{$_G['site_url']}source/plugin/youka_pay/template/loading.gif" /><!--{/if}-->{$status}</td>
+    </tr>
+</table>
+<!--{if $order['status']==0}-->
+        <script>
+            setTimeout(function(){
+                location.reload();
+            },5000);
+        </script>
+<!--{/if}-->
+        <!--{else}-->
+<table cellspacing="0" cellpadding="0" class="tfm mtn" bgcolor="#F5F5F5">
+<tr>
+<td>
+<div style="width:17%; height:30px; line-height:30px; float:left;">{lang youka_pay:mode_of_payment_xg}</div>
+<div style="width:83%; height:30px; line-height:30px; float:right;color:#FF0000">{lang youka_pay:memcp_credits_addfunds_rules_ratio} =  <strong>$ec_ratio</strong> {$_G[setting][extcredits][$my_conf['credit_type']][unit]}{$_G[setting][extcredits][$my_conf['credit_type']][title]}
+        <!--{if $ec_mincredits}-->&nbsp;&nbsp;{lang youka_pay:memcp_credits_addfunds_rules_min}  <strong>$ec_mincredits</strong> {$_G[setting][extcredits][$my_conf['credit_type']][unit]}{$_G[setting][extcredits][$my_conf['credit_type']][title]}<!--{/if}-->
+        <!--{if $ec_maxcredits}-->&nbsp;&nbsp;{lang youka_pay:memcp_credits_addfunds_rules_max}  <strong>$ec_maxcredits</strong> {$_G[setting][extcredits][$my_conf['credit_type']][unit]}{$_G[setting][extcredits][$my_conf['credit_type']][title]}<!--{/if}-->
+        <!--{if $_G[setting][ec_maxcreditspermonth]}--><br />{lang youka_pay:memcp_credits_addfunds_rules_month}  <strong>$_G[setting][ec_maxcreditspermonth]</strong> {$_G[setting][extcredits][$my_conf['credit_type']][unit]}{$_G[setting][extcredits][$my_conf['credit_type']][title]}<!--{/if}-->
+</div>
+</td>
+</tr>
+</table>
+<!--{if in_array(1,$api_type) && in_array(2,$api_type)}-->
+<table cellspacing="0" cellpadding="0" class="tfm mtn">
+
+    <tr>
+        <th>{lang youka_pay:pay_channel}</th>
+        <td colspan="2">
+            <div class="controls">
+            <ul class="valuelist" id="bank_pay_channel">
+                <li class="hover" tag="bank"><a href="javascript:;">{lang youka_pay:select_bank}</a></li>
+                <li tag="card" class=""><a href="javascript:;">{lang youka_pay:select_card}</a></li>
+            </ul>
+            </div>
+        </td>
+    </tr>
+    </table>
+<!--{/if}-->
+<!--{if in_array(1,$api_type)}-->
+			<form id="addfundsform" name="addfundsform" method="post" autocomplete="off" action="home.php?mod=spacecp&ac=plugin&op=credit&id=youka_pay:exchange" onsubmit="ajaxpost(this.id, 'return_addfundsform');return false;">
+				<input type="hidden" name="formhash" value="{FORMHASH}" />
+				<input type="hidden" name="addfundssubmit" value="true" />
+				<input type="hidden" name="handlekey" value="buycredit" />
+				<table cellspacing="0" cellpadding="0" class="tfm mtn">
+
+					<tr id="paybox" >
+						<th>{lang youka_pay:memcp_credits_addfunds}</th>
+						<td class="pns">
+                             <div style="height:30px; float:left"><input type="text" size="5" class="px" style="width: auto;" id="addfundamount" name="addfundamount" value="0" onkeyup="addcalcredit()" /></div>
+            <div style="line-height:30px; height:30px; float:left">{$_G[setting][extcredits][$my_conf['credit_type']][title]}&nbsp;
+							{lang youka_pay:credits_need}&nbsp;{lang youka_pay:memcp_credits_addfunds_caculate_radio}</div>
+						</td>
+						<td width="300" class="d">
+							</td>
+					</tr>
+
+                    <tr>
+                        <td>{lang youka_pay:select_bank}</td>
+                        <td>
+                            <ul class="banklist" style="height: auto;">
+                                <!--{loop $pay_banks $val}-->
+                                <li bank_id="$val[id]" payment_type="chinapay" title="{$val[lang]}" class="">
+                                    <img src="{$_G['site_url']}source/plugin/youka_pay/template/bank/{$val[id]}.png">
+                                </li>
+                                <!--{/loop}-->
+                                <input type="hidden" name="pay_type" value="0" />
+                            </ul>
+                        </td>
+                    </tr>
+
+
+					<tr>
+						<th>&nbsp;</th>
+						<td colspan="2">
+							<button type="submit" name="addfundssubmit_btn" class="pn" id="addfundssubmit_btn" value="true"><em>{lang youka_pay:memcp_credits_addfunds}</em></button>
+						</td>
+					</tr>
+
+				</table>
+			</form>
+<span style="display: none" id="return_addfundsform"></span>
+<!--{/if}-->
+<!--{if in_array(2,$api_type)}-->
+        <!-- card_pay -->
+<!--{if in_array(1,$api_type)}-->
+       <!-- style='display:none;' -->
+        <!--{/if}-->
+     <!-- name="card_form" method="post" autocomplete="off" action="home.php?mod=spacecp&ac=plugin&op=credit&id=youka_pay:exchange" > -->  <!--{if in_array(1,$api_type)}-->   <!--{/if}-->
+    <form id="card_form"style='display:none;' name="card_form" method="post" autocomplete="off" action="home.php?mod=spacecp&ac=plugin&op=credit&id=youka_pay:exchange" >
+    <input type="hidden" name="formhash" value="{FORMHASH}" />
+    <input type="hidden" name="card_form" value="true" />
+<table cellspacing="0" cellpadding="0" class="tfm mtn">
+    <tr>
+        <th>{lang youka_pay:dianka_leixing}</th>
+        <td colspan="2">
+            <div class="cell_radio pay_type" id="card_pay_type" data-action="select">
+                <!--{loop $card_types_show $val}-->
+                <label class="form-select" val="{$val['id']}">{$val['lang']}</label>
+                <!--{/loop}-->
+             </div>
+            <input type="hidden" id="card_type" name="card_type" value="0" />
+        </td>
+    </tr>
+    <tr>
+        <th>{lang youka_pay:zhifu_jine}</th>
+        <td colspan="2">
+            <div style="height:30px; float:left">
+            <select id="exttype" name="card_value" class="ps" width="168">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="200">200</option>
+                <option value="300">300</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+            </select></div>
+            <div style="line-height:30px; height:30px; float:left">{lang youka_pay:danwei}&nbsp;
+                {lang youka_pay:credits_need2}&nbsp;{lang youka_pay:memcp_credits_addfunds_caculate_radio2}{$_G[setting][extcredits][$my_conf['credit_type']][title]}</div>
+        </td>
+    </tr>
+    <style>
+        #desamount2{margin-top:-2px;}
+    </style>
+    <tr>
+        <th>{lang youka_pay:kahao}</th>
+        <td colspan="2">
+            <input type="text" size="30" class="px" style="width: auto;" id="cardno" name="cardno" />
+        </td>
+    </tr>
+    <tr>
+        <th>{lang youka_pay:mima}</th>
+        <td colspan="2">
+            <input type="text" size="30" class="px" style="width: auto;" id="cardpwd" name="cardpwd" />
+        </td>
+    </tr>
+    <tr>
+        <th></th>
+        <td colspan="2">
+            <button type="submit" name="card_submit_btn" class="pn" id="card_submit_btn" value="true"><em>{lang youka_pay:memcp_credits_addfunds}</em></button>
+        </td>
+    </tr>
+</table>
+
+</form>
+    <!--{/if}-->
+<!--{/if}-->
+
+        <script src="{$_G['site_url']}source/plugin/youka_pay/template/jquery.js" ></script>
+			<script type="text/javascript">
+                var jq = jQuery.noConflict();
+				function addcalcredit() {
+					var addfundamount = $('addfundamount').value.replace(/^0/, '');
+					var addfundamount = parseInt(addfundamount);
+					$('desamount').innerHTML = !isNaN(addfundamount) ? Math.ceil(((addfundamount / $ec_ratio) * 100)) / 100 : 0;
+				}
+                jq(function(){
+                    jq('.banklist li').click(function(){
+                        var html = jq(this).html();
+                        if(jq(this).hasClass('bank_on')){
+                            jq(this).removeClass('bank_on');
+                            jq('em',this).remove();
+                            jq('[name=pay_type]').val(0);
+                        }else{
+                            jq('.banklist li').removeClass('bank_on');
+                            jq('.banklist li em').remove();
+                            jq(this).addClass('bank_on')
+                                    .html(html+'<em></em>');
+                            var pay_type = jq(this).attr('bank_id');
+                            jq('[name=pay_type]').val(pay_type);
+                        }
+                    });
+                    jq('#bank_pay_channel li').click(function(){
+                        jq(this).addClass('hover').siblings().removeClass('hover');
+                        var tag = jq(this).attr('tag');
+                        if(tag=='card'){
+                            jq('#addfundsform').hide();
+                            jq('#card_form').show();
+                        }else{
+                            jq('#addfundsform').show();
+                            jq('#card_form').hide();
+                        }
+                    });
+                    jq('#card_pay_type label').click(function(){
+                        jq(this).addClass('selected').siblings().removeClass('selected');
+                        var val = jq(this).attr('val');
+                        jq('#card_type').val(val);
+                    });
+                    var card_value = jq('[name=card_value]').val();
+                    card_value = card_value * $ec_ratio;
+                    jq('#desamount2').html(card_value);
+                    jq('[name=card_value]').change(function(){
+                        card_value = jq(this).val();
+                        card_value = card_value * $ec_ratio;
+                        jq('#desamount2').html(card_value);
+                    });
+                });
+
+			</script>
+
+		<!--{hook/spacecp_credit_bottom}-->
+

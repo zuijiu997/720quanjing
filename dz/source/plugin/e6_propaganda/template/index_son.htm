@@ -1,0 +1,32 @@
+<!--{template common/header}-->
+<!--{template e6_propaganda:left_header}-->
+<table summary="e6_nav_name" cellspacing="0" cellpadding="0" class="dt">
+    <tr style="color:#FF6600;">
+		<td>ID</td>
+		<td>{lang e6_propaganda:s_1}</td>
+		<td>{lang e6_propaganda:s_2}</td>
+		<td>{lang e6_propaganda:s_3}</td>
+		<td>{lang e6_propaganda:s_4}</td>
+		<td>{lang e6_propaganda:s_5}</td>
+		{$table_title}
+    </tr>
+    <!--{loop $list $value}-->
+	<tr>
+		<td>$value[n]</td>
+        <td>$value[username]</td>
+		<td>$value[groupid]</td>
+        <td>$value[regdate]</td>
+        <td>$value[oltime] {lang e6_propaganda:s_6}</td>
+		<td>$value[posts] {lang e6_propaganda:s_7}</td>
+		<!--{if $e6_propaganda['area']}-->
+		<td>$value[region]</td>
+		<!--{/if}-->
+		<!--{loop $active_arr $v}-->
+		<td>{$value['activation'.$v]}</td>
+		<!--{/loop}-->
+	</tr>
+    <!--{/loop}-->
+</table>		
+<!--{if $multi}--><div class="pgs cl mtm">$multi</div><!--{/if}-->
+<!--{template e6_propaganda:left_footer}-->
+<!--{template common/footer}-->

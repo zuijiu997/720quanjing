@@ -1,0 +1,615 @@
+<!--{template common/header}-->
+<!--{eval include template("shenlan_center:$style/style");}-->
+<div id="ct" class="ct3_a wp cl">
+
+<!--{template shenlan_center:default/index_left}-->
+
+
+<div class="mn ptm pbm">
+<div class="brian_main">
+<style>
+.ct3_a .mn { float:none;
+ margin-left:140px;
+ padding-left:0px;
+ width:auto;}
+.pbm { background-color:#fff;}
+#ct { position:relative; margin:5px auto;}
+.appl { position:absolute; top:0px; left:0;}
+</style>
+
+{if $_G['cache']['plugin']['tmall'] || $showadmin}
+<div class="portal_block cl">
+    <div class="block_title cl">
+        <div class="z">{$shenlan_center_lang['index_htm_1']}</div>
+        <div class="y">
+        <a href="tmall.php?mod=list" target="_blank">{$shenlan_center_lang['index_htm_2']}&raquo;</a>
+        <a href="tmall.php?mod=hotsell" target="_blank">{$shenlan_center_lang['index_htm_3']}&raquo;</a>
+        <a href="tmall.php?mod=shop&op=list" target="_blank">{$shenlan_center_lang['index_htm_4']}&raquo;</a>
+        <a href="tmall.php?mod=comments" target="_blank">{$shenlan_center_lang['index_htm_5']}&raquo;</a>
+        <a href="tmall.php?mod=member" target="_blank">{$shenlan_center_lang['index_htm_6']}&raquo;</a>
+        <a href="tmall.php" target="_blank">{$shenlan_center_lang['index_htm_7']}&raquo;</a></div>
+    </div>
+    
+    <div>
+        <div class="portal_shangcheng cl">
+        <!--[diy=portal_shangcheng]--><div id="portal_shangcheng" class="area"></div><!--[/diy]-->
+        </div>
+    </div>
+    
+    {if $_G['adminid'] && !$_G['cache']['plugin']['tmall']}
+    <div class="shenlan_plugin_dec cl">
+        <table>
+            <tr>
+                <td class="shenlan_plugin_dec1"><a href="http://addon.discuz.com/?@tmall.plugin" target="_blank"><img src="http://addon.discuz.com/resource/plugin/tmall.png" /></a></td>
+                <td class="shenlan_plugin_dec2">
+                    <h1>{$shenlan_center_lang['index_htm_8']}</h1>
+                    <h2>{$shenlan_center_lang['index_htm_9']}</h2>
+                    <h2>{$shenlan_center_lang['index_htm_10']} </h2>
+                </td>
+                <td class="shenlan_plugin_dec3">
+                    <p><a href="http://addon.discuz.com/?@tmall.plugin" target="_blank">[{$shenlan_center_lang['index_htm_11']}]</a></p>
+                    <p><a href="http://www.discuzcms.com/tmall" target="_blank">[{$shenlan_center_lang['index_htm_12']}]</a></p>
+                </td>
+            </tr>
+        </table>
+     </div>
+     {/if}
+</div>
+{/if}
+
+<div class="cl"><!--[diy=portal_ad_09]--><div id="portal_ad_09" class="area"></div><!--[/diy]--></div>
+
+
+{if $_G['cache']['plugin']['dmember'] || $showadmin}
+<div class="portal_block cl">
+    <div class="block_title cl">
+        <div class="z">{$shenlan_center_lang['index_htm_13']}</div>
+        <div class="y">
+            <a href="jiaoyou.php?mod=search&now=girl" target="_blank">{$shenlan_center_lang['index_htm_14']}&raquo;</a>
+            <a href="jiaoyou.php?mod=search&now=boy" target="_blank">{$shenlan_center_lang['index_htm_15']}&raquo;</a>
+            <a href="jiaoyou.php?mod=advanced" target="_blank">{$shenlan_center_lang['index_htm_16']}&raquo;</a>
+            <a href="jiaoyou.php?mod=wall" target="_blank">{$shenlan_center_lang['index_htm_17']}&raquo;</a>
+            <a href="jiaoyou.php?mod=my" target="_blank" style=" color:#f30"><b>{$shenlan_center_lang['index_htm_18']}VIP</b>&raquo;</a>
+            <a href="jiaoyou.php" target="_blank">{$shenlan_center_lang['index_htm_7']}&raquo;</a></div>
+    </div>
+    
+    <div class="portal_jiaoyou">
+        <!--[diy=portal_jiaoyou]--><div id="portal_jiaoyou" class="area"></div><!--[/diy]-->
+    </div>
+    
+        {if $_G['adminid']==1 && !$_G['cache']['plugin']['dmember']}
+    <div class="shenlan_plugin_dec cl">
+        <table>
+            <tr>
+                <td class="shenlan_plugin_dec1"><a href="http://addon.discuz.com/?@dmember.plugin" target="_blank"><img src="http://addon.discuz.com/resource/plugin/dmember.png" /></a></td>
+                <td class="shenlan_plugin_dec2">
+                    <h1>{$shenlan_center_lang['index_htm_20']}</h1>
+                    <h2>{$shenlan_center_lang['index_htm_21']}</h2>
+                    <h2>{$shenlan_center_lang['index_htm_22']}</h2>
+                </td>
+                <td class="shenlan_plugin_dec3">
+                    <p><a href="http://addon.discuz.com/?@dmember.plugin" target="_blank">[{$shenlan_center_lang['index_htm_11']}]</a></p>
+                    <p><a href="http://www.discuzcms.com/jiaoyou" target="_blank">[{$shenlan_center_lang['index_htm_12']}]</a></p>
+                </td>
+            </tr>
+        </table>
+        </div>
+        {/if}
+</div>
+{/if}
+
+<div class="cl"><!--[diy=portal_ad_17]--><div id="portal_ad_17" class="area"></div><!--[/diy]--></div>
+
+
+{if $_G['cache']['plugin']['info'] || $showadmin}
+<div class="portal_block cl">
+    <div class="block_title cl">
+        <div class="z">{$shenlan_center_lang['index_htm_25']}</div>
+        <div class="y">
+            <a href="info.php?mod=select" target="_blank" style=" color:#f30"><b>{$shenlan_center_lang['index_htm_26']}</b>&raquo;</a>
+        <a href="info.php" target="_blank">{$shenlan_center_lang['index_htm_7']}&raquo;</a></div>
+    </div>
+    
+    <div class="portal_fenleixinxi">
+        <!--[diy=portal_fenleixinxi]--><div id="portal_fenleixinxi" class="area"></div><!--[/diy]-->
+    </div>
+    
+        {if $_G['adminid']==1 && !$_G['cache']['plugin']['info']}
+    <div class="shenlan_plugin_dec cl">
+        <table>
+            <tr>
+                <td class="shenlan_plugin_dec1"><a href="http://addon.discuz.com/?@info.plugin" target="_blank"><img src="http://addon.discuz.com/resource/plugin/info.png" /></a></td>
+                <td class="shenlan_plugin_dec2">
+                    <h1>{$shenlan_center_lang['index_htm_25']}</h1>
+                    <h2>{$shenlan_center_lang['index_htm_29']}</h2>
+                    <h2>{$shenlan_center_lang['index_htm_30']}</h2>
+                </td>
+                <td class="shenlan_plugin_dec3">
+                    <p><a href="http://addon.discuz.com/?@info.plugin" target="_blank">[{$shenlan_center_lang['index_htm_11']}]</a></p>
+                    <p><a href="http://www.discuzcms.com/info" target="_blank">[{$shenlan_center_lang['index_htm_12']}]</a></p>
+                </td>
+            </tr>
+        </table>
+        </div>
+        {/if}
+</div>
+{/if}
+
+<div class="cl"><!--[diy=portal_ad_18]--><div id="portal_ad_18" class="area"></div><!--[/diy]--></div>
+
+
+
+{if $_G['cache']['plugin']['house'] || $showadmin}
+<div class="portal_block cl">
+    <div class="block_title cl">
+        <div class="z">{$shenlan_center_lang['index_htm_33']}</div>
+        <div class="y">
+        <a href="house.php?mod=list&profile_type_id=1" target="_blank">{$shenlan_center_lang['index_htm_34']}&raquo;</a>
+        <a href="house.php?mod=list&profile_type_id=2" target="_blank">{$shenlan_center_lang['index_htm_35']}&raquo;</a>
+        <a href="house.php?mod=list&profile_type_id=3" target="_blank">{$shenlan_center_lang['index_htm_36']}&raquo;</a>
+        <a href="house.php?mod=list&profile_type_id=5" target="_blank">{$shenlan_center_lang['index_htm_37']}&raquo;</a>
+        <a href="house.php?mod=tool&op=fdjsq" target="_blank">{$shenlan_center_lang['index_htm_38']}&raquo;</a>
+        <a href="house.php?mod=member" target="_blank" style=" color:#f30"><b>{$shenlan_center_lang['index_htm_39']}</b>&raquo;</a>
+        <a href="house.php" target="_blank">{$shenlan_center_lang['index_htm_7']}&raquo;</a></div>
+    </div>
+    
+    <div class="portal_fangchan">
+        <!--[diy=portal_fangchan_shou]--><div id="portal_fangchan_shou" class="area"></div><!--[/diy]-->
+    </div>
+        
+</div>
+
+<div class="cl"><!--[diy=portal_ad_11]--><div id="portal_ad_11" class="area"></div><!--[/diy]--></div>
+
+<div class="portal_block cl">
+    <div class="block_title cl">
+        <div class="z">{$shenlan_center_lang['index_htm_41']}</div>
+        <div class="y"><a href="house.php?mod=loupan" target="_blank">{$shenlan_center_lang['index_htm_7']}&raquo;</a></div>
+    </div>
+    
+    <div class="portal_loupan">
+        <!--[diy=portal_loupan]--><div id="portal_loupan" class="area"></div><!--[/diy]-->
+    </div>
+    
+        {if $_G['adminid']==1 && !$_G['cache']['plugin']['house']}
+    <div class="shenlan_plugin_dec cl">
+        <table>
+            <tr>
+                <td class="shenlan_plugin_dec1"><a href="http://addon.discuz.com/?@house.plugin" target="_blank"><img src="http://addon.discuz.com/resource/plugin/house.png" /></a></td>
+                <td class="shenlan_plugin_dec2">
+                    <h1>{$shenlan_center_lang['index_htm_43']}</h1>
+                    <h2>{$shenlan_center_lang['index_htm_44']}</h2>
+                    <h2>{$shenlan_center_lang['index_htm_30']}</h2>
+                </td>
+                <td class="shenlan_plugin_dec3">
+                    <p><a href="http://addon.discuz.com/?@house.plugin" target="_blank">[{$shenlan_center_lang['index_htm_11']}]</a></p>
+                    <p><a href="http://www.discuzcms.com/house" target="_blank">[{$shenlan_center_lang['index_htm_12']}]</a></p>
+                </td>
+            </tr>
+        </table>
+        </div>
+        {/if}
+</div>
+{/if}
+
+<div class="cl"><!--[diy=portal_ad_12]--><div id="portal_ad_12" class="area"></div><!--[/diy]--></div>
+
+
+{if $_G['cache']['plugin']['job'] || $showadmin}
+<div class="portal_block cl">
+    <div class="block_title cl">
+        <div class="z">{$shenlan_center_lang['index_htm_48']}</div>
+        <div class="y">
+        <a href="job.php?mod=list" target="_blank">{$shenlan_center_lang['index_htm_49']}&raquo;</a>
+        <a href="job.php?mod=memberlist" target="_blank">{$shenlan_center_lang['index_htm_50']}&raquo;</a>
+        <a href="job.php?mod=member&op=resume" target="_blank">{$shenlan_center_lang['index_htm_51']}&raquo;</a>
+        
+        <a href="job.php?mod=space" target="_blank" style=" color:#f30"><b>{$shenlan_center_lang['index_htm_52']}({$shenlan_center_lang['index_htm_53']})</b>&raquo;</a>
+        <a href="job.php" target="_blank">{$shenlan_center_lang['index_htm_7']}&raquo;</a></div>
+    </div>
+    
+    <div class="portal_zhaopin">
+        <!--[diy=portal_zhaopin]--><div id="portal_zhaopin" class="area"></div><!--[/diy]-->
+    </div>
+    
+
+</div>
+
+<div class="cl"><!--[diy=portal_ad_13]--><div id="portal_ad_13" class="area"></div><!--[/diy]--></div>
+
+<div class="portal_block cl">
+    <div class="block_title cl">
+        <div class="z">{$shenlan_center_lang['index_htm_55']}</div>
+        <div class="y">
+        <a href="job.php" target="_blank">{$shenlan_center_lang['index_htm_7']}&raquo;</a></div>
+    </div>
+    
+    <div>
+        <ul class="portal_mingqizhaopin" >
+            <!--[diy=portal_mingqizhaopin]--><div id="portal_mingqizhaopin" class="area"></div><!--[/diy]-->
+        </ul>
+    </div>
+    
+        {if $_G['adminid']==1 && !$_G['cache']['plugin']['job']}
+        <div class="shenlan_plugin_dec cl">
+        <table>
+            <tr>
+                <td class="shenlan_plugin_dec1"><a href="http://addon.discuz.com/?@job.plugin" target="_blank"><img src="http://addon.discuz.com/resource/plugin/job.png" /></a></td>
+                <td class="shenlan_plugin_dec2">
+                    <h1>{$shenlan_center_lang['index_htm_57']}</h1>
+                    <h2>{$shenlan_center_lang['index_htm_58']}</h2>
+                    <h2>{$shenlan_center_lang['index_htm_30']}</h2>
+                </td>
+                <td class="shenlan_plugin_dec3">
+                    <p><a href="http://addon.discuz.com/?@job.plugin" target="_blank">[{$shenlan_center_lang['index_htm_11']}]</a></p>
+                    <p><a href="http://www.discuzcms.com/job" target="_blank">[{$shenlan_center_lang['index_htm_12']}]</a></p>
+                </td>
+            </tr>
+        </table>
+        </div>
+        {/if}
+</div>
+{/if}
+
+<div class="cl"><!--[diy=portal_ad_14]--><div id="portal_ad_14" class="area"></div><!--[/diy]--></div>
+
+
+{if $_G['cache']['plugin']['space'] || $showadmin}
+<div class="portal_block cl">
+    <div class="block_title cl">
+        <div class="z">{$shenlan_center_lang['index_htm_62']}</div>
+        <div class="y" >
+        <a href="space.php?mod=list" target="_blank">{$shenlan_center_lang['index_htm_63']}&raquo;</a>
+        <a href="space.php?mod=map" target="_blank">{$shenlan_center_lang['index_htm_64']}&raquo;</a>
+        <a href="space.php?mod=brand" target="_blank">{$shenlan_center_lang['index_htm_65']}&raquo;</a>
+        <a href="space.php?mod=card" target="_blank">{$shenlan_center_lang['index_htm_66']}&raquo;</a>
+        
+        <a href="space.php?mod=member&op=post" target="_blank" style=" color:#f30"><b>{$shenlan_center_lang['index_htm_67']}</b>&raquo;</a>
+        <a href="space.php" target="_blank">{$shenlan_center_lang['index_htm_7']}&raquo;</a>
+        </div>
+    </div>
+    
+    <div class="portal_shangjia cl">
+        <div class="portal_shangjia_join">
+            <div class="portal_shangjia_title">{$shenlan_center_lang['index_htm_69']}</div>
+            <!--[diy=portal_shangjia_join]--><div id="portal_shangjia_join" class="area"></div><!--[/diy]-->
+        </div>
+        
+        <div class="portal_shangjia_tuijian">
+            <div class="portal_shangjia_title">{$shenlan_center_lang['index_htm_70']}</div>
+            <!--[diy=portal_shangjia_tuijian]--><div id="portal_shangjia_tuijian" class="area"></div><!--[/diy]-->
+        </div>
+    </div>
+    
+        {if $_G['adminid']==1 && !$_G['cache']['plugin']['space']}
+    <div class="shenlan_plugin_dec cl">
+    <table>
+        <tr>
+            <td class="shenlan_plugin_dec1"><a href="http://addon.discuz.com/?@space.plugin" target="_blank"><img src="http://addon.discuz.com/resource/plugin/space.png" /></a></td>
+            <td class="shenlan_plugin_dec2">
+                <h1>{$shenlan_center_lang['index_htm_62']}</h1>
+                <h2>{$shenlan_center_lang['index_htm_72']}</h2>
+                <h2>{$shenlan_center_lang['index_htm_73']}</h2>
+            </td>
+            <td class="shenlan_plugin_dec3">
+                <p><a href="http://addon.discuz.com/?@space.plugin" target="_blank">[{$shenlan_center_lang['index_htm_11']}]</a></p>
+                <p><a href="http://www.discuzcms.com/space" target="_blank">[{$shenlan_center_lang['index_htm_12']}]</a></p>
+            </td>
+        </tr>
+    </table>
+    </div>
+    {/if}
+</div>
+{/if}
+
+<div class="cl"><!--[diy=portal_ad_05]--><div id="portal_ad_05" class="area"></div><!--[/diy]--></div>
+
+{if $_G['cache']['plugin']['weixinnav'] || $showadmin}
+<div class="portal_block cl">
+    <div class="block_title cl">
+        <div class="z">{$shenlan_center_lang['index_htm_76']}</div>
+        <div class="y">
+            <a href="weixinnav.php?mod=list&op=cat" target="_blank">{$shenlan_center_lang['index_htm_77']}&raquo;</a>
+            <a href="weixinnav.php?mod=list&op=area" target="_blank">{$shenlan_center_lang['index_htm_78']}&raquo;</a>
+            <a href="weixinnav.php?mod=select" target="_blank" style=" color:#f30"><b>{$shenlan_center_lang['index_htm_79']}</b>&raquo;</a>
+        <a href="weixinnav.php" target="_blank">{$shenlan_center_lang['index_htm_7']}&raquo;</a></div>
+    </div>
+    
+    <div class="portal_weixindaohang">
+        <!--[diy=portal_weixindaohang]--><div id="portal_weixindaohang" class="area"></div><!--[/diy]-->
+    </div>
+    
+        {if $_G['adminid']==1 && !$_G['cache']['plugin']['weixinnav']}
+        <div class="shenlan_plugin_dec cl">
+        <table>
+            <tr>
+                <td class="shenlan_plugin_dec1"><a href="http://addon.discuz.com/?@weixinnav.plugin" target="_blank"><img src="http://addon.discuz.com/resource/plugin/weixinnav.png" /></a></td>
+                <td class="shenlan_plugin_dec2">
+                    <h1>{$shenlan_center_lang['index_htm_76']}</h1>
+                    <h2>{$shenlan_center_lang['index_htm_82']}</h2>
+                    <h2>{$shenlan_center_lang['index_htm_83']}</h2>
+                </td>
+                <td class="shenlan_plugin_dec3">
+                    <p><a href="http://addon.discuz.com/?@weixinnav.plugin" target="_blank">[{$shenlan_center_lang['index_htm_11']}]</a></p>
+                    <p><a href="http://www.discuzcms.com/weixinnav" target="_blank">[{$shenlan_center_lang['index_htm_12']}]</a></p>
+                </td>
+            </tr>
+        </table>
+        </div>
+        {/if}
+</div>
+{/if}
+
+<div class="cl"><!--[diy=portal_ad_06]--><div id="portal_ad_06" class="area"></div><!--[/diy]--></div>
+
+{if $_G['cache']['plugin']['tuan'] || $showadmin}
+<div class="portal_block cl">
+    <div class="block_title cl">
+        <div class="z">{$shenlan_center_lang['index_htm_86']}</div>
+        <div class="y">
+        <a href="tuan.php?mod=seeyouaround" target="_blank">{$shenlan_center_lang['index_htm_87']}&raquo;</a>
+        <a href="tuan.php?mod=comments" target="_blank">{$shenlan_center_lang['index_htm_5']}&raquo;</a>
+        <a href="tuan.php?mod=new" target="_blank">{$shenlan_center_lang['index_htm_89']}&raquo;</a>
+        <a href="tuan.php?mod=member" target="_blank">{$shenlan_center_lang['index_htm_90']}&raquo;</a>
+        <a href="tuan.php" target="_blank">{$shenlan_center_lang['index_htm_7']}&raquo;</a></div>
+    </div>
+    
+    <div class="portal_tuan">
+        <!--[diy=portal_tuan]--><div id="portal_tuan" class="area"></div><!--[/diy]-->
+    </div>
+    
+        {if $_G['adminid']==1 && !$_G['cache']['plugin']['tuan']}
+    <div class="shenlan_plugin_dec cl">
+        <table>
+            <tr>
+                <td class="shenlan_plugin_dec1"><a href="http://addon.discuz.com/?@tuan.plugin" target="_blank"><img src="http://addon.discuz.com/resource/plugin/tuan.png" /></a></td>
+                <td class="shenlan_plugin_dec2">
+                    <h1>{$shenlan_center_lang['index_htm_92']}</h1>
+                    <h2>{$shenlan_center_lang['index_htm_93']}</h2>
+                    <h2>{$shenlan_center_lang['index_htm_94']}</h2>
+                </td>
+                <td class="shenlan_plugin_dec3">
+                    <p><a href="http://addon.discuz.com/?@tuan.plugin" target="_blank">[{$shenlan_center_lang['index_htm_11']}]</a></p>
+                    <p><a href="http://www.discuzcms.com/tuan" target="_blank">[{$shenlan_center_lang['index_htm_12']}]</a></p>
+                </td>
+            </tr>
+        </table>
+        </div>
+        {/if}
+</div>
+{/if}
+
+<div class="cl"><!--[diy=portal_ad_07]--><div id="portal_ad_07" class="area"></div><!--[/diy]--></div>
+
+{if $_G['cache']['plugin']['biyouhui'] || $showadmin}
+<div class="portal_block cl">
+    <div class="block_title cl">
+        <div class="z">{$shenlan_center_lang['index_htm_97']}</div>
+        <div class="y">
+        <a href="biyouhui.php?mod=seeyouaround" target="_blank">{$shenlan_center_lang['index_htm_98']}&raquo;</a>
+        <a href="biyouhui.php?mod=comments" target="_blank">{$shenlan_center_lang['index_htm_5']}&raquo;</a>
+        <a href="biyouhui.php?mod=new" target="_blank">{$shenlan_center_lang['index_htm_100']}&raquo;</a>
+        <a href="biyouhui.php" target="_blank">{$shenlan_center_lang['index_htm_7']}&raquo;</a></div>
+    </div>
+    
+    <div class="portal_youhuiquan">
+        <!--[diy=portal_youhuiquan]--><div id="portal_youhuiquan" class="area"></div><!--[/diy]-->
+    </div>
+    
+        {if $_G['adminid']==1 && !$_G['cache']['plugin']['biyouhui']}
+        <div class="shenlan_plugin_dec cl">
+        <table>
+            <tr>
+                <td class="shenlan_plugin_dec1"><a href="http://addon.discuz.com/?@biyouhui.plugin" target="_blank"><img src="http://addon.discuz.com/resource/plugin/biyouhui.png" /></a></td>
+                <td class="shenlan_plugin_dec2">
+                    <h1>{$shenlan_center_lang['index_htm_97']}</h1>
+                    <h2>{$shenlan_center_lang['index_htm_103']}</h2>
+                    <h2>{$shenlan_center_lang['index_htm_104']}</h2>
+                </td>
+                <td class="shenlan_plugin_dec3">
+                    <p><a href="http://addon.discuz.com/?@biyouhui.plugin" target="_blank">[{$shenlan_center_lang['index_htm_11']}]</a></p>
+                    <p><a href="http://www.discuzcms.com/biyouhui" target="_blank">[{$shenlan_center_lang['index_htm_12']}]</a></p>
+                </td>
+            </tr>
+        </table>
+        </div>
+        {/if}
+</div>
+{/if}
+
+<div class="cl"><!--[diy=portal_ad_08]--><div id="portal_ad_08" class="area"></div><!--[/diy]--></div>
+
+
+{if $_G['cache']['plugin']['food'] || $showadmin}
+<div class="portal_block cl">
+    <div class="block_title cl">
+        <div class="z">{$shenlan_center_lang['index_htm_107']}</div>
+        <div class="y">
+        <a href="food.php?mod=shop&op=list" target="_blank">{$shenlan_center_lang['index_htm_108']}&raquo;</a>
+        <a href="food.php?mod=comments" target="_blank">{$shenlan_center_lang['index_htm_109']}&raquo;</a>
+        <a href="food.php?mod=seeyouaround" target="_blank">{$shenlan_center_lang['index_htm_110']}&raquo;</a>
+        <a href="food.php?mod=member" target="_blank">{$shenlan_center_lang['index_htm_111']}&raquo;</a>
+        <a href="food.php" target="_blank">{$shenlan_center_lang['index_htm_7']}&raquo;</a></div>
+    </div>
+    
+    <div class="portal_waimai">
+        <!--[diy=portal_waimai]--><div id="portal_waimai" class="area"></div><!--[/diy]-->
+    </div>
+    
+        {if $_G['adminid']==1 && !$_G['cache']['plugin']['food']}
+    <div class="shenlan_plugin_dec cl">
+        <table>
+            <tr>
+                <td class="shenlan_plugin_dec1"><a href="http://addon.discuz.com/?@biyouhui.plugin" target="_blank"><img src="http://addon.discuz.com/resource/plugin/food.png" /></a></td>
+                <td class="shenlan_plugin_dec2">
+                    <h1>{$shenlan_center_lang['index_htm_113']}</h1>
+                    <h2>{$shenlan_center_lang['index_htm_114']}</h2>
+                    <h2>{$shenlan_center_lang['index_htm_94']}</h2>
+                </td>
+                <td class="shenlan_plugin_dec3">
+                    <p><a href="http://addon.discuz.com/?@food.plugin" target="_blank">[{$shenlan_center_lang['index_htm_11']}]</a></p>
+                    <p><a href="http://www.discuzcms.com/food" target="_blank">[{$shenlan_center_lang['index_htm_12']}]</a></p>
+                </td>
+            </tr>
+        </table>
+        </div>
+        {/if}
+</div>
+{/if}
+
+<div class="cl"><!--[diy=portal_ad_10]--><div id="portal_ad_10" class="area"></div><!--[/diy]--></div>
+
+{if $_G['cache']['plugin']['car'] || $showadmin}
+<div class="portal_block cl">
+    <div class="block_title cl">
+        <div class="z">{$shenlan_center_lang['index_htm_118']}</div>
+        <div class="y">
+            <a href="car.php?mod=list" target="_blank">{$shenlan_center_lang['index_htm_119']}&raquo;</a>
+            <a href="car.php" target="_blank">{$shenlan_center_lang['index_htm_120']}&raquo;</a>
+            <a href="car.php?mod=select" target="_blank" style=" color:#f30"><b>{$shenlan_center_lang['index_htm_121']}</b>&raquo;</a>
+        <a href="car.php" target="_blank">{$shenlan_center_lang['index_htm_7']}&raquo;</a></div>
+    </div>
+    
+    <div class="portal_qiche">
+        <!--[diy=portal_qiche]--><div id="portal_qiche" class="area"></div><!--[/diy]-->
+    </div>
+    
+        {if $_G['adminid']==1 && !$_G['cache']['plugin']['car']}
+    <div class="shenlan_plugin_dec cl">
+        <table>
+            <tr>
+                <td class="shenlan_plugin_dec1"><a href="http://addon.discuz.com/?@car.plugin" target="_blank"><img src="http://addon.discuz.com/resource/plugin/car.png" /></a></td>
+                <td class="shenlan_plugin_dec2">
+                    <h1>{$shenlan_center_lang['index_htm_123']}</h1>
+                    <h2>{$shenlan_center_lang['index_htm_124']}</h2>
+                    <h2>{$shenlan_center_lang['index_htm_125']}</h2>
+                </td>
+                <td class="shenlan_plugin_dec3">
+                    <p><a href="http://addon.discuz.com/?@car.plugin" target="_blank">[{$shenlan_center_lang['index_htm_11']}]</a></p>
+                    <p><a href="http://www.discuzcms.com/car" target="_blank">[{$shenlan_center_lang['index_htm_12']}]</a></p>
+                </td>
+            </tr>
+        </table>
+        </div>
+        {/if}
+</div>
+{/if}
+
+<div class="cl"><!--[diy=portal_ad_15]--><div id="portal_ad_15" class="area"></div><!--[/diy]--></div>
+
+{if $_G['cache']['plugin']['marry'] || $showadmin}
+<div class="portal_block cl">
+    <div class="block_title cl">
+        <div class="z">{$shenlan_center_lang['index_htm_128']}</div>
+        <div class="y">
+            <a href="marry.php?mod=search&op=boy" target="_blank">{$shenlan_center_lang['index_htm_129']}&raquo;</a>
+            <a href="marry.php?mod=search&op=girl" target="_blank">{$shenlan_center_lang['index_htm_130']}&raquo;</a>
+            <a href="marry.php?mod=advanced" target="_blank">{$shenlan_center_lang['index_htm_131']}&raquo;</a>
+            <a href="marry.php?mod=hongniang" target="_blank">{$shenlan_center_lang['index_htm_132']}&raquo;</a>
+            <a href="marry.php?mod=my&ac=marry" target="_blank" style=" color:#f30"><b>{$shenlan_center_lang['index_htm_133']}</b>&raquo;</a>
+        <a href="marry.php" target="_blank">{$shenlan_center_lang['index_htm_7']}&raquo;</a>
+        </div>
+    </div>
+    
+    <div class="portal_hunlian">
+        <!--[diy=portal_hunlian]--><div id="portal_hunlian" class="area"></div><!--[/diy]-->
+    </div>
+    
+        {if $_G['adminid']==1 && !$_G['cache']['plugin']['marry']}
+    <div class="shenlan_plugin_dec cl">
+        <table>
+            <tr>
+                <td class="shenlan_plugin_dec1"><a href="http://addon.discuz.com/?@marry.plugin" target="_blank"><img src="http://addon.discuz.com/resource/plugin/marry.png" /></a></td>
+                <td class="shenlan_plugin_dec2">
+                    <h1>{$shenlan_center_lang['index_htm_135']}</h1>
+                    <h2>{$shenlan_center_lang['index_htm_136']}</h2>
+                    <h2>{$shenlan_center_lang['index_htm_22']}</h2>
+                </td>
+                <td class="shenlan_plugin_dec3">
+                    <p><a href="http://addon.discuz.com/?@marry.plugin" target="_blank">[{$shenlan_center_lang['index_htm_11']}]</a></p>
+                    <p><a href="http://www.discuzcms.com/marry" target="_blank">[{$shenlan_center_lang['index_htm_12']}]</a></p>
+                </td>
+            </tr>
+        </table>
+        </div>
+        {/if}
+</div>
+{/if}
+
+<div class="cl"><!--[diy=portal_ad_16]--><div id="portal_ad_16" class="area"></div><!--[/diy]--></div>
+
+{if $_G['cache']['plugin']['sale'] || $showadmin}
+<div class="portal_block cl">
+    <div class="block_title cl">
+        <div class="z">{$shenlan_center_lang['index_htm_140']}</div>
+        <div class="y">
+            <a href="sale.php?mod=post" target="_blank" style=" color:#f30"><b>{$shenlan_center_lang['index_htm_26']}</b>&raquo;</a>
+        <a href="sale.php" target="_blank">{$shenlan_center_lang['index_htm_7']}&raquo;</a></div>
+    </div>
+    
+    <div class="portal_fenleixinxi">
+        <!--[diy=portal_ershou]--><div id="portal_ershou" class="area"></div><!--[/diy]-->
+    </div>
+    
+        {if $_G['adminid']==1 && !$_G['cache']['plugin']['sale']}
+    <div class="shenlan_plugin_dec cl">
+        <table>
+            <tr>
+                <td class="shenlan_plugin_dec1"><a href="http://addon.discuz.com/?@sale.plugin" target="_blank"><img src="http://addon.discuz.com/resource/plugin/sale.png" /></a></td>
+                <td class="shenlan_plugin_dec2">
+                    <h1>{$shenlan_center_lang['index_htm_143']}/{$shenlan_center_lang['index_htm_140']}</h1>
+                    <h2>{$shenlan_center_lang['index_htm_145']}</h2>
+                    <h2>{$shenlan_center_lang['index_htm_30']}</h2>
+                </td>
+                <td class="shenlan_plugin_dec3">
+                    <p><a href="http://addon.discuz.com/?@sale.plugin" target="_blank">[{$shenlan_center_lang['index_htm_11']}]</a></p>
+                    <p><a href="http://www.discuzcms.com/sale" target="_blank">[{$shenlan_center_lang['index_htm_12']}]</a></p>
+                </td>
+            </tr>
+        </table>
+        </div>
+        {/if}
+</div>
+{/if}
+
+<div class="cl"><!--[diy=portal_ad_19]--><div id="portal_ad_19" class="area"></div><!--[/diy]--></div>
+
+{if $_G['cache']['plugin']['gongqiu'] || $showadmin}
+<div class="portal_block cl">
+    <div class="block_title cl">
+        <div class="z">{$shenlan_center_lang['index_htm_149']}</div>
+        <div class="y">
+            <a href="gongqiu.php?mod=post" target="_blank" style=" color:#f30"><b>{$shenlan_center_lang['index_htm_26']}</b>&raquo;</a>
+        <a href="gongqiu.php" target="_blank">{$shenlan_center_lang['index_htm_7']}&raquo;</a></div>
+    </div>
+    
+    <div class="portal_fenleixinxi">
+        <!--[diy=portal_gongqiu]--><div id="portal_gongqiu" class="area"></div><!--[/diy]-->
+    </div>
+    
+        {if $_G['adminid']==1 && !$_G['cache']['plugin']['gongqiu']}
+    <div class="shenlan_plugin_dec cl">
+        <table>
+            <tr>
+                <td class="shenlan_plugin_dec1"><a href="http://addon.discuz.com/?@gongqiu.plugin" target="_blank"><img src="http://addon.discuz.com/resource/plugin/gongqiu.png" /></a></td>
+                <td class="shenlan_plugin_dec2">
+                    <h1>{$shenlan_center_lang['index_htm_149']}</h1>
+                    <h2>{$shenlan_center_lang['index_htm_145']}</h2>
+                    <h2>{$shenlan_center_lang['index_htm_154']}</h2>
+                </td>
+                <td class="shenlan_plugin_dec3">
+                    <p><a href="http://addon.discuz.com/?@gongqiu.plugin" target="_blank">[{$shenlan_center_lang['index_htm_11']}]</a></p>
+                    <p><a href="http://www.discuzcms.com/gongqiu" target="_blank">[{$shenlan_center_lang['index_htm_12']}]</a></p>
+                </td>
+            </tr>
+        </table>
+        </div>
+        {/if}
+</div>
+{/if}
+
+</div>
+
+<div class="cl"><!--[diy=portal_ad_20]--><div id="portal_ad_20" class="area"></div><!--[/diy]--></div>
+</div>
+<!--{template common/footer}-->

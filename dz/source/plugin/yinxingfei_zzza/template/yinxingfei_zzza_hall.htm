@@ -1,0 +1,270 @@
+{template common/header}
+<!--{if !widthauto()}-->
+</div>
+<div style="width:{$set['dtkd']}px;margin:0 auto;background-color:{$set['dtbjys']}!important;">
+<!--{/if}-->
+<link rel="stylesheet" type="text/css" href="source/plugin/yinxingfei_zzza/yinxingfei_zzza_css/yinxingfei_zzza_rili.css?{VERHASH}" />
+<link rel="stylesheet" type="text/css" href="source/plugin/yinxingfei_zzza/yinxingfei_zzza_css/yinxingfei_zzza_main.css?{VERHASH}" />
+<link rel="stylesheet" type="text/css" href="source/plugin/yinxingfei_zzza/yinxingfei_zzza_css/yinxingfei_zzza_dengji.css?{VERHASH}" />
+<style>
+.zzza_tixing {
+display:none;
+}
+.wp #wp {
+min-height:0px!important;
+height:auto!important;
+}
+</style>
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a><em>&raquo;</em><a href="{$set['zzza_link']}">{$set['zzza_t']}</a>
+	</div>
+</div>
+{if $_G['uid']}
+	{if $yjjs == 'yes' && $zzza_time == '1'}
+		<div id="yjyem_zzza">
+		<!--{template yinxingfei_zzza:yinxingfei_zzza_zp}--> 
+		</div>
+	{elseif $zzza_time != '1' && $zzza_tiezi4 <= '0'}
+		<div id="yjyem_zzza">
+		<!--{template yinxingfei_zzza:yinxingfei_zzza_zp}--> 
+		</div>
+	{else}
+		
+	{/if}
+{/if}
+<div class="zzza_hall_main cl">
+    <div class="zzza_hall_top">
+        <div class="zzza_hall_top_left">
+            {if $_G['uid']}
+			<div class="zzza_hall_top_left_tx">
+                <a href="home.php?mod=space&uid={$_G['uid']}&do=profile" target="_blank"><!--{avatar($_G[uid],big)}--></a>
+            </div>
+            <div class="zzza_hall_top_left_infor">
+                <ul>
+					<li>
+                        <a href="home.php?mod=space&uid={$_G['uid']}&do=profile" target="_blank" class="zzza_hall_top_left_infor_username" title="{$_G[member][username]}"><!--{eval echo cutstr($_G[member][username],10);}--></a><span class="zzza_hall_top_left_infor_dj_{$zzzadjdj}">{$zzzadjdj}{lang yinxingfei_zzza:ji}</span>
+                    </li>
+                    <li>
+                        <!--{if $_G['uid'] && {$zzza_u} > 0 && {$aaaa} != '' && $zzza_time == 1}-->
+                        {lang yinxingfei_zzza:jrpmd}<span class="zzza_hall_top_left_infor_num">{$zzza_u}</span>{lang yinxingfei_zzza:wyyyhd}<span class="zzza_hall_top_left_infor_num">{$querya['jf_jt']}</span>{$zzza_jfmc}{lang yinxingfei_zzza:dpm}<span class="zzza_hall_top_left_infor_num">{$mycons1}</span>
+                        <!--{else}-->
+                        {lang yinxingfei_zzza:jtnhmyyypyaygkyb}
+                        <!--{/if}-->
+                    </li>
+                    <li>
+                        {lang yinxingfei_zzza:lxpmd}<span class="zzza_hall_top_left_infor_num">{$lxtsall}</span>{lang yinxingfei_zzza:mlxyj}<span class="zzza_hall_top_left_infor_num">{$querya['lxyj']}</span>{lang yinxingfei_zzza:tian}
+                    </li>
+                    <li>
+                        {lang yinxingfei_zzza:ljpmd}<span class="zzza_hall_top_left_infor_num">{$mytimes}</span>{lang yinxingfei_zzza:mljyj}<span class="zzza_hall_top_left_infor_num">{$querya['cj_cs']}</span>{lang yinxingfei_zzza:tljhd}<span class="zzza_hall_top_left_infor_num">{$querya['jf_all']}</span>{$zzza_jfmc}{lang yinxingfei_zzza:dddddddd}<span class="zzza_hall_top_left_infor_num">{$myall}</span>{lang yinxingfei_zzza:zzza_6}
+                    </li>
+                </ul>
+            </div>
+			{else}
+			<div class="yyl-fsdfsd">
+				<a href="member.php?mod=logging&action=login" onclick="showWindow('login', this.href)" class="xi2">{lang login}</a> | <a href="member.php?mod={$_G[setting][regname]}" class="xi2">$_G['setting']['reglinkname']</a>
+			</div>
+			{/if}
+        </div>
+		{if $set['gglx'] != '3'}
+			{if $set['gglx'] == '1'}
+			<div class="zzza_hall_top_right">
+				<div class="zzza_hall_top_right_img">{$zzza_img}</div>
+			</div>
+			{else}
+			<div class="zzza_hall_top_right">
+				<!-- DIY模式 --><div class="zzza_hall_top_right_img" style="background:transparent!important;"><!--[diy=yinxingfei_zzza1]--><div id="yinxingfei_zzza1" class="area"></div><!--[/diy]--></div>
+			</div>
+			{/if}
+		{/if}
+    </div>
+    <div class="zzza_hall_bottom">
+        <div class="zzza_hall_bottom_left">
+            <div class="yyl-fyt-t">
+                <span class="zzza_hall_top_left_infor_num">{$zzza_fyb}</span>{lang yinxingfei_zzza:tfyb}
+            </div>
+			<ul class="yyl-fyb-main">
+				{loop $zzzalistz_fyb1 $value}
+					{if $value['index'] < 4}
+					<li class="yyl-fyb-main-li">
+						<div class="yyl-fyb-main2">
+							<div class="topnum{$value['index']} topnum">{$value['index']}</div>
+							<div class="yyl-fyb-main22"><a href="home.php?mod=space&uid={$value['zzza_uid']}&do=profile" target="_blank" title="{$value['zzza_name']}"><!--{avatar($value['zzza_uid'],small)}--></a></div>
+							<div class="yyl-fyb-main3">
+								<p class="yyl-fyb-main31"><a href="home.php?mod=space&uid={$value['zzza_uid']}&do=profile" target="_blank" title="{$value['zzza_name']}">{$value['usernamec']}</a></p>
+								<p class="yyl-fyb-main32"><span class="zzza_hall_top_left_infor_num">{$value['jf_jt']}</span>{$zzza_jfmc}</p>
+							</div>
+						</div>
+					</li>
+					{else}
+					<li class="yyl-fyb-main-li">
+						<div class="yyl-fyb-main2">
+							<div class="yyl-rank_num{$value['index']} yyl-rank_num">{$value['index']}</div>
+							<div class="yyl-fyb-main22"><a href="home.php?mod=space&uid={$value['zzza_uid']}&do=profile" target="_blank" title="{$value['zzza_name']}"><!--{avatar($value['zzza_uid'],small)}--></a></div>
+							<div class="yyl-fyb-main3">
+								<p class="yyl-fyb-main31"><a href="home.php?mod=space&uid={$value['zzza_uid']}&do=profile" target="_blank" title="{$value['zzza_name']}">{$value['usernamec']}</a></p>
+								<p class="yyl-fyb-main32"><span class="zzza_hall_top_left_infor_num">{$value['jf_jt']}</span>{$zzza_jfmc}</p>
+							</div>
+						</div>
+					</li>
+					{/if}
+				{/loop}
+			</ul>
+        </div>
+        <div class="zzza_hall_bottom_mid">
+            {if $zzza_tz == 'yes'}
+            <!--{eval include template($zzza_typeid.':'.$zzza_typeid);}-->
+            {else}
+			<!--{eval include template('yinxingfei_zzza:list_view/top_title');}-->
+            <!--{eval include template('yinxingfei_zzza:list_view/list_com');}-->
+            {/if}
+            <div class="zzza_hall_bottom_mid_bottom">
+                {$multipage}
+            </div>
+        </div>
+        <div class="zzza_hall_bottom_right">
+            <div class="zzza_hall_bottom_right_yjan">
+				
+                <div class="zzza_hall_bottom_right_yjan_left">
+					{if $_G['uid']}
+                    <!--{if $zzza_time == 0}-->
+					<!-- 未摇过 -->
+						<!-- 未完成任务 -->
+						<!--{if $zzza_tiezi4 > 0}-->
+						<style>
+						.zzza_hall_bottom_right_yjan_btn:hover {
+							background: url(source/plugin/yinxingfei_zzza/yinxingfei_zzza_img/rank_yao_all.gif) no-repeat 0 -150px;
+						}
+						</style>
+						<a href="javascript:;" onclick="alert('{lang yinxingfei_zzza:hmwcyyrwo}')" class="zzza_hall_bottom_right_yjan_btn">{lang yinxingfei_zzza:wwcrw}</a>
+						<!--{else}-->
+						<!-- 完成任务 -->
+						<style>
+						.zzza_hall_bottom_right_yjan_btn:hover {
+							background: url(source/plugin/yinxingfei_zzza/yinxingfei_zzza_img/rank_yao_all.gif) no-repeat 0 -50px;
+						}
+						</style>
+						<a href="javascript:;" onclick="yjyema();" class="zzza_hall_bottom_right_yjan_btn">{lang yinxingfei_zzza:kyyjl}</a>
+						<!--{/if}-->
+					<!--{else}-->
+					<!-- 已经摇过 -->
+						<a href="javascript:;" onclick="alert('{lang yinxingfei_zzza:yjygmtzlkkb}')" class="zzza_hall_bottom_right_yjan_btn11">{lang yinxingfei_zzza:yjyg}</a>
+					<!--{/if}-->
+					{else}
+						<style>
+						.zzza_hall_bottom_right_yjan_btn:hover {
+							background: url(source/plugin/yinxingfei_zzza/yinxingfei_zzza_img/rank_yao_all.gif) no-repeat 0 -150px;
+						}
+						</style>
+						<a href="javascript:;" onclick="alert('{lang yinxingfei_zzza:qxdlzhhzczh}')" class="zzza_hall_bottom_right_yjan_btn">{lang yinxingfei_zzza:wwcrw}</a>
+					{/if}
+                </div>
+				{if $_G['uid']}
+                <div class="zzza_hall_bottom_right_yjan_title">
+				 <!--{if $zzza_time == 0}-->
+					{if $zzza_tiezi4 <= '0'}
+						<p style="height: 49px;line-height: 49px;font-size: 12px;color: #999;">
+						{lang yinxingfei_zzza:rwywckyjb}
+						</p>
+					{else}
+                    <p style="font-size: 14px;">{lang yinxingfei_zzza:yjtjm}</p>
+                    <p>{lang yinxingfei_zzza:zzdbk}{lang yinxingfei_zzza:nbspaaa}"<span class="zzza_hall_top_left_infor_num"><a href="javascript:;" onmouseover="showMenu({'ctrlid':'zzza_bankuais','pos':'34','ctrlclass':'bankuaia','duration':2});" id="zzza_bankuais" style="font-size: 12px;">{lang yinxingfei_zzza:ckbkw}</a></span>"</p>
+                    <p>
+						{lang yinxingfei_zzza:rank21}<span class="zzza_hall_top_left_infor_num">{$zzza_tiezi4}</span><!--{if $zzza_lx == '1'}-->{lang yinxingfei_zzza:rank22}<!--{elseif $zzza_lx == '2'}-->{lang yinxingfei_zzza:rank222}<!--{elseif $zzza_lx == '3'}-->{lang yinxingfei_zzza:rank232}<!--{/if}-->
+                    </p>
+					{/if}
+				<!--{else}-->
+					<p style="height: 49px;line-height: 49px;font-size: 12px;color: #999;">
+						{lang yinxingfei_zzza:mtzlyjbg}
+					</p>
+				<!--{/if}-->
+				</div>
+				{/if}
+            </div>
+			<div class="tongjjaa">{lang yinxingfei_zzza:jryyya} <span class="zzza_hall_top_left_infor_num">{$zzza_jtall}</span>{lang yinxingfei_zzza:rljyca} <span class="zzza_hall_top_left_infor_num">{$zzza_jfall}</span>{$zzza_jfmc}</div>
+			<div class="zzza_hall_bottom_right_rili">
+				<div class="zzza_sign_bottompart">
+                    <div class="zzza_sign_succ_calendar_title clearfix">
+                            <span class="calendar_title_span">
+                                {lang yinxingfei_zzza:zzzam8}
+                            </span>
+                            <div class="calendar_title_month">
+                                <div class="calendar_month_span j_calendar_month">
+                                    {$zzza_year}{lang yinxingfei_zzza:zzzam9}{$zzza_month}{lang yinxingfei_zzza:zzzam10}
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <table class="zzza_sign_succ_table ">
+                            <thead align="center">
+                                <tr class="zzza_sign_succ_canlerdar_head">
+                                    <td>
+                                        {lang yinxingfei_zzza:zzzam11}
+                                    </td>
+                                    <td>
+                                        {lang yinxingfei_zzza:zzzam12}
+                                    </td>
+                                    <td>
+                                        {lang yinxingfei_zzza:zzzam13}
+                                    </td>
+                                    <td>
+                                        {lang yinxingfei_zzza:zzzam14}
+                                    </td>
+                                    <td>
+                                        {lang yinxingfei_zzza:zzzam15}
+                                    </td>
+                                    <td>
+                                        {lang yinxingfei_zzza:zzzam16}
+                                    </td>
+                                    <td>
+                                        {lang yinxingfei_zzza:zzzam17}
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody align="center" class="zzza_sign_succ_canlerdar_days">
+                                {loop $ggprinta $key $value}
+                                {if $value['index']%7 == 1 && $value['index']%7 != 0}<tr>{/if}
+                                   <td class="zzza_{$value['data']} {if $value['yjyj'] > 0 && $value['yjdi'] == 1}zzza_signed_mob_day{elseif $value['yjyj'] > 0 && $value['yjdi'] != 1}zzza_signed_anime_day{/if}" {if $value['yjyj'] > 0 && $value['yjdi'] == 1}title="{lang yinxingfei_zzza:zzzam18}{$value['lasttime']}{lang yinxingfei_zzza:zzzam19}{$value['jf_jt']}{$value['jf_name']}"{elseif $value['yjyj'] > 0 && $value['yjdi'] != 1}title="{lang yinxingfei_zzza:zzzam20}{$value['yjdi']}{lang yinxingfei_zzza:zzzam21}{$value['lasttime']}{lang yinxingfei_zzza:zzzam19}{$value['jf_jt']}{$value['jf_name']}"{/if}>
+                                        {$value['day']}
+                                    </td>
+                                 {if $value['index']%7 != 1 && $value['index']%7 == 0}<tr>{/if}
+                                {/loop}
+                            </tbody>
+                            <tfoot align="center" class="zzza_sign_canlerdar_footer">
+                                <tr>
+                                    <td colspan="7" class="zzza_sign_succ_info">
+                                        {lang yinxingfei_zzza:zzzam22}
+                                        <span class="zzza_sign_succ_count_span j_zzza_sign_succ_keep">
+                                            {$zzza_listi['lxcs']}
+                                        </span>
+                                        {lang yinxingfei_zzza:tian} {lang yinxingfei_zzza:zzzam23}
+                                        <span class="zzza_sign_succ_count_span j_zzza_sign_succ_count">
+                                            {$zzza_listi['ljcs']}
+                                        </span>
+                                        {lang yinxingfei_zzza:tian}
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                </div>
+			</div>
+			<div class="rilidiy">
+			<!--[diy=yinxingfei_zzza2]--><div id="yinxingfei_zzza2" class="area"></div><!--[/diy]-->
+			</div>
+			<div class="zzza_hall_bottom_right_banquan">
+                {lang yinxingfei_zzza:banquan}
+            </div>
+        </div>
+    </div>
+</div>
+<div id="zzza_bankuais_menu" style="display:none;">
+    <div style="padding: 5px;padding-top: 1px;text-align: center;font-weight: bold;">{lang yinxingfei_zzza:yxbkzrwcyyo}</div>
+    <ul>
+        {loop $zzza_bankuai $key $zzza_bankuai}
+        <li>
+			<a href="forum.php?mod=forumdisplay&fid={$zzza_bankuai}" target="_blank"><!--{eval echo DB::result_first("SELECT name FROM ".DB::table('forum_forum')." WHERE fid = '$zzza_bankuai'");}--></a>
+        </li>
+        {/loop}
+    </ul>
+</div>
+{template common/footer}

@@ -1,0 +1,258 @@
+/**
+ *      本程序由尹兴飞开发
+ *      若要二次开发或用于商业用途的，需要经过尹兴飞同意。
+ *
+ *		http://app.yinxingfei.com			插件技术支持
+ *
+ *		http://www.cglnn.com			    插件演示站点
+ *
+ ->		==========================================================================================
+ *
+ *      2014-11-01 开始由6.1升级到6.2！
+ *
+ *		愿我的同学、家人、朋友身体安康，天天快乐！
+ ->		同时也祝您使用愉快！
+ */
+.yyl-random-box {
+position: fixed;
+z-index: 10000;
+width: 585px;
+background-position: 0 -313px;
+padding-top: 181px;
+display:none;
+}
+.yinxingfei_zzza_close {
+position: absolute;
+left: 461px;
+top: 135px;
+width: 28px;
+height: 28px;
+line-height: 10;
+overflow: hidden;
+cursor: pointer;
+}
+.yyl-number-wrap {
+position: relative;
+width: 309px;
+height: 77px;
+margin: 181px 0 28px 134px;
+overflow: hidden;
+}
+.yinxingfei_zzza_num {
+color: #FFF;
+position: relative;
+float: left;
+width: 53px;
+height: 77px;
+margin-right: 11px;
+overflow: hidden;
+}
+.yinxingfei_zzza_num em {
+color: #FFF;
+line-height: 77px;
+font-weight: bold;
+font-size: 77px;
+font-family: simsun;
+height: 77px;
+width: 53px;
+display: block;
+text-align: center;
+}
+.yinxingfei_zzza_num_last {
+color: #FFF;
+position: relative;
+float: left;
+width: 115px;
+height: 77px;
+overflow: hidden;
+}
+.yinxingfei_zzza_num_last span {
+color: #FFF;
+line-height: 77px;
+font-weight: 700;
+font-size: 40px;
+}
+.yyl-number-wrap span {
+position: relative;
+float: left;
+width: 115px;
+height: 77px;
+overflow: hidden;
+font-family: simsun;
+text-align: center;
+}
+.yyl-random-box .yyl-bottom {
+cursor: pointer;
+width: 352px;
+height: 50px;
+padding: 0 0 7px 112px;
+line-height: 51px;
+text-align: center;
+font-size: 14px;
+overflow: hidden;
+}
+.yyl-random-box, .yyl-random-box .zzza_button_1, .yyl-random-result, .yyl-random-get-vip, .yyl-random-banner {
+background-image: url(../yinxingfei_zzza_img/yaoyaole_box_new.png);
+background-repeat: no-repeat;
+}
+.yyl-random-box .zzza_button_1 {
+cursor: pointer;
+float: left;
+width: 352px;
+height: 50px;
+padding: 0;
+line-height: 10;
+overflow: hidden;
+border: 0 none;
+background-position: -112px -599px;
+blr: expression(this.hideFocus=true);
+}
+.yyl-random-banner {
+width: 352px;
+height: 60px;
+margin: -7px 0 -12px 97px;
+padding: 7px 13px 12px 15px;
+overflow: hidden;
+background-position: -97px -53px;
+line-height:60px;
+color:#ffffff;
+text-align:center;
+}
+.yyl-random-box .zzza_button_1:hover {
+cursor: pointer;
+background-position: -112px 0;
+}
+
+.yyl-random-box .yyl-random-result {
+width: 380px;
+height: 146px;
+margin: -7px 0 -12px 97px;
+background-position: -97px -136px;
+}
+.yyl-random-box .yyl-result-contents {
+height: 100px;
+padding-top: 13px;
+text-align: center;
+}
+.yyl-result-contents p {
+margin: 0;
+padding: 0;
+line-height: 6.4;
+}
+
+/* .zzza_main_bg {
+	background:url(../yinxingfei_zzza_img/main_bg.jpg);
+	height:460px;
+	position: relative;
+}
+.zzza_main {
+	width:752px;
+	height:460px;
+	position:relative;
+	margin:0 auto;
+}
+.zzza_num_mask {
+	background:url(../yinxingfei_zzza_img/num_mask.png) 0px 0px no-repeat;
+	height:184px;
+	width:740px;
+	position:absolute;
+	left:50%;
+	top: 23px;
+	margin-left: -371px;
+	z-index:9;
+}
+.zzza_num_box {
+	height:450px;
+	width:752px;
+	position:absolute;
+	left:50%;
+	top:16px;
+	margin-left:-377px;
+	z-index:8;
+	overflow:hidden;
+	text-align:center;
+	background:url(../yinxingfei_zzza_img/main_bga.jpg) no-repeat 0 0;
+}
+.zzza_num {
+	background:url(../yinxingfei_zzza_img/num.png) top center repeat-y;
+	width: 182px;
+	height: 265px;
+	float: left;
+	margin-top: 7px;
+	margin-left: 5px
+}
+.zzza_btn {
+	background:url(../yinxingfei_zzza_img/btn_start.png) 0px 0px no-repeat;
+	width:264px;
+	height:89px;
+	position:absolute;
+	left:50%;
+	bottom:50px;
+	margin-left:-132px;
+	cursor:pointer;
+	clear:both;
+}
+.zzza_btnb {
+	background:url(../yinxingfei_zzza_img/btn_over.png) 0px 0px no-repeat;
+	width:264px;
+	height:89px;
+	position:absolute;
+	left:50%;
+	bottom:50px;
+	margin-left:-132px;
+	cursor:pointer;
+	clear:both;
+}
+.zzza_btnc {
+	background:url(../yinxingfei_zzza_img/btn_load.png) 0px 0px no-repeat;
+	width:264px;
+	height:89px;
+	position:absolute;
+	left:50%;
+	bottom:50px;
+	margin-left:-132px;
+	cursor:pointer;
+	clear:both;
+}
+.zzza_btnd {
+	background:url(../yinxingfei_zzza_img/btn_close.png) 0px 0px no-repeat;
+	width:264px;
+	height:89px;
+	position:absolute;
+	left:50%;
+	bottom:50px;
+	margin-left:-132px;
+	cursor:pointer;
+	clear:both;
+}
+.zzza_btnd:hover {
+	background:url(../yinxingfei_zzza_img/btn_close_hover.png) 0px 0px no-repeat;
+}
+.zzza_btnb:hover {
+	background:url(../yinxingfei_zzza_img/btn_over_hover.png) 0px 0px no-repeat;
+}
+.zzza_btn:hover {
+	background:url(../yinxingfei_zzza_img/btn_start_hover.png) 0px 0px no-repeat;
+}
+.close_btn_zzza {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.close_btn_zzza_a {
+	font-size: 13px;
+	color: #929292;
+}
+.close_btn_zzza_a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+.zzza_numa {
+width: 182px;
+height: 265px;
+float: left;
+margin-top: 7px;
+margin-left: 5px;
+color: black;
+line-height: 265px;
+} */

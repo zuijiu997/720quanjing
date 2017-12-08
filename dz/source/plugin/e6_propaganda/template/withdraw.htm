@@ -1,0 +1,65 @@
+<div style="height:10px;"></div>
+<script src="static/js/calendar.js" type="text/javascript"></script>
+<script type="text/javascript">
+function selectAll_a(){
+	for (var i=0; i<document.cpform_list.quit.length; i++) {
+		var temp = document.cpform_list.quit[i];
+		temp.checked =! temp.checked;
+	}
+}
+function selectAll_b(){
+	for (var i=0; i<document.cpform_list.pass.length; i++) {
+		var temp = document.cpform_list.pass[i];
+		temp.checked =! temp.checked;
+	}
+}
+</script>
+<form name="e6_form" method="post" autocomplete="off" action="">
+{$e6_c['a_w_1']}: <input type="text" name="username" size="8"> &nbsp;&nbsp;
+{$e6_c['a_w_2']}: <select name="ok"><option value="">{$e6_c['a_w_3']}</option>{$ok_option}</select>&nbsp;&nbsp;
+{$e6_c['a_w_4']}: <input type="text" name="sdate" value="" style="width: 108px; margin-right: 5px;" onclick="showcalendar(event, this)"> 
+-- <input type="text" name="edate" value="" style="width: 108px; margin-left: 5px;" onclick="showcalendar(event, this)">&nbsp;&nbsp;
+<input type="submit" name="submit" value="{$e6_c['a_w_5']}">&nbsp;&nbsp;&nbsp;<a href="{$adminurl}&excel=down" style="color:blue;">{$e6_c['a_w_6']}</a>
+</form>
+<div style="height:20px;"></div>
+<form name="cpform_list" method="post" autocomplete="off" action="">
+<input type="hidden" name="step" value="2">
+<table summary="$dual_nav_name" cellspacing="0" cellpadding="0" class="dt">
+    <tr align="center">
+		<td>ID</td>
+		<td>{$e6_c['a_w_7']}</td>
+    	<td>{$e6_c['a_w_8']}</td>
+		<!--{if $e6_propaganda['feetype']}-->
+		<td>{$e6_c['a_w_9']}</td>
+		<!--{/if}-->
+		<!--{loop $profile_list $v}-->
+		<td>$v</td>
+		<!--{/loop}-->
+    	<td>{$e6_c['a_w_10']}</td>
+		<td>{$e6_c['a_w_11']}</td>
+        <td>{$e6_c['a_w_12']}</td>
+		<td>{$e6_c['a_w_13']}<input type="checkbox" name="chk_all" title="{$e6_c['a_w_15']}" onclick="selectAll_a();"/></td>
+        <td>{$e6_c['a_w_14']}<input type="checkbox" name="chk_all" title="{$e6_c['a_w_15']}" onclick="selectAll_b();"/></td>
+    </tr>
+    <!--{loop $list $key $value}-->
+	<tr align="center">
+		<td>$value[n]</td>
+		<td>$value[username]</td>
+		<td>{$value['money']}{$value['type']}</td>
+		<!--{if $e6_propaganda['feetype']}-->
+		<td>{$value['feemoney']}{$value['feetype']}</td>
+		<!--{/if}-->
+		<!--{loop $profile_list $k $v}-->
+		<td>{$value[$k]}</td>
+		<!--{/loop}-->
+        <td>$value[date]</td>
+		<td>$value[okdate]</td>
+		<td>$value[ok_text]</td>
+		<td><!--{if $value[ok]<1}--><input class="checkbox" type="checkbox" id="quit" name="quit[]" value="$value[id]"><!--{/if}--></td>
+		<td><!--{if $value[ok]<1}--><input class="checkbox" type="checkbox" id="pass" name="pass[]" value="$value[id]"><!--{/if}--></td>
+	</tr>
+    <!--{/loop}-->
+</table>
+<!--{if $multi}--><div class="pgs cl mtm" style="width:500px;height:20px;">$multi</div><!--{/if}-->
+<div style="float:right;<!--{if $multi}-->margin-top:-20px;<!--{/if}-->margin-right:50px;"><input type="submit" name="e6_submit" value="{$e6_c['a_w_16']}"></div>
+</form>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X3.2]]></item>
+	<item id="Time"><![CDATA[2012-12-26 11:02]]></item>
+	<item id="From"><![CDATA[±Ò©ú¬P½×¾Â (http://www.qmx8.com/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[VIP¥Î¤á²ÕÁÊ¶R]]></item>
+			<item id="identifier"><![CDATA[qmx8_buy_usergroup]]></item>
+			<item id="description"><![CDATA[¦Û§UÁÊ¶R¥Î¤á²Õ´¡¥ó¡A¥i¥HÅý·|­û³q¹L¤ä¥IÄ_ª½±µÁÊ¶R¯S©wªº¥Î¤á²Õ¡C¥i¥H¦Û¥Ñ³]©w¤£¦P¥Î¤á²Õ¡B¤£¦P¯SÅv´Á­­¡B¤£¦P»ù®æ¡C·|­û³q¹L¤ä¥IÄ_¥I´Ú«á¡A¨t²Î¦Û°Ê³]¸m·|­ûªº¥Î¤á²Õ¥H¤Î¦³®Ä´Á¡A¥H¤Î¦Û°ÊÃØ°e¬ÛÀ³ªº¿n¤À¡Cºñ¦â´¡¥ó¡A¤£­×§ï¥ô¦ó¨t²Î¤å¥ó¡I]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[qmx8_buy_usergroup/]]></item>
+			<item id="copyright"><![CDATA[¤C¤ë http://www.qmx8.com/]]></item>
+			<item id="version"><![CDATA[1.0.5]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[adminid]]></item>
+					<item id="menu"><![CDATA[ÁÊ¶R°O¿ý]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[buy_gui]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X3.2]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[ÁÊ¶R³W«h]]></item>
+				<item id="description"><![CDATA[°t¸m»¡©ú¤w¸g¦b°t¸m¶µ¤¤¼g©ú¡A¦p¦³¤£©ú¥Õ½Ð¨ì¦w¸Ë­¶­±¬d¬Ý¨Ï¥Î»¡©ú http://addon.discuz.com/?@qmx8_buy_usergroup.plugin]]></item>
+				<item id="variable"><![CDATA[c_rule]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[#»¡©ú¡J"#"¶}ÀYªº¤º®e¬°ª`ÄÀ¤º®e¡A¤£¼vÅT¹ê»Ú°t¸m©MÅã¥Ü!
+#°t¸m»¡©ú   °t¸m¦U¶µ¥H  "||" ¸¹¤À¹j¡A¥i¥H³]¸m¦h­Ó¥Î¤á²Õ¡A¨C¦æ¤@­Ó¡C®æ¦¡¦p¤U¡J
+#¥Î¤á²Õ¦WºÙ¡]¥i¥H¦Û¤v©w¸q¡^|| ¹ïÀ³ªº¥Î¤á²Õid¡]§Y groupid ¥i¥H¦b«á¥x>¥Î¤á>¥Î¤á²Õ¤¤¬d¬Ý ¡^|| ¦¬¶O¼Ð·Ç ||¦³®Ä´Á¡]¥Ã¤[¦³®Ä½Ð¶ñ¼g0¡^||ÃØ°e¿n¤À¡]¥i¥HÃØ°e¦h­ÓºØÃþ¿n¤À¡^¶ñ¼g®æ¦¡  ¿n¤À¦WºÙ:¿n¤À¼ÐÃÑ:ÃØ°e¼Æ¶q,¿n¤À¦WºÙ:¿n¤À¼ÐÃÑ:ÃØ°e¼Æ¶q¡]ÃØ°e½Ð¦h­Ó¥H³r¸¹¹j¶}¡A¿n¤À¦WºÙ ©M ¿n¤À¼ÐÃÑ ¥i¥H¦b «á¥x>¥þ§½>¿n¤À³]¸m ¤¤¬d¬Ý¡^
+#°t¸m¥Ü¨Ò --¥H¤U¬°¥¿¦¡°t¸m ¥Î¤á½Ð®Ú¾Ú¦Û¤vªº¹ê»Ú±¡ªp­×§ï
+»ÉµP·|­û||21||0.01||365||«Â±æ:extcredits1:100,ª÷¿ú:extcredits2:100
+»ÈµP·|­û||22||200||365||«Â±æ:extcredits1:300,ª÷¿ú:extcredits2:500
+ª÷µP·|­û||22||500||365||«Â±æ:extcredits1:1000,ª÷¿ú:extcredits2:1000]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[¯SÅv®i¥Ü]]></item>
+				<item id="description"><![CDATA[°t¸m»¡©ú¤w¸g¦b°t¸m¶µ¤¤¼g©ú¡A¦p¦³¤£©ú¥Õ½Ð¨ì¦w¸Ë­¶­±¬d¬Ý¨Ï¥Î»¡©ú http://addon.discuz.com/?@qmx8_buy_usergroup.plugin]]></item>
+				<item id="variable"><![CDATA[t_rule]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[#»¡©ú¡J"#"¶}ÀYªº¤º®e¬°ª`ÄÀ¤º®e¡A¤£¼vÅT¹ê»Ú°t¸m©MÅã¥Ü!
+#³o¨½¬OÅã¥Ü¤@­Óªí®æ¡A¥Î¨Ó®i¥ÜVIP¥Î¤á²Õªº¯SÅv©MªA°È¡A¥i¥H¤À¦¨¦h­Óªí®æ¨ãÅé½Ð°Ñ¦Ò¤U­±°t¸m
+#²Ä¤@¦æ¬OªíÀY¡J¤À²Õ¼ÐÃD¨M©w¤F¤º®eÄÝ¤_­þ¤@­Óªí®æ¡A¤À²Õ¼ÐÃD¬Û¦Pªº·|¦b¦P¤@­Óªí®æ¨½Åã¥Ü¡A¦U­Ó³æ¤¸®æ¤§¶¡¥Î"||"¹j¶}
+#¤À²Õ¼ÐÃD||¯SÅv¦WºÙ||¥Î¤á²Õ¦WºÙ1||¥Î¤á²Õ¦WºÙ2(¥H¨ÇÃþ±À¡A»Ý­n´X­Ó¼g´X­Ó)
+#²Ä¤G¦æ¶}©l¬O¤º®e¡A¨C¦æ¹ïÀ³Åã¥Ü¤@¦æªí®æ¡J
+#¤À²Õ¼ÐÃD||¨ãÅéªºÅv­­||¦³||¦³(®Ú¾Ú²Ä¤@¦æªº°t¸m¡A¦³´X­Ó¼g´X­Ó)
+#¤À²Õ¼ÐÃD||¨ãÅéªºÅv­­||¦³||¦³(®Ú¾Ú²Ä¤@¦æªº°t¸m¡A¦³´X­Ó¼g´X­Ó)
+#¥i¥H¥t°_¤@­Ó¤À²Õ¼ÐÃD¡AÅã¥Ü¥t¤@­Óªí®æ  
+#²Ä¤@¦æ¬OªíÀY¡J
+#¤À²Õ¼ÐÃD2||¯SÅv¦WºÙ||¥Î¤á²Õ¦WºÙ1||¥Î¤á²Õ¦WºÙ2(¥H¨ÇÃþ±À¡A»Ý­n´X­Ó¼g´X­Ó)
+#²Ä¤G¦æ¶}©l¬O¤º®e¡A¨C¦æ¹ïÀ³Åã¥Ü¤@¦æªí®æ¡J
+#¤À²Õ¼ÐÃD2||¨ãÅéªºÅv­­||¦³||¦³(®Ú¾Ú²Ä¤@¦æªº°t¸m¡A¦³´X­Ó¼g´X­Ó)
+#¤À²Õ¼ÐÃD2||¨ãÅéªºÅv­­||¦³||¦³(®Ú¾Ú²Ä¤@¦æªº°t¸m¡A¦³´X­Ó¼g´X­Ó)
+#°t¸m¥Ü¨Ò --¥H¤U¬°¥¿¦¡°t¸m ¥Î¤á½Ð®Ú¾Ú¦Û¤vªº¹ê»Ú±¡ªp­×§ï
+
+VIP©«¤l¯SÅv||¯SÅv¦WºÙ||´¶³q·|­û||»ÉµP·|­û||»ÈµP·|­û||ª÷µP·|­û
+VIP©«¤l¯SÅv||§K¦^©«¬d¬Ý¥ô¦ó©«¤l||¤£¥i¥H||¤£¥i¥H||¥i¥H||¥i¥H
+VIP©«¤l¯SÅv||§K¿n¤À¤U¸ü||¤£¥i¥H||¥i¥H||¥i¥H||¥i¥H
+VIP©«¤l¯SÅv||¦^©«Âù­¿¿n¤ÀÅv­­||µL||¦³||¦³||¦³
+
+VIP¬¡°Ê¯SÅv||¯SÅv¦WºÙ||´¶³q·|­û||»ÉµP·|­û||»ÈµP·|­û||ª÷µP·|­û
+VIP¬¡°Ê¯SÅv||°Ñ»P¬¡°Ê||¥i¥H||¥i¥H||¥i¥H||¥i¥H
+VIP¬¡°Ê¯SÅv||²ÕÂ´¬¡°Ê||¤£¥i¥H||¥i¥H||¥i¥H||¥i¥H
+
+VIPªA°È||¯SÅv¦WºÙ||´¶³q·|­û||»ÉµP·|­û||»ÈµP·|­û||ª÷µP·|­û
+VIPªA°È||¤@¹ï¤@«ÈªAªA°È||µL||¦³||¦³||¦³
+VIPªA°È||7*24¤p®ÉªA°È||µL||µL||¦³||¦³
+VIPªA°È||§K¦^©«¬d¬Ý¥ô¦ó©«¤l||¤£¥i¥H||¤£¥i¥H||¥i¥H||¥i¥H
+VIPªA°È||§K¿n¤À¤U¸ü||¤£¥i¥H||¥i¥H||¥i¥H||¥i¥H
+VIPªA°È||¦^©«Âù­¿¿n¤ÀÅv­­||µL||¦³||¦³||¦³]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[¨ä¥¦»¡©ú]]></item>
+				<item id="description"><![CDATA[°t¸m»¡©ú¤w¸g¦b°t¸m¶µ¤¤¼g©ú¡A¦p¦³¤£©ú¥Õ½Ð¨ì¦w¸Ë­¶­±¬d¬Ý¨Ï¥Î»¡©ú http://addon.discuz.com/?@qmx8_buy_usergroup.plugin]]></item>
+				<item id="variable"><![CDATA[other_tip]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[#¨ä¥¦»¡©ú
+#¥Ü¨Ò¡J¤À²Õ¼ÐÃD||¤º®e
+#¤À²Õ¼ÐÃD¬Û¦Pªº·|Åã¥Ü¦P¤@­Ó²Õ
+
+±`¨£°ÝÃD||¥I´Ú¤§«á¨S¦³¶}³q¦¨¥\«ç»ò¿ì¡H½ÐÁp¨tºÞ²z­û¡A´£¨Ñ§Aªº¥æ©ö­q³æ¸¹¡AºÞ²z­û·|À°§A¤â°Ê¶}³q¡I
+±`¨£°ÝÃD||¥I´Ú¤§«á¨S¦³¶}³q¦¨¥\«ç»ò¿ì¡H½ÐÁp¨tºÞ²z­û¡A´£¨Ñ§Aªº¥æ©ö­q³æ¸¹¡AºÞ²z­û·|À°§A¤â°Ê¶}³q¡I
+±`¨£°ÝÃD||¥I´Ú¤§«á¨S¦³¶}³q¦¨¥\«ç»ò¿ì¡H½ÐÁp¨tºÞ²z­û¡A´£¨Ñ§Aªº¥æ©ö­q³æ¸¹¡AºÞ²z­û·|À°§A¤â°Ê¶}³q¡I
+ª`·N¨Æ¶µ||¥I´Ú®É½Ð¤£¦bÃö³¬¥I´Ú­¶­±¡Aµ¥«ÝÂsÄý¾¹¦Û°Ê¸õÂà§¹¦¨¡A§_«h±NµLªk¦Û°Ê¶}³q¡I
+ª`·N¨Æ¶µ||¥I´Ú®É½Ð¿ï¾Ü§Y®É¨ì½ã¤è¦¡¡A¨t²Î±N·|¦Û°Ê¬°§A¶}³q¡I]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[¬¡°ÊÁn©ú]]></item>
+				<item id="description"><![CDATA[ÁÊ¶R­¶­±ªº³Ì¤U¤è!¸ÑÄÀÅvÁn©ú¡I]]></item>
+				<item id="variable"><![CDATA[hd_tip]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA["VIP"¬¡°Ê³Ì²×¸ÑÄÀÅvÂk**©Ò¦³]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[ÁÊ¶RÃì±µ¤å¦r]]></item>
+				<item id="description"><![CDATA[ÁÊ¶R­¶­±ªºÁÊ¶RÃì±µ¤å¦r]]></item>
+				<item id="variable"><![CDATA[do]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[¥ß§Y¶}³q]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[VIPÁÊ¶R­¶­±¼ÐÃD]]></item>
+				<item id="description"><![CDATA[VIPÁÊ¶R­¶­±¼ÐÃD]]></item>
+				<item id="variable"><![CDATA[p_title]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[¶}³qVIP·|­û]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[¥Î¤á°Ï°ì´£¥Ü¤å¦r]]></item>
+				<item id="description"><![CDATA[¥Î¤á°Ï°ì´£¥Ü¤å¦r¡AÅã¥Ü¦b¥k¤W¨¤¡A¯dªÅ«h¤£Åã¥Ü]]></item>
+				<item id="variable"><![CDATA[b_user_tip]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[¤É¯ÅVIP]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="qmx8_pay_succeed"><![CDATA[¤ä¥I¦¨¥\\,¥¿¦b¬°±z¸õÂà¡I]]></item>
+				<item id="qmx8_orders_tips"><![CDATA[<li>Åwªï¨Ï¥Î [±Ò©ú¬P§a] ÁÊ¶R¥Î¤á²Õ-¥[±jª©</li><li>±z¥i¥H¦b³o¨½¬d¬Ý¥Î¤áÁÊ¶R°O¿ý¡I</li>]]></item>
+				<item id="qmx8_orders_search"><![CDATA[¥Î¤á²ÕÁÊ¶R­q³æ·j¯Á]]></item>
+				<item id="qmx8_orders_search_status"><![CDATA[­q³æª¬ºA]]></item>
+				<item id="qmx8_orders_search_status_all"><![CDATA[¥þ³¡ª¬ºA]]></item>
+				<item id="qmx8_orders_search_status_pending"><![CDATA[µ¥«Ý¥I´Ú]]></item>
+				<item id="qmx8_orders_search_status_auto_finished"><![CDATA[¦¨¥\\¦b½u¤ä¥I]]></item>
+				<item id="qmx8_orders_submitdate"><![CDATA[´£¥æ®É¶¡]]></item>
+				<item id="qmx8_orders_confirmdate"><![CDATA[½T»{®É¶¡]]></item>
+				<item id="qmx8_order_status"><![CDATA[­q³æª¬ºA]]></item>
+				<item id="qmx8_orders_buyer"><![CDATA[¥I´Ú¤H]]></item>
+				<item id="qmx8_expiration"><![CDATA[¦³®Ä´Á]]></item>
+				<item id="qmx8_orders_price"><![CDATA[¤ä¥X¤H¥Á¹ô]]></item>
+				<item id="qmx8_orders_search_submit_date"><![CDATA[­q³æ´£¥æ®É¶¡½d³ò(yyyy-mm-dd)]]></item>
+				<item id="qmx8_orders_search_confirm_date"><![CDATA[­q³æ½T»{®É¶¡½d³ò(®æ¦¡ yyyy-mm-dd)]]></item>
+				<item id="qmx8_buy_groupname"><![CDATA[ÁÊ¶R¥Î¤á²Õ]]></item>
+				<item id="qmx8_orders_id"><![CDATA[­q³æ¸¹/¥æ©ö¸¹]]></item>
+				<item id="qmx8_forever"><![CDATA[¥Ã¤[]]></item>
+				<item id="qmx8_day"><![CDATA[¤Ñ]]></item>
+				<item id="qmx8_rmb"><![CDATA[¤H¥Á¹ô]]></item>
+				<item id="qmx8_yuan"><![CDATA[¤¸]]></item>
+				<item id="qmx8_search_result"><![CDATA[·j¯Áµ²ªG]]></item>
+				<item id="qmx8_plugin_title"><![CDATA[ÁÊ¶R¥Î¤á²Õ-¥[±jª©]]></item>
+				<item id="qmx8_plugin_usergroup"><![CDATA[¥Î¤á²Õ]]></item>
+				<item id="qmx8_price"><![CDATA[»ù&#160;&#160;&#160;&#160;®æ]]></item>
+				<item id="qmx8_do"><![CDATA[¾Þ&#160;&#160;&#160;&#160;§@]]></item>
+				<item id="qmx8_buy"><![CDATA[ÁÊ¶R]]></item>
+				<item id="qmx8_plugin_not_open"><![CDATA[´¡¥ó¥¼¶}±Ò¡I]]></item>
+				<item id="qmx8_close"><![CDATA[Ãö³¬]]></item>
+				<item id="qmx8_need_price"><![CDATA[©Ò»Ýª÷ÃB]]></item>
+				<item id="qmx8_premium"><![CDATA[¼úÀy]]></item>
+				<item id="qmx8_paytype"><![CDATA[¤ä¥IÄ_]]></item>
+				<item id="qmx8_submit"><![CDATA[´£¥æ]]></item>
+				<item id="qmx8_vip"><![CDATA[¤É¯ÅVIP]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="qmx8_expiration"><![CDATA[¦³®Ä´Á]]></item>
+				<item id="qmx8_plugin_usergroup"><![CDATA[¥Î¤á²Õ]]></item>
+				<item id="qmx8_price"><![CDATA[»ù&#160;&#160;&#160;&#160;®æ]]></item>
+				<item id="qmx8_do"><![CDATA[¾Þ&#160;&#160;&#160;&#160;§@]]></item>
+				<item id="qmx8_nav_title"><![CDATA[VIPÁÊ¶R]]></item>
+				<item id="qmx8_rmb"><![CDATA[¤H¥Á¹ô]]></item>
+				<item id="qmx8_yuan"><![CDATA[¤¸]]></item>
+				<item id="qmx8_zsjf"><![CDATA[ÃØ°e¿n¤À]]></item>
+				<item id="qmx8_tian"><![CDATA[¤Ñ]]></item>
+				<item id="qmx8_select_pay"><![CDATA[¿ï¾Ü¤ä¥I¤è¦¡]]></item>
+				<item id="qmx8_close"><![CDATA[Ãö³¬]]></item>
+				<item id="qmx8_pay_type"><![CDATA[¤ä¥I¤è¦¡]]></item>
+				<item id="qmx8_forever_ok"><![CDATA[¥Ã¤[]]></item>
+				<item id="qmx8_config_tip"><![CDATA[±zÁÙ¨S¦³³]¸m¤ä¥IÄ_©M°]¥I³q¡A½Ðµn¿ý«á¥x³]¸m¡I³]¸m¤èªk¡Jµn¿ý½×¾Â«á¥x->¹BÀç->¹q¤l°Ó°È ®Ú¾Ú»¡©ú¶i¦æ³]¸m¡I]]></item>
+				<item id="qmx8_next"><![CDATA[¤U¤@¨B]]></item>
+				<item id="qmx8_subing"><![CDATA[´£¥æ¤¤]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+	</item>
+</root>

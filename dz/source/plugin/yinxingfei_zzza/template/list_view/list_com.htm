@@ -1,0 +1,24 @@
+<div class="zzza_hall_bottom_mid_mid">
+    {if $num == 0}
+    <div style="text-align: center;line-height: 311px;font-size: 18px;font-weight: bold;">{lang yinxingfei_zzza:hmsjjo}</div>
+    {else}
+    <ul class="zzza_readers">
+       {loop $ggprint $key $value}
+        <li>
+            <a target="_blank" href="home.php?mod=space&uid=$value['zzza_uid']" title="{lang yinxingfei_zzza:yhmma}{$value['zzza_name']}{lang yinxingfei_zzza:dyyldjma}{$value['zzzadjdj']}{lang yinxingfei_zzza:ji}">
+                <!--{avatar($value['zzza_uid'],big)}-->
+                <p class="zzza_readers_name"><i class="zzza_djico">none</i>{lang yinxingfei_zzza:zzza_5}<span class="zzza_hall_top_left_infor_num">{$value['index']}</span>{lang yinxingfei_zzza:zzza_6}</p>
+                <p class="zzza_readers_mc"><em style="max-width: 92px;overflow: hidden;height:23px;">{$value['usernamec']}</em><em class="emmmmmm zzza_hall_top_left_infor_dj_{$value['zzzadjdj']}">none</em></p>
+				{if $zzza_typeid == 'lxyj'}
+				<p class="zzza_readers_mc">{lang yinxingfei_zzza:lxyjma}<span class="zzza_hall_top_left_infor_num">{$value['jf_jt']}</span>{lang yinxingfei_zzza:tian}</p>
+				{elseif $zzza_typeid == 'today'}
+				<p class="zzza_readers_mc">{lang yinxingfei_zzza:jrycma}<span class="zzza_hall_top_left_infor_num">{$value['jf_jt']}</span>{$zzza_jfmc}</p>
+				{else}
+				<p class="zzza_readers_mc">{lang yinxingfei_zzza:ljhdma}<span class="zzza_hall_top_left_infor_num">{$value['jf_jt']}</span>{$zzza_jfmc}</p>
+				{/if}
+            </a>
+        </li>
+        {/loop}
+    </ul>
+    {/if}
+</div>

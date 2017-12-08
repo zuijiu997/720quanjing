@@ -1,0 +1,27 @@
+<!--{template common/header}-->
+<!--{template e6_propaganda:left_header}-->
+<table summary="e6_nav_name" cellspacing="0" cellpadding="0" class="dt">
+    <tr style="color:#FF6600;">
+    	<td>{lang e6_propaganda:l_1}</td>
+    	<td>{lang e6_propaganda:l_2}</td>
+        <td>{lang e6_propaganda:l_3}</td>
+        <td>{lang e6_propaganda:l_4}</td>
+        <td>{lang e6_propaganda:l_5}</td>
+        <td>IP</td>
+        <td>{lang e6_propaganda:l_6}</td>
+    </tr>
+    <!--{loop $list $key $value}-->
+	<tr>
+		<td>$value[type]</td>
+        <td>$value[smoney]</td>
+        <td>$value[change]</td>
+        <td>$value[emoney]</td>
+		<td>$value[date]</td>
+		<td>$value[ip]</td>
+		<td>$value[describe]</td>
+	</tr>
+    <!--{/loop}-->
+</table>		
+<!--{if $multi}--><div class="pgs cl mtm">$multi</div><!--{/if}-->
+<!--{template e6_propaganda:left_footer}-->
+<!--{template common/footer}-->

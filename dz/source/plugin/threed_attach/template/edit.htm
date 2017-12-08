@@ -1,0 +1,52 @@
+{template common/header} 
+<script>
+function edit_pan() {
+        var pan_link2 = $('edit_url').value;        
+        var pan_name2 = $('edit_name').value;
+        if(pan_link2==''||pan_name2==''){
+            alert("{lang threed_attach:load8}");
+                return false;
+        }
+        pan_link2 = encodeURIComponent(pan_link2);
+        pan_name2 =  toTxt(pan_name2);
+        var xmlHttp2=new Ajax('HTML', 'pan__iframe2');               
+        xmlHttp2.get('plugin.php?id=threed_attach:addattach&formhash={FORMHASH}&ac=update&aid={$aid}&name=' + pan_name2 + '&url=' + pan_link2  + '&callback=?',function(json){
+            var INDEX = json;
+             var TEMP_BOX_ID = 'attachname' + INDEX;
+             document.getElementById(TEMP_BOX_ID).innerHTML=pan_name2;
+            document.getElementById(TEMP_BOX_ID).title=pan_name2;
+            var TEMP_BOX_NAME="attachnew["+INDEX+"][description]";   
+            if(INDEX)alert("{lang threed_attach:edit2}");
+	       hideWindow('editbox');
+	});
+}
+</script>
+<table cellpadding="0" cellspacing="0">
+  <tr>
+    <td><h3 class="flb"><em>{lang threed_attach:load2}</em><span><a onclick="hideWindow('editbox');" class="flbc" href="javascript:;">{lang threed_attach:load3}</a></span></h3>
+      <div class="c">
+        <div style="width:640px;height:150px;">
+          <form id="vdisk_form"  target="vdisk_iframe" action="" method="post" enctype="application/x-www-form-urlencoded" accept-charset=utf-8>
+            <table cellpadding="0" cellspacing="0" width="100%">
+              <tbody>
+                <tr class="xg1">
+                  <th width="54%" class="pbn">{lang threed_attach:load4}</th>
+                  <th width="40%" class="pbn">{lang threed_attach:load5}</th>
+                </tr>
+                <tr height="30">
+                  <td><input id="edit_url" type="text" value="{$edit_arr[attachment]}" style="width: 95%;"></td>
+                  <td><input id="edit_name" type="text" value="{$edit_arr[filename]}" style="width: 95%;" ></td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </div>
+      </div>
+      <p class="o pns">
+      	<button class="pn pnc" style="width: 100px;" type="button" id="e_vdisk_btn_charu" onclick="edit_pan()"><strong>{lang threed_attach:edit3}</strong></button>
+        <button type="submit" id="ctrlid_submit" class="pn pnc" onclick="hideWindow('editbox')"><strong>{lang threed_attach:load3}</strong></button>
+      </p></td>
+  </tr>
+</table>
+{template common/footer}

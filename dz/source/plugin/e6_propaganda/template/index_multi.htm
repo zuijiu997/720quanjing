@@ -1,0 +1,56 @@
+<!--{template common/header}-->
+<!--{template e6_propaganda:left_header}-->
+<!--{if empty($_GET['status'])}-->
+{eval E6::M()->js('j', 'e6_propaganda')}
+{eval E6::M()->js('multi', 'e6_propaganda')}
+{eval E6::M()->css('multi', 'e6_propaganda')}
+<div style="padding-left:10px;" >
+	<ul class="simpleTree">
+		<li class="root" id='{$_G['uid']}'><span>{$_G['username']} {$allnum}</span>
+			<ul>
+				<!--{loop $list $value}-->
+				<li id='{$value['uid']}'><span>{$value['username']}</span>
+					<!--{if $value['register'] > 0}-->
+					<ul class="ajax">
+						<li id='$value[uid]'>{url:$multi_url&uid=$value[uid]}</li>
+					</ul>
+					<!--{/if}-->
+				</li>
+				<!--{/loop}-->
+			</ul>
+		</li>
+	</ul>
+</div>
+<!--{else}-->
+<style>
+.e6_tr {color:#0096C2;background: none repeat scroll 0 0 #F2F2F2;}
+.e6_tr a {color:#0096C2;}
+.e6_tr td {font-szie:20px;font-weight:bold;}
+</style>
+<table summary="e6_nav_name" cellspacing="0" cellpadding="0" class="dt">
+	<tr class="e6_tr">
+		<td colspan="7"><h2>{$pro_header}</h2></td>
+	</tr>
+    <tr style="color:#FF6600;">
+    	<td>ID</td>
+    	<td>{lang e6_propaganda:m_1}</td>
+		<td>{lang e6_propaganda:m_2}</td>
+        <td>{lang e6_propaganda:m_3}</td>
+		<td>{lang e6_propaganda:m_4}</td>
+		<td>{lang e6_propaganda:m_5}</td>
+    </tr>
+    <!--{loop $list $key $value}-->
+	<tr>
+		<td>$value[n]</td>
+		<td>$value[username]</td>
+		<td>$value[grouptitle]</td>
+        <td>$value[regdate]</td>
+       	<td>$value[posts] {lang e6_propaganda:m_6}</td>
+		<td>$value[oltime] {lang e6_propaganda:m_7}</td>
+	</tr>
+    <!--{/loop}-->
+</table>
+<div class="pgs cl mtm"><!--{if $multi}-->$multi<!--{/if}--></div>
+<!--{/if}-->
+<!--{template e6_propaganda:left_footer}-->
+<!--{template common/footer}-->

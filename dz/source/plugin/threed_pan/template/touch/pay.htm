@@ -1,0 +1,52 @@
+<!--{template common/header}-->
+<!--Í·²¿-->
+<!-- header start -->
+<header class="header">
+	<div class="nav">
+		<a href="forum.php?mod=viewthread&tid={$tid}&mobile=2" class="z"><img src="{STATICURL}image/mobile/images/icon_back.png" /></a>
+		<span class="name">{lang threed_pan:tmpay1}</span>
+	</div>
+
+</header>
+<!-- header end -->
+<style>
+.paybox1{width: 100%; }
+.paybox1 td{border-bottom:1px dashed #CDCDCD; padding:5px 2px; text-align:center;}
+.button_course {
+	display: inline-block;
+	color: #FFF;
+	background: #33A0C7 none repeat scroll 0% 0%;
+	line-height: 35px;
+	font-size: 16px;
+	width: 100px;
+	height: 35px;
+	border-radius: 3px;
+	text-align: center;
+	position: relative;
+	font-family: "microsoft yahei";
+	vertical-align: middle;
+    margin:5px 10px 5px 10px;
+}
+</style>
+<div class="bm bw0">
+    <div style="padding:0 10px;">
+	<table class="paybox1" style="" cellpadding="0" cellspacing="0"><tbody>
+    <tr ><td width="150">{lang threed_pan:tmpay2}</td><td><a href="home.php?mod=space&uid=$seieid">$sale_username</a></td></tr>
+	<tr><td>{lang threed_pan:tmpay3}</td><td><a href="home.php?mod=space&amp;uid=$uid">$buy_username</a></td></tr>
+	<tr><td>{lang threed_pan:tmpay4}</td><td>$pan_srljiage $buy_creditname </td></tr>
+        <!--{if $user_creditnum>$pan_srljiage}-->
+        	<tr><td>{lang threed_pan:tmpay5}</td><td>$sale_get $buy_creditname</td></tr>
+			<tr><td>{lang threed_pan:tmpay6}</td><td>$yuxia $buy_creditname</td></tr>
+        <tr style=" background:#F2F2F2; height:20px; border-top:1px solid #CCC"><td>{lang threed_pan:tmpay7}</td><td><div style="padding:8px 10px; text-align:right;"><a href="plugin.php?id=threed_pan:payfor&tid=$_GET['tid']&ac=pay&gg=$pan_srlgg&formhash={FORMHASH}" class="button_course"><em>{lang threed_pan:tmpay8}</em></a></div></td></tr>
+        	<!--{else}-->
+            <tr><td colspan="2">$pan_option['thd_credit']</td></tr>
+            <!--{/if}-->
+            </tbody></table>
+            </div>
+            
+		</div>
+    </div>
+
+</div>
+
+<!--{template common/footer}-->

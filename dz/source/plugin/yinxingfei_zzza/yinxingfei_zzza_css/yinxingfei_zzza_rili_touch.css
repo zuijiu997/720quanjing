@@ -1,0 +1,147 @@
+/**
+ *      本程序由尹兴飞开发
+ *      若要二次开发或用于商业用途的，需要经过尹兴飞同意。
+ *
+ *		http://app.yinxingfei.com			插件技术支持
+ *
+ *		http://www.cglnn.com			    插件演示站点
+ *
+ ->		==========================================================================================
+ *
+ *      2014-11-01 开始由6.1升级到6.2！
+ *
+ *		愿我的同学、家人、朋友身体安康，天天快乐！
+ ->		同时也祝您使用愉快！
+ */
+#zzzarili_menu {
+width: 300px;
+padding: 4px;
+border: 1px solid;
+min-width: 60px;
+border-color: #DDD;
+background: #FFF;
+margin-top: -1px;
+border-radius: 4px 0px 4px 4px;
+}
+.zzza_sign_succ_table .zzza_sign_succ_canlerdar_head td {
+border-bottom: 1px solid #E3E3E3;
+}
+.zzza_sign_succ_canlerdar_days td {
+border-right: 1px solid #E3E3E3;
+border-bottom: 1px solid #E3E3E3;
+font-weight: bold;
+}
+.zzza_sign_succ_table td {
+height: 26px;
+cursor: default;
+}
+.zzza_sign_succ_table {
+float:left;
+min-width: 257px;
+width:100%;
+border: 1px solid #E3E3E3;
+background: #FFFFFA;
+border-collapse: collapse;
+border-spacing: 0;
+color: #666;
+}
+.zzza_sign_succ_calendar_title {
+float:left;
+margin-right: 1px;
+overflow: hidden;
+width: 100%;
+}
+.calendar_title_span {
+float: left;
+font-weight: bold;
+}
+.calendar_title_month {
+float: right;
+background-color: #FFFFFA;
+border: 1px solid #E3E3E3;
+border-bottom: 0;
+width: 100px;
+text-align: center;
+}
+.calendar_month_prev {
+display: inline-block;
+width: 18px;
+background: url(../yinxingfei_zzza_img/sign_prev.gif) center no-repeat;
+zoom: 1;
+cursor: pointer;
+}
+.calendar_month_span {
+padding:0 10px 0 10px;
+display: inline;
+line-height: 24px;
+}
+.calendar_month_next {
+display: inline-block;
+width: 18px;
+background: url(../yinxingfei_zzza_img/sign_next.gif) center no-repeat;
+zoom: 1;
+cursor: pointer;
+}
+.zzza_sign_ad_mobi {
+display: block;
+padding: 11px 9px 5px 9px;
+}
+.zzza_sign_ad_mobi_wrapper {
+border-bottom: solid 1px #E3DABB;
+width: 282px;
+padding-bottom:10px;
+}
+.zzza_sign_ad_mobi_strong {
+position: relative;
+font-weight: bold;
+color: #666;
+zoom: 1;
+}
+.zzza_sign_ad_mobi_link {
+font-weight: normal;
+color: #005AE7;
+text-decoration: none;
+}
+.zzza_sign_ad_mobi_hot {
+background-image: url(../yinxingfei_zzza_img/icon_hot.gif);
+background-repeat: no-repeat;
+height: 12px;
+width: 20px;
+position: absolute;
+top: -9px;
+right: 43px;
+}
+.zzza_sign_bottompart {
+padding: 5px;
+overflow: hidden;
+width: 96%;
+}
+.zzza_signed_anime_day {
+background: url(../yinxingfei_zzza_img/sign_have_anime.gif) center no-repeat;
+}
+.zzza_signed_mob_day {
+background: url(../yinxingfei_zzza_img/sign_mob_have.gif) center no-repeat;
+}
+#zzzarili {
+	padding-bottom: 3px;
+	padding-right: 17px;
+	background: url(../yinxingfei_zzza_img/arrwd.gif) no-repeat right 5px;
+    padding-left: 2px;
+}
+#zzzarili.a {
+	position: relative;
+    z-index: 302;
+    border: 1px solid;
+    border-color: #DDD;
+    border-bottom: none;
+    background: white url(../yinxingfei_zzza_img/arrwd1.gif) no-repeat 100% 50%;
+    padding-right: 16px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-top: 3px;
+    margin-left: -9px;
+    border-radius: 4px 4px 0px 0px;
+}
+#zzzarili:hover {
+	text-decoration: none;
+}

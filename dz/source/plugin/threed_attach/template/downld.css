@@ -1,0 +1,97 @@
+
+.threed_panbox{
+    margin-left: auto; margin-right: auto;
+	width:960px;
+	height:auto !important;
+	overflow:hidden;
+}
+.pan_topdiy .panframe{
+	width:100%;
+	height:auto !important;
+}
+
+.pan_info {
+    margin: 60px auto;
+    padding: 20px;
+    width: 580px;
+    border: 3px solid #F2F2F2;
+    background: none repeat scroll 0% 0% #FFF;
+}
+.alert_info {
+    padding: 6px 0px 6px 58px;
+    min-height: 40px;
+    height: auto !important;
+    line-height: 160%;
+    background: url('info.gif') no-repeat scroll 8px 8px transparent;
+    font-size: 14px;
+}
+
+
+.pan_left{
+	float:left;
+	border-radius: 5px;
+	background: #FBFBFB;
+	margin-bottom:10px;
+	width:720px;
+}
+.pan_right{
+	width:229px;
+	float:right;
+	padding-left:10px;
+	border-radius: 5px;	
+	
+}
+.pan_left h4 {
+	border-radius: 5px 5px 0 0;	
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #E8E8E8;
+	width:auto;
+	background:-moz-linear-gradient(center top , #FFF, #F7F7F7) repeat scroll 0% 0% transparent;
+}
+  
+.pan_left h4 strong {
+float: left;
+    display: block;
+    margin-left:10px;
+	font-size:18px; 
+	color:#333; 
+	font-weight:normal;
+
+}
+.pan_left p {
+    float: right;
+    margin: -40px 20px 0 0;
+    color: #333;
+    font-size: 12px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.thd_box {
+    background: #eee;
+    border-radius: 5px;
+    margin:10px;
+	 border-bottom: 2px solid #eee;
+	 overflow:hidden;
+}
+
+.pan_bottomdiy{
+	width:100%;
+	height:auto !important;
+	float:left;
+}
+
+/*pan_f7 社区导读内部框架*/
+.pan_f7{ border:0px; border-radius: 5px; background: #FBFBFB;}
+.pan_f7 .frame-title { padding: 0 10px 0 10px; height: 40px; line-height: 40px; margin:0px; background:none; border-bottom:1px solid #E8E8E8; background:-moz-linear-gradient(center top , #FFF, #F7F7F7) repeat scroll 0% 0% transparent; border-radius: 5px 5px 0 0;	}
+.pan_f7 .frame-title .titletext{ font-size:18px; color:#333; font-weight:normal; }
+.pan_f7 .frame-title .subtitle{ float:right; font-size:12px; padding-left:10px; color:#999}
+.pan_f7 .frame-title .subtitle a{ color:#999}
+
+/*pan_top10 热点*/
+.pan_top10{ background:url(pan_top10.png) no-repeat left 6px; margin:5px 8px 5px 5px; height:400px; overflow:hidden;}
+.pan_top10 li{ height:35px; line-height:35px; padding-left:32px; overflow:hidden; font-size:14px; border-bottom:1px solid #eee;}
+
+
+

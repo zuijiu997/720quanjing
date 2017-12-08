@@ -1,0 +1,194 @@
+<!--{block return}-->
+<style>
+#zzzarili_menu {
+padding: 4px;
+border: 1px solid;
+min-width: 60px;
+border-color: #DDD;
+background: #FEFEFE;
+margin-top: -1px;
+}
+.sign_succ_table tr:nth-child(1) td, .sign_succ_table .sign_succ_canlerdar_head td {
+border-bottom: 1px solid #E3E3E3;
+}
+.sign_succ_canlerdar_days td {
+border-right: 1px solid #E3E3E3;
+border-bottom: 1px solid #E3E3E3;
+font-weight: bold;
+}
+.sign_succ_table td {
+height: 26px;
+cursor: default;
+}
+.sign_succ_table {
+width: 247px;
+border: 1px solid #E3E3E3;
+background: #FFFFFA;
+border-collapse: collapse;
+border-spacing: 0;
+color: #666;
+}
+.sign_succ_calendar_title {
+margin-right: 1px;
+overflow: hidden;
+}
+.calendar_title_span {
+float: left;
+font-weight: bold;
+}
+.calendar_title_month {
+float: right;
+background-color: #FFFFFA;
+border: 1px solid #E3E3E3;
+border-bottom: 0;
+}
+.calendar_month_prev {
+display: inline-block;
+width: 18px;
+background: url(source/plugin/yinxingfei_zzza/yinxingfei_zzza_img/sign_prev.gif) center no-repeat;
+zoom: 1;
+cursor: pointer;
+}
+.calendar_month_span {
+padding:0 10px 0 10px;
+display: inline;
+line-height: 24px;
+}
+.calendar_month_next {
+display: inline-block;
+width: 18px;
+background: url(source/plugin/yinxingfei_zzza/yinxingfei_zzza_img/sign_next.gif) center no-repeat;
+zoom: 1;
+cursor: pointer;
+}
+.sign_ad_mobi {
+display: block;
+padding: 11px 9px 5px 9px;
+}
+.sign_ad_mobi_wrapper {
+border-bottom: solid 1px #E3DABB;
+width: 250px;
+height: 30px;
+}
+.sign_ad_mobi_strong {
+position: relative;
+font-weight: bold;
+color: #666;
+zoom: 1;
+}
+.sign_ad_mobi_link {
+font-weight: normal;
+color: #005AE7;
+text-decoration: none;
+}
+.sign_ad_mobi_hot {
+background-image: url(source/plugin/yinxingfei_zzza/yinxingfei_zzza_img/icon_hot.gif);
+background-repeat: no-repeat;
+height: 12px;
+width: 20px;
+position: absolute;
+top: -7px;
+right: -17px;
+}
+.sign_bottompart {
+padding: 5px 10px 12px 10px;
+}
+.signed_anime_day {
+background: url(source/plugin/yinxingfei_zzza/yinxingfei_zzza_img/sign_have_anime.gif) center no-repeat;
+}
+.signed_mob_day {
+background: url(source/plugin/yinxingfei_zzza/yinxingfei_zzza_img/sign_mob_have.gif) center no-repeat;
+}
+</style>
+<div id="zzzarili_menu" style="display:none;">
+	<div class="j_succ_info sign_succ2" style="">
+        <div class="j_sign_ad_mobi sign_ad_mobi">
+            <div class="sign_ad_mobi_wrapper">
+                <p class="j_sign_ad_mobi_text sign_ad_mobi_text">
+                    <span class="sign_ad_mobi_strong">
+                        <strong style="color:#666666;line-height:18px;position:relative;zoom:1;">
+                            {lang yinxingfei_zzza:zzzam7}
+                            <span>
+                                <a href="{$set['zzza_link']}" style="color:#ff0000;">{$set['zzza_t']}</a>&nbsp;
+                            </span>
+                        </strong>
+                        <span class="sign_ad_mobi_hot">
+                        </span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="sign_bottompart">
+            <div class="sign_succ_calendar">
+                <div class="sign_succ_calendar_title clearfix">
+                    <span class="calendar_title_span">
+                        {lang yinxingfei_zzza:zzzam8}
+                    </span>
+                    <div class="calendar_title_month">
+                        <!-- <div class="calendar_month_prev j_calendar_month_prev" onclick="ajaxget('plugin.php?id=yinxingfei_zzza:yinxingfei_zzza_ajax&action=a&month={$zzza_month}', 'zzzarili_menu');doane(event);">
+                            &nbsp;
+                        </div>
+                         --><div class="calendar_month_span j_calendar_month">
+                            {$zzza_year}{lang yinxingfei_zzza:zzzam9}{$zzza_month}{lang yinxingfei_zzza:zzzam10}
+                        </div>
+                        <!-- <div class="calendar_month_next j_calendar_month_next" onclick="ajaxget('plugin.php?id=yinxingfei_zzza:yinxingfei_zzza_ajax&action=b&month={$zzza_month}', 'zzzarili_menu');doane(event);">
+                            &nbsp;
+                        </div> -->
+                    </div>
+                </div>
+                <table class="sign_succ_table ">
+                    <thead align="center">
+                        <tr class="sign_succ_canlerdar_head">
+                            <td>
+                                {lang yinxingfei_zzza:zzzam11}
+                            </td>
+                            <td>
+                                {lang yinxingfei_zzza:zzzam12}
+                            </td>
+                            <td>
+                                {lang yinxingfei_zzza:zzzam13}
+                            </td>
+                            <td>
+                                {lang yinxingfei_zzza:zzzam14}
+                            </td>
+                            <td>
+                                {lang yinxingfei_zzza:zzzam15}
+                            </td>
+                            <td>
+                                {lang yinxingfei_zzza:zzzam16}
+                            </td>
+                            <td>
+                                {lang yinxingfei_zzza:zzzam17}
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody align="center" class="sign_succ_canlerdar_days">
+						{loop $ggprint $key $value}
+                        {if $value['index']%7 == 1 && $value['index']%7 != 0}<tr>{/if}
+                           <td class="zzza_{$value['data']} {if $value['yjyj'] > 0 && $value['yjdi'] == 1}signed_mob_day{elseif $value['yjyj'] > 0 && $value['yjdi'] != 1}signed_anime_day{/if}" {if $value['yjyj'] > 0 && $value['yjdi'] == 1}title="{lang yinxingfei_zzza:zzzam18}{$value['lasttime']}{lang yinxingfei_zzza:zzzam19}{$value['jf_jt']}{$value['jf_name']}"{elseif $value['yjyj'] > 0 && $value['yjdi'] != 1}title="{lang yinxingfei_zzza:zzzam20}{$value['yjdi']}{lang yinxingfei_zzza:zzzam21}{$value['lasttime']}{lang yinxingfei_zzza:zzzam19}{$value['jf_jt']}{$value['jf_name']}"{/if}>
+                                {$value['day']}
+                            </td>
+                         {if $value['index']%7 != 1 && $value['index']%7 == 0}<tr>{/if}
+						{/loop}
+                    </tbody>
+                    <tfoot align="center" class="sign_canlerdar_footer">
+                        <tr>
+                            <td colspan="7" class="sign_succ_info">
+                                {lang yinxingfei_zzza:zzzam22}
+                                <span class="sign_succ_count_span j_sign_succ_keep">
+                                    {$value['lxcs']}
+                                </span>
+                                {lang yinxingfei_zzza:zzzam4}&nbsp;&nbsp;{lang yinxingfei_zzza:zzzam23}
+                                <span class="sign_succ_count_span j_sign_succ_count">
+                                    {$value['ljcs']}
+                                </span>
+                                {lang yinxingfei_zzza:zzzam4}
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--{/block}-->	

@@ -1,0 +1,121 @@
+<!--{template common/header}-->
+<!--[name][迪恩素材资源教程下载2-宫格频道列表页][/name]-->
+<!--{eval $list = array();}-->
+<!--{eval $wheresql = category_get_wheresql($cat);}-->
+<!--{eval $list = category_get_list($cat, $wheresql, $page);}-->
+<style type="text/css">
+.deansidebar{ display:block;}
+body{ background:#f4f4f4!important;}
+.wp, #wp{ width:100%;}
+#deanpage{ padding:0;}
+.pg{ margin-right:0!important;}
+.deanadsbanner{ width:100%; min-width:1180px; height:450px; background:url(./template/zvis_source_170511/deancss/portal_list_view/bg.jpg) center no-repeat; position:relative;}
+.deanadsbinners{ width:1180px; height:450px; margin:0 auto;}
+.deanadsbinners h5{width:602px; height:81px;background:url(./template/zvis_source_170511/deancss/portal_list_view/bgs.png) center no-repeat;  margin:0px auto; position:relative; top:160px;}
+.deanadsbinners p{ width:391px; height:45px; background:url(./template/zvis_source_170511/deancss/portal_list_view/tts.png) center no-repeat; margin:0px auto; position:relative; top:180px;}
+.dean_designernextnav{ background:#fff; width:100%; min-width:1180px; padding:10px 0;}
+.dean_designernextnav ul{ display:table; margin:15px auto;}
+.dean_designernextnav ul li{ float:left; padding:0 5px;}
+.dean_designernextnav ul li a{ display:block; font-size:16px; color:#999; width:120px; height:30px; line-height:30px; overflow:hidden; text-align:center;}
+.dean_designernextnav ul li a:hover{ color:#fff; background-color: #07AEFC; background: linear-gradient(90deg,#5ea2ff,#00e3ff);}
+.deanwp{ width:1180px; margin:20px auto 0 auto; }
+
+.dean_portbox{}
+.dean_portbox ul{ width:1205px;}
+.dean_portbox ul li{ float:left; width:224px; margin:0 15px 15px 0; background:#fff; box-shadow: 0 2px 3px rgba(0,0,0,0.06);-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear;}
+.dean_portbox ul li:hover{box-shadow: 0 0 15px rgba(45,50,55,.3);-webkit-transform: translateY(-5px); -moz-transform: translateY(-4px); -ms-transform: translateY(-4px); -o-transform: translateY(-4px); transform: translateY(-4px);}
+.deanpbpics{}
+.deanpbpics a{ display:block; width:224px; height:168px; position:relative;}
+.deanpbpics a img{width:224px; height:168px;}
+
+
+.dean_pocontent{ padding: 10px 15px 15px 15px;}
+.dean_pocontent h2{ line-height: 22px; height: 22px; overflow: hidden;}
+.dean_pocontent h2 a{ font-size: 14px; color: #333; font-weight: 400;}
+.dean_pocontent h2 a:hover{ color:#07AEFC;}
+.dean_pofg{ margin:10px 0; height:20px; line-height:20px;}
+.dean_pfenleis{ float:left; height:20px; line-height:20px; padding-left:20px; background:url(./template/zvis_source_170511/deancss/portal_list_view/file.png) left center no-repeat;}
+.dean_pfenleis a{ font-size:12px; color:#cdcdcd;}
+.dean_pfenleis a:hover{ color:#333;}
+.deanfaburiqi{float:right; width:65px; text-align:right; font-size:12px; color:#cdcdcd; height:20px; line-height:20px; overflow:hidden;}
+
+.deansctyui{ height:22px; line-height:22px;}
+.dean_pozzx{ float:left; height:22px; line-height:22px;}
+.dean_pozzx a{ display:block;}
+.dean_pozzx a img{ display:block; float:left; width:22px; height:22px; border-radius:100%;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear;}
+.dean_pozzx a span{ display:block; float:left; margin-left:8px; font-size:14px; color:#999;}
+.dean_pozzx a:hover img{ transform:rotate(360deg); -webkit-transform:rotate(360deg); -moz-transform:rotate(360deg); -o-transform:rotate(360deg); -ms-transform:rotate(360deg);}
+.dean_pozzx a:hover span{ color:#07AEFC}
+.deandfdfgyu{ float:right;height:22px; line-height:22px;}
+.deandfdfgyu span{ display:block; padding-left:25px;background:url(./template/zvis_source_170511/deancss/portal_list_view/viewx.png) left center no-repeat; font-size:12px; color:#999;}
+
+</style>
+<div class="deanadsbanner">
+	<div class="deanadsbinners">
+    	<h5></h5>
+        <p></p>
+    </div>
+</div>
+<!--{if $cat[subs]}-->
+        
+        <div class="dean_designernextnav">
+        	<ul>
+            <!--{eval $i = 1;}-->
+            <!--{loop $cat[subs] $value}-->
+            <!--{if $i != 1}--><!--{/if}-->
+            <li>
+            	<a href="{$portalcategory[$value['catid']]['caturl']}">$value[catname]</a><!--{eval $i--;}-->
+            </li>
+            <!--{/loop}-->
+            <div class="clear"></div>
+            </ul>
+        </div>
+        <!--{/if}-->
+<div class="deanwp">
+    <!--{ad/text/wp a_t}-->
+    <div class="dean_portbox">
+    	<ul>
+        	<!--{loop $list['list'] $value}-->
+            <!--{eval $highlight = article_title_style($value);}-->
+            <!--{eval $article_url = fetch_article_url($value);}-->
+        	<li>
+            	<div class="deanpbpics">
+                	<!--{if $value[pic]}-->
+                    <a href="$article_url" target="_blank">
+                        <img src="$value[pic]"/>
+                    </a>
+                    <!--{else}--><a href="$article_url" target="_blank"><img src="$_G['style'][styleimgdir]/nopic.jpg" /><span></span></a><!--{/if}-->
+                </div>
+            	<div class="dean_pocontent">
+                	<h2><a href="$article_url" target="_blank">$value[title]</a></h2>
+                    <div class="dean_pofg">
+                    	<div class="dean_pfenleis">
+                        	<!--{if $value[catname] && $cat[subs]}--><a href="{$portalcategory[$value['catid']]['caturl']}" target="_blank">$value[catname]</a><!--{/if}-->
+                        </div>
+                        <div class="deanfaburiqi">$value[dateline]</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="deansctyui">
+                    	<div class="dean_pozzx">
+                        	<a href="home.php?mod=space&uid=$value[uid]&do=profile" target="_blank">
+                            	<img src="uc_server/avatar.php?uid=$value[uid]&size=middle">
+                                <span>$value[username]</span>
+                                <div class="clear"></div>
+                            </a>
+                        </div>
+                        <div class="deandfdfgyu">
+                        	<span>{eval $query = DB::query("SELECT t1.viewnum from ".DB::table('portal_article_count')." t1 inner join ".DB::table('portal_article_title')." t2 on t1.aid=t2.aid WHERE t2.aid=$value[aid]"); $dean = DB::fetch($query);echo $dean['viewnum'];}</span>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    
+                </div>
+            </li>
+            <!--{/loop}-->
+            <div class="clear"></div>
+        </ul>
+    </div>
+    <!--{if $list['multi']}--><div class="pgs cl" id="deanpage">{$list['multi']}</div><!--{/if}-->
+</div>
+
+<!--{template common/footer}-->

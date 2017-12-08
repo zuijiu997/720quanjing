@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>$var['p_title']-$navtitle</title>
+    <link href="source/plugin/qmx8_buy_usergroup/template/css/Vip.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="source/plugin/qmx8_buy_usergroup/template/js/common.js"></script>
+    <script type="text/javascript">
+
+    var STYLEID = '{STYLEID}', STATICURL = '{STATICURL}', IMGDIR = '{IMGDIR}', VERHASH = '{VERHASH}', charset = '{CHARSET}', discuz_uid = '$_G[uid]', cookiepre = '{$_G[config][cookie][cookiepre]}', cookiedomain = '{$_G[config][cookie][cookiedomain]}', cookiepath = '{$_G[config][cookie][cookiepath]}', showusercard = '{$_G[setting][showusercard]}', attackevasive = '{$_G[config][security][attackevasive]}', disallowfloat = '{$_G[setting][disallowfloat]}', creditnotice = '<!--{if $_G['setting']['creditnotice']}-->$_G['setting']['creditnames']<!--{/if}-->', defaultstyle = '$_G[style][defaultextstyle]', REPORTURL = '$_G[currenturl_encode]', SITEURL = '$_G[siteurl]', JSPATH = '$_G[setting][jspath]';
+    
+    function pay() {
+        obj=$("next_bt");
+        obj.style.cssText="background-position: 0 -105px;color: #AAAAAA;";
+        obj.onclick=null;
+        obj.value="{lang qmx8_buy_usergroup:qmx8_subing} ...";
+        ajaxget($("bank_type_value_hidden").value,'ajaxback','ajaxback','none');
+    }
+    </script>
+</head>
+<body>
+    <div id="ajaxback" style="display:none;"></div>
+    <input id="bank_type_value_hidden" type="hidden" value="">
+    <div id="append_parent"></div>
+    <div id="header">
+        <img src="source/plugin/qmx8_buy_usergroup/template/images/diamond.gif" alt="" style="position: absolute; left: 313px; top: 317px;" />
+    </div>
+        <div id="nv">
+            <ul>
+                <!--{loop $_G['setting']['navs'] $nav}-->
+                    <!--{if $nav['available'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1))}--><li {if $mnid == $nav[navid]}class="a" {/if}$nav[nav]></li><!--{/if}-->
+                <!--{/loop}-->
+            </ul>
+        </div>
+    <div id="content">
+        <img src="source/plugin/qmx8_buy_usergroup/template/images/titleVip.jpg" alt="" />
+
+        <div class="content">
+            <div class="qmx8_tq">
+                <div class="title"><span class="first">{$var['p_title']}</span></div>
+                    <table width="100%" border="1" cellpadding="0" cellspacing="0" >
+                        <tr class="even" style="color: rgb(0, 0, 0); height: 40px;">
+                            <td align="center" valign="middle">{lang qmx8_buy_usergroup:qmx8_plugin_usergroup}</td>
+                            <td align="center" valign="middle">{lang qmx8_buy_usergroup:qmx8_price}</td>
+                            <td align="center" valign="middle">{lang qmx8_buy_usergroup:qmx8_expiration}</td>
+                            <td align="center" valign="middle">{lang qmx8_buy_usergroup:qmx8_zsjf}</td>
+                            <td align="center" valign="middle">{lang qmx8_buy_usergroup:qmx8_do}</td>
+                        </tr> 
+                        {eval $oj=0;}
+                        {eval $bid=0}
+                        {loop $glist $row}
+                        {eval $bid++}
+                        {if $oj==0}
+                        {eval $oj=1}
+                        <tr class="odd" style="color: rgb(0, 0, 0); height: 40px;">
+                        {else}
+                        {eval $oj=0}
+                        <tr class="even" style="color: rgb(0, 0, 0); height: 40px;">
+                        {/if}    
+                            <td align="center" valign="middle"><a href="home.php?mod=spacecp&amp;ac=usergroup&amp;gid={$row[1]}" style="color:#000000; height: 40px;">{$row[0]}</a></td>
+                            <td align="center" valign="middle">{$row[2]}{lang qmx8_buy_usergroup:qmx8_yuan}</td>
+                            <td align="center" valign="middle">
+                                {if $row[3]==0}
+                                {lang qmx8_buy_usergroup:qmx8_forever_ok}
+                                {else}
+                                {$row[3]}{lang qmx8_buy_usergroup:qmx8_tian}
+                                {/if}
+                            </td>
+                            <td align="center" valign="middle">
+                                {if $row[4]==0}
+                                {lang qmx8_buy_usergroup:qmx8_wu}
+                                {else}
+                                    {eval $i=1}
+                                    {eval $i2=count($row[4])}
+                                    {loop $row[4] $row2}
+                                    {if $i==$i2}
+                                    $row2[0]:$row2[2]
+                                    {else}
+                                    $row2[0]:$row2[2],
+                                    {/if}
+                                    {eval $i++}
+                                    {/loop}
+                                {/if}
+                            </td>
+                            <td align="center" valign="middle" ><a href="plugin.php?id=qmx8_buy_usergroup:vip&amp;bid={$bid}&amp;select_pay_type=true" style="color:#dc3000; height: 40px;" onclick="showWindow('select_pay_type',this.href,'get',0); return false;">{$var['do']}</a></td>
+                        </tr>                 
+                        {/loop}
+                    </table>  
+            </div>
+
+            {loop $ttlist $row}
+            <div class="service">
+                <div class="title"><span class="first">$row[0][0]</span></div>
+                <table width="100%" border="1" cellpadding="0" cellspacing="0" >
+                    {eval $oj=0;}
+                    {eval $ii=0}
+                    {loop $row $row2}
+                        {eval $ii++}
+                        {if $oj==0}
+                        {eval $oj=1}
+
+                        {if $ii==1}
+                        <tr class="even" style="color: rgb(0, 0, 0); height: 40px;">
+                        {else}
+                        <tr class="even" >
+                        {/if}
+                        {else}
+                        {eval $oj=0}
+                        <tr class="odd" >
+                        {/if} 
+                        {eval $i=0}
+                        {loop $row2 $value}
+                            {if $i>0}
+                            <td align="center" valign="middle">$value</td>
+                            {/if}
+                            {eval $i++}
+                        {/loop}
+                        </tr>
+                    {/loop}
+                </table>
+            </div>
+            {/loop}
+            {loop $otlist $row}
+            <div class="vipUpgrade">
+
+                <div class="title"><span class="first">{$row[0][0]}</span></div>
+                {eval $i=0}
+                {eval $oj=0;}
+                {loop $row $row2}
+                {eval $i++}
+                {if $oj==0}
+                {eval $oj=1}                
+                <div class="DivFir">{$i}.{$row2[1]}</div>
+                {else}
+                {eval $oj=0}  
+                <div class="DivSec">{$i}.{$row2[1]}</div>
+                {/if}
+                {/loop}
+
+            </div>
+            {/loop}
+
+        </div>
+
+        <img src="source/plugin/qmx8_buy_usergroup/template/images/footerVip.jpg" alt="" />
+
+    </div>
+
+    <div id="footer">
+
+        {$var[hd_tip]}</div>
+
+</body>
+
+</html>
+

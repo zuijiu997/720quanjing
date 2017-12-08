@@ -1,0 +1,48 @@
+<!--{template common/header}-->
+<!--{template e6_propaganda:left_header}-->
+		<style>.e6_ul li {margin-bottom:5px;}</style>
+		<table style="width:100%">
+			<tr>
+			<td>{lang e6_propaganda:i_1}: $e6_user_count[money]</td>
+			<td>{lang e6_propaganda:i_2}: $e6_user_count[register]{lang e6_propaganda:i_16}</td>
+			<td>{lang e6_propaganda:i_3}: $e6_user_count[ip]</td>
+			<td>{lang e6_propaganda:i_4}: $e6_user_count[task]</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="bm">
+	<div class="bm_h cl">
+		<h2>{lang e6_propaganda:i_5}</h2>
+	</div>
+	<div class="bm_c bid" style="padding-top:0px;padding-bottom:0px;">
+		<table cellspacing="0" cellpadding="0" class="tfm">
+			<caption>
+				<p>{lang e6_propaganda:i_6}</p>
+				<p>{lang e6_propaganda:i_7}</p>
+			</caption>
+			<tr>
+				<th>{lang e6_propaganda:i_5}</th>
+				<td class="pns">
+					<input type="text" class="px vm" onclick="this.select();setCopy(this.value, '{lang e6_propaganda:i_8}');" value="$spread_url" size="50" /> 
+					<button type="submit" class="pn vm" onclick="setCopy('$spread_url', '{lang e6_propaganda:i_8}');" type="submit"><em>{lang e6_propaganda:i_9}</em></button>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="bm">
+	<div class="bm_h cl">
+		<h2>{lang e6_propaganda:i_10}</h2>
+	</div>
+	<div class="bm_c bid">
+		<ul class="e6_ul">
+			<li>1. {lang e6_propaganda:i_11}</li>
+			<li>2. {lang e6_propaganda:i_12}<font color="red">{$e6_propaganda['ip']}</font> {lang e6_propaganda:i_13}</li>
+			<li>3. {lang e6_propaganda:i_14}</li>
+			<li>4. {lang e6_propaganda:i_15}{$explain4}<br>
+				<table>{$explain_all}</table>
+			</li>
+		</ul>	
+<!--{template e6_propaganda:left_footer}-->
+<!--{template common/footer}-->

@@ -1,0 +1,141 @@
+<!--{template common/header}-->
+<!--[name][迪恩网络-cgmodel-产品案例][/name]-->
+<!--{eval $list = array();}-->
+<!--{eval $wheresql = category_get_wheresql($cat);}-->
+<!--{eval $list = category_get_list($cat, $wheresql, $page);}-->
+<style type="text/css">
+.deanwp,.wp,#wp{ width:100%;}
+.deanpdbg{ width:100%; text-align:center; height:320px; background:url(./template/dean_cg_160522/deancss/newbg.png) top center repeat;}
+	.deanpdbg span{ font-size:58px; font-weight:500; color:#dddddd; height:65px; display:block; margin:0 auto;}
+	.deanlines{ height:1px; width:100px; margin:15px auto; background:#ddd; display:block;}
+	.deanpdbg em{  display: block; color: #ffffff; margin:10px auto;  text-transform: uppercase;  font-size: 15px; letter-spacing: 7px; margin-top: 0px;}
+#ct,#pt{ width:1180px!important; margin:0 auto;}
+
+.deanforumhot{ margin-top:0; width:210px; float:left;}
+	.deanforumhot ul{ margin-top:0;}
+	.deanforumhot ul li{ width:210px; height:50px; line-height:50px; font-size:18px; font-weight:normal; margin-bottom:10px; text-align:center;}
+	.deanforumhot ul li.deantitleli{ background:#4F71CB url(./template/dean_cg_160522/deancss/down_icon.png) 160px 20px no-repeat; border-radius:0; border:1px solid #fff; color:#fff;}
+	.deanforumhot ul li a{ border:1px dashed #ccc; background:#fff; color:#333;}
+	.deanforumhot ul li a:hover{ background:none; border:1px dashed #4F71CB; color:#4F71CB;}
+.deanproduct{ margin-bottom:30px; float:right; width:930px;}
+	.deanproduct dl{ width:960px; float:left;}
+		.deanproduct dl dd{ width:300px; float:left; background:#fff; margin-bottom:16px; margin-right:15px; }
+		.deanproduct dl dd:hover{}
+			.deanproduct dl dd .deanddc{}
+				.deanimg{ width:300px; height:200px; position:relative; overflow:hidden;}
+					.deanhoverinfo{ position:absolute; height:65px; line-height:25px; overflow:hidden; font-size:14px; width:280px; padding:10px; background:rgba(0,0,0,0.5); color:#fff; bottom:-85px; left:0;}
+				.deanpinfo{ padding:10px 15px; width:198px;}
+					.deanpinfo h3{ width:198px; font-size:14px; font-weight:500; height:30px; line-height:30px; text-overflow: ellipsis; overflow:hidden; white-space:nowrap;}
+						.deanpinfo h3 a{ color:#606060;}
+						.deanpinfo h3 a:hover{ color:#3598DB;}
+					.deanpinfo .deantype{ color:#999; font-size:12px; margin-top:3px; display:block; }
+						.deanpinfo .deantype em{ color:#4F71CB; font-style:normal;}
+			
+	.deanadimg{ margin-top:10px;}
+</style>
+<div class="deanpdbg">
+	<div style="display:block; padding-top:60px; ">&nbsp;</div>
+	<span>师生案例</span>
+    <div class="clear"></div>
+    <div class="deanlines"></div>
+    <div class="clear"></div>
+    <em>STUDENT GALLERY</em>
+</div>
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+		<a href="$_G[setting][navs][1][filename]">{lang portal}</a> <em>&rsaquo;</em>
+		<!--{loop $cat[ups] $value}--> <a href="{$portalcategory[$value['catid']]['caturl']}">$value[catname]</a><em>&rsaquo;</em><!--{/loop}-->
+		$cat[catname]
+	</div>
+</div>
+
+<!--{ad/text/wp a_t}-->
+<style id="diy_style" type="text/css"></style>
+<div class="wp">
+	<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+
+<div class="clear"></div>
+<div id="ct" class="ct2 wp cl deanbox">
+	<div class="">
+		<!--{ad/articlelist/mbm hm/1}--><!--{ad/articlelist/mbm hm/2}-->
+		<!--[diy=listcontenttop]--><div id="listcontenttop" class="area"></div><!--[/diy]-->
+		<div class="bm">
+        	<div class="deanforumhot" >
+                <ul>
+                    <li class="deantitleli">案例产品</li>
+                    <!--{if ($_G['group']['allowpostarticle'] || $_G['group']['allowmanagearticle'] || $categoryperm[$catid]['allowmanage'] || $categoryperm[$catid]['allowpublish']) && empty($cat['disallowpublish'])}--><li><a class="button13 fadeInLeft wow" href="portal.php?mod=portalcp&ac=article&catid=$cat[catid]"><span>{lang article_publish}</span></a></li><!--{/if}-->
+                    <!--{if $cat[subs]}-->
+                    <!--{eval $i = 1;}-->
+                    <!--{loop $cat[subs] $value}-->
+                    <!--{if $i != 1}--><!--{/if}--><li class=" fadeInRight wow"><a href="{$portalcategory[$value['catid']]['caturl']}">$value[catname]</a></li><!--{eval $i--;}-->
+                    <!--{/loop}-->
+                    <!--{/if}-->
+                    <div class="clear"></div>
+                </ul>
+                <div class="clear"></div>
+                <div class="deanadimg"><a href="#" target="_blank"><img src="./template/dean_cg_160522/deancss/adr1.jpeg" width="212" /></a></div>
+                <div class="deanadimg"><a href="#" target="_blank"><img src="./template/dean_cg_160522/deancss/adr2.jpeg" width="212" /></a></div>
+                <div class="deanadimg"><a href="#" target="_blank"><img src="./template/dean_cg_160522/deancss/adr.jpeg" width="212" /></a></div>
+
+            </div>
+            <div class="deanproduct">
+                <dl>
+                    <!--{loop $list['list'] $value}-->
+                    <!--{eval $highlight = article_title_style($value);}-->
+                    <!--{eval $article_url = fetch_article_url($value);}-->
+                    <dd class="wow bounceInUp deanshadow">
+                        <div class="deanddc">
+                            <div class="deanimg deanlarge">
+                                <!--{if $value[pic]}-->
+                                    <a href="$article_url" target="_blank"><img src="$value[pic]" alt="$value[title]" width="300" height="200" /></a>
+                                    <a href="$article_url" target="_blank" class="deanhover"></a>
+                                <!--{else}-->
+                                    <a href="$article_url" target="_blank"><img src="$_G['style'][styleimgdir]/nopic.png" alt="$value[title]" width="300" height="200" /></a>
+                                    <a href="$article_url" target="_blank" class="deanhover"></a>
+                                <!--{/if}-->
+                                <div class="clear"></div>
+                                <div class="deanhoverinfo">$value[summary]</div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="deanpinfo">
+                                <h3><a href="$article_url" target="_blank" class="xi2" $highlight>$value[title]</a> <!--{if $value[status] == 1}-->({lang moderate_need})<!--{/if}--></h3>
+                                <div class="clear"></div>
+                                <!--{if $value[catname] && $cat[subs]}--><a href="{$portalcategory[$value['catid']]['caturl']}" class="deantype">产品分类：<em>$value[catname]</em></a><!--{/if}-->
+                            </div>
+                        </div>
+                    </dd>                    
+                    <!--{/loop}-->
+                    <div class="clear"></div>
+                </dl>
+				<script type="text/javascript">
+                    jq(".deanproduct dl dd").each(function(s){
+                        jq(this).hover(
+                            function(){
+                                jq(".deanhoverinfo").eq(s).animate({bottom:"0"},200);
+                            },
+                            function(){
+                                jq(".deanhoverinfo").eq(s).animate({bottom:"-85px"},200);
+                            })
+                            
+                        })
+                </script>
+                </div>
+            </div>
+			<!--[diy=listloopbottom]--><div id="listloopbottom" class="area"></div><!--[/diy]-->
+		</div>
+		<!--{ad/articlelist/mbm hm/3}--><!--{ad/articlelist/mbm hm/4}-->
+        <div class="clear"></div>
+		<div><!--{if $list['multi']}--><div class="pgs cl">{$list['multi']}</div><!--{/if}--></div>
+
+		<!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+
+	</div>
+	
+	<div class="clear"></div>
+    <div class="wp mtn">
+        <!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+    </div>
+</div>
+<!--{template common/footer}-->

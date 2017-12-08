@@ -1,0 +1,35 @@
+{template common/header}
+<style id="diy_style" type="text/css"></style>
+<link rel="stylesheet" type="text/css" href="source/plugin/threed_attach/template/downld.css">
+<div class="threed_panbox" >
+    <div class="pan_info">
+		<div class="alert_info">
+			<p>$kofen_info</p>
+		</div>
+	</div>
+    <div class="pan_topdiy">
+	<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+    </div>
+	<div class="panframe">
+		<div class="pan_left">       
+		<h4 style="width:720px;"><strong><span style="font-size: 20px; color:#0f0">$pan_srlname</span></strong></h4><p><a href="$pan_srl">{lang threed_attach:downld1}</a></p>
+        	<!--{if $pan_type}-->
+			<div class="thd_box" style=" width:$panbox_w[$pan_type]px; height:$panbox_h[$pan_type]px;overflow:hidden;">
+				<Iframe src="$pan_srl" width="$iframe_w" height="$iframe_h" scrolling="NO" style="margin:$panbox_y[$pan_type]px 0px 0px $panbox_x[$pan_type]px;">
+                </iframe>
+            </div>
+            <!--{else}-->
+            <div class="thd_box">
+            <a href="$pan_srl" target="_blank"><img src="source/plugin/threed_attach/template/dld.gif" /></a>
+            </div>
+            <!--{/if}-->
+        </div>
+        <div class="pan_right">
+         <!--[diy=diy2]--><div id="diy2" class="area"></div><!--[/diy]-->
+        </div>
+ 	</div>
+    <div class="pan_bottomdiy">
+	<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+    </div>
+</div>
+{template common/footer}

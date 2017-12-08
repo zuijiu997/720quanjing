@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Addon MD5]]></item>
+	<item id="ID"><![CDATA[shenlan_mobile.plugin]]></item>
+	<item id="RevisionID"><![CDATA[32597]]></item>
+	<item id="SN"><![CDATA[2017120721dd9N225696]]></item>
+	<item id="RevisionDateline"><![CDATA[1394589601]]></item>
+	<item id="Data">
+		<item id="/admin_shenlan.inc.php"><![CDATA[9ad927370377bfdfc71ab110aaca903a]]></item>
+		<item id="/discuz_plugin_shenlan_mobile_SC_GBK.xml"><![CDATA[5e963657ac805f4c256750ce5ece2a71]]></item>
+		<item id="/discuz_plugin_shenlan_mobile_SC_UTF8.xml"><![CDATA[a1520aa137599a6cc07d81bf56dc1053]]></item>
+		<item id="/discuz_plugin_shenlan_mobile_TC_BIG5.xml"><![CDATA[7db2374067e6b89be73e2921e5e0945e]]></item>
+		<item id="/discuz_plugin_shenlan_mobile_TC_UTF8.xml"><![CDATA[ed2c7af2af34ed15c54e97fcf8b2fcee]]></item>
+		<item id="/install.php"><![CDATA[19bc069270393e93a2f1c41ffdf0f35a]]></item>
+	</item>
+</root>

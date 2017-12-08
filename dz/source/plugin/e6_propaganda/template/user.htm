@@ -1,0 +1,64 @@
+{eval E6::M()->prompt('<font color="blue">' . $e6_c['a_u_1'] . '</font> &nbsp;|&nbsp; <font color="red">' . $e6_c['a_u_2'] . '</font> &nbsp;|&nbsp; ' . $e6_c['a_u_3'])}
+<div style="height:10px;"></div>
+<!--{if $_GET[edit]}-->
+<div style="color:red;font-weight:bold;font-size:14px;">{$e6_c['a_u_4']}: $username</div>
+<form name="e6_form" method="post" autocomplete="off" action="">
+<input type="hidden" name="uid" value="$uid" />
+<input type="hidden" name="step" value="3" />
+<table style="margin-top:5px;">
+<!--{eval for($n=1; $n<=10; $n++){}-->
+	<tr>
+		<td height="30px;">{$n} {$e6_c['a_u_5']}</td>
+		<td><input type="text" name="username{$n}" value="{$user['username'.$n]}" /></td>
+	</tr>
+<!--{eval }}-->
+</table>
+<input type="submit" class="btn" name="e6_submit"  value="{$e6_c['a_u_6']}" />
+</form>
+<!--{else}-->
+<script type="text/javascript">
+function selectAll(){
+	for (var i=0;i<document.e6_form.quit.length;i++) {
+		var temp=document.e6_form.quit[i];
+		temp.checked=!temp.checked;
+	}
+}
+</script>
+<style>
+.blue,.blue a:link,.blue a:visited,blue a:hover {color:blue;}
+.gray a:link,.gray a:visited,gray a:hover {color:gray;}
+</style>
+<form name="e6_forms" method="post" autocomplete="off" action="">
+{$e6_c['a_u_7']}: <input type="text" name="username" size="30" value="$username" /> &nbsp;&nbsp;
+{$e6_c['a_u_8']}: <select name="type"><option value='1'>{$e6_c['a_u_9']}</option><option value='2' {$type2}>{$e6_c['a_u_10']}</option></select> &nbsp;&nbsp;
+<input type="submit" name="e6_submit" value="{$e6_c['a_u_11']}" />
+</form>
+<div style="height:20px;"></div>
+<form name="e6_form" method="post" autocomplete="off" action="">
+<input type="hidden" name="step" value="2" />
+<table summary="$dual_nav_name" cellspacing="0" cellpadding="0" class="dt">
+    <tr align="center">
+		<td>ID</td>
+		<td>{$e6_c['a_u_12']}</td>
+		<!--{eval for($n=1; $n<=10; $n++){ if($n%2==1) $class='blue'; else $class='';}-->
+    	<td class="{$class}">{$n} {$e6_c['a_u_13']}</td>
+		<!--{eval }}-->
+		<td>{$e6_c['a_u_14']}</td>
+		<td><span onclick="selectAll();" title="{$e6_c['a_u_15']}" style="cursor:pointer;">{$e6_c['a_u_16']}</span></td>
+    </tr>
+    <!--{loop $list $key $value}-->
+	<tr align="center">
+		<td>$value[n]</td>
+		<td>$value[username]</td>
+		<!--{eval for($n=1; $n<=10; $n++){ if($n%2==1) $class='blue'; else $class='gray';}-->
+    	<td class="{$class}"><a href="{$my_url}&uid={$value['fuid'.$n]}">{$value['username'.$n]}</a></td>
+		<!--{eval }}-->
+		<td><a href="{$my_url}&edit={$value[uid]}">{$e6_c['a_u_17']}</a></td>
+		<td><input class="checkbox" type="checkbox" id="quit" name="quit[]" value="$value[uid]" /></td>
+	</tr>
+    <!--{/loop}-->
+</table>
+<!--{if $multi}--><div class="pgs cl mtm" style="width:500px;height:20px;">$multi</div><!--{/if}-->
+<div style="float:right;{if $multi}margin-top:-20px;{/if}margin-right:50px;"><input type="submit" name="submit" value="{$e6_c['a_u_18']}" onclick="return confirm('{$e6_c['a_u_19']}');" /></div>
+</form>
+<!--{/if}-->

@@ -1,0 +1,42 @@
+{template common/header}
+<style id="diy_style" type="text/css"></style>
+<link rel="stylesheet" type="text/css" href="source/plugin/threed_attach/template/downld.css">
+<link rel="stylesheet" type="text/css" href="source/plugin/threed_attach/template/panattach.css">
+<div class="threed_panbox" >
+    <div class="pan_topdiy">
+	<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+    </div>
+	<div class="panframe">
+		<div class="pan_left">       
+		<h4 style="width:720px; border-bottom: 2px solid #52B9FB;"><strong>{lang threed_attach:downall1}</strong></h4><p><a href="forum.php?mod=viewthread&tid={$attachlist[0][tid]}">{lang threed_attach:downall2}</a></p>
+            <div class="thd_box" style="background:none;">
+             <!--{loop $attachlist $id $attach}-->
+             <div style="clear:both; width:100%;text-decoration:none;overflow:hidden;" class="tab_button">
+             <div class="button">
+            <a href="javascript:;" onclick="$attach[url]" rel="nofollow" style="text-decoration:none;"><img src="source/plugin/threed_attach/template/{$attach[type]}.gif" class="vm" alt="" border="0" /><font style=" color:#fff !important;"> <!--{if $attach[type]==5}-->{lang threed_attach:downall3}{$attach[price]}{$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][unit]}{$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][title]}<!--{else}-->{lang threed_attach:attachdown}<!--{/if}--></font></a>
+            <!--{if $uid}-->
+    <p class="top">$button_info[$attach[type]]</p>
+    <p class="bottom">{lang threed_attach:attachdownlogin_ok}$_G[group][grouptitle]</p>
+            <!--{else}-->
+      <p class="top">{lang threed_attach:attachdownreg}</p>
+      <p class="bottom">{lang threed_attach:attachdownlogin}</p>
+            <!--{/if}-->
+    </div><div class="buttonright">
+            <span style="white-space: nowrap;"><em >{lang threed_attach:attachname}</em>$attach[filename]&nbsp;</span><br>
+            <em >{lang threed_attach:attachdownloads}</em>$attach[downloads]&nbsp;&nbsp;
+             <em>{lang threed_attach:attachreadperm}</em> <a target="_blank" href="/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=$_G[groupid]"  rel="nofollow" class="xi2" style="text-decoration:none;"><font style="font-size:14px;" >$attach[readperm] &nbsp;</font></a></div></div><br />
+             
+              <!--{/loop}-->
+            
+            </div>
+            
+        </div>
+        <div class="pan_right">
+         <!--[diy=diy2]--><div id="diy2" class="area"></div><!--[/diy]-->
+        </div>
+ 	</div>
+    <div class="pan_bottomdiy">
+	<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+    </div>
+</div>
+{template common/footer}

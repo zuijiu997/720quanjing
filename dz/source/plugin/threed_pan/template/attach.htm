@@ -1,0 +1,61 @@
+<!--{eval}-->
+<!--
+
+function show_pan_attach($ifbuy,$pan_url,$pan_srlname,$pan_srljiage,$allcount,$pan_type,$pan_srl,$pan_yuanjia) {
+	global $_G;
+    $pan_kofen=$_G['cache']['plugin']['threed_pan']['thd_koufen'];
+    $pan_panurl=$_G['cache']['plugin']['threed_pan']['thd_panurl'];
+    $attachname=$_G['cache']['plugin']['threed_pan']['thd_name'];
+    $pan_buyuser=unserialize($_G['cache']['plugin']['threed_pan']['thd_buyuser']);
+    if(empty($pan_buyuser[0]))$pan_buyuser[0]=0;
+    $pan_groupname=DB::result_first("SELECT grouptitle FROM ".DB::table('common_usergroup')." WHERE groupid=".$pan_buyuser[0]);
+-->
+<!--{/eval}-->
+<!--{block return}-->
+<!--{if $pan_type==4}-->
+<link rel="stylesheet" type="text/css" href="source/plugin/threed_pan/template/downld.css">
+<div class="threed_panbox" >  
+	<div class="panframe">
+    	<div class="pan_left">
+        <!--{if $ifbuy }-->   
+		<h4 style="width:720px;"><a href="$pan_url" target="_blank"><strong>$pan_srlname({lang threed_pan:attach1})</strong></a></h4>
+      	<!--{else}-->
+        <h4 style="width:720px;"><a href="javascript:" onclick="showWindow('paybox', '$pan_url')" rel="nofollow" style="text-decoration:none;"><strong>$pan_srlname({lang threed_pan:attachprice}{$pan_srljiage} {$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][unit]}{$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][title]})</strong></a></h4>
+        <!--{/if}-->
+			<div class="thd_box" style=" width:710px; height:650px;overflow:hidden;">
+				<Iframe src="$pan_srl" width="730" height="880" scrolling="NO" style="margin:-170px 0px 0px -22px;">
+                </iframe>
+            </div>           
+           
+        </div>        
+ 	</div>   
+</div>
+<!--{else}-->
+<link rel="stylesheet" type="text/css" href="source/plugin/threed_pan/template/panattach.css">
+<div class="attachbox">
+  <div style="clear:both; width:670px;text-decoration:none;" class="tab_button"> 
+    <!--{if $ifbuy }-->
+    <div class="button"> <a href="$pan_url"  target="_blank" rel="nofollow" style="text-decoration:none;"><img src="source/plugin/threed_pan/template/zip.gif" class="vm" alt="" border="0"><font style=" color:#fff !important;"> {lang threed_pan:attachdown}</font></a>
+      <p class="top">{lang threed_pan:attachdownreg}</p>
+      <p class="bottom">{lang threed_pan:attachdownlogin}</p>
+    </div>
+    <!--{else}-->
+    <div class="button"> <a href="javascript:" onclick="showWindow('paybox', '$pan_url')" rel="nofollow" style="text-decoration:none;"><img src="source/plugin/threed_pan/template/zip.gif" class="vm" alt="" border="0"><font style=" color:#fff !important;">{lang threed_pan:attachdown}</font></a>
+      <p class="top">{lang threed_pan:attachdownreg}</p>
+      <p class="bottom">{lang threed_pan:attachdownlogin}</p>
+    </div>
+    <!--{/if}-->
+    <div class="buttonright"> <span style="white-space: nowrap;"><em >{$attachname}</em>$pan_srlname&nbsp;</span><br />
+    <em>{lang threed_pan:attachdownloads}</em>$allcount &nbsp;&nbsp; <!--{if $pan_yuanjia}--><em>{lang threed_pan:attachmail}</em><!--{if $ifbuy }-->{lang threed_pan:isbuy}<!--{else}-->{lang threed_pan:notbuy}<!--{/if}-->&nbsp;&nbsp;<em>{lang threed_pan:attachprice}</em>{$pan_srljiage} ({lang threed_pan:yuanjia}<del>{$pan_yuanjia}</del>){$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][unit]}{$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][title]} <!--{else}--><em >{lang threed_pan:attachfree}</em>{$pan_kofen}&nbsp;{$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][unit]}{$_G['setting']['extcredits'][$_G['setting']['creditstransextra'][1]][title]}<!--{/if}--><br/>
+      <em>{lang threed_pan:attachreadperm}</em> <a target="_blank" href="/home.php?mod=spacecp&amp;ac=usergroup&amp;gid={$pan_buyuser[0]}"  rel="nofollow" class="xi2" style="text-decoration:none;"><font style="font-size:14px;" >{$pan_groupname}&nbsp;</font></a> $pan_panurl </div>
+  </div>
+  <br />
+</div>
+<!--{/if}-->
+<!--{/block}--> 
+<!--{eval}--> 
+<!--
+	return $return;
+}
+--> 
+<!--{/eval}-->
